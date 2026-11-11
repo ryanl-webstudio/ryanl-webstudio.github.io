@@ -311,7 +311,7 @@ if(fine){
  stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();const x=e.clientX-r.left,y=e.clientY-r.top;lens.classList.add('free','on');setLens(x,y);
   let best=-1,bd=1e9;P.forEach((p,i)=>{const d=Math.hypot(p.x/100*r.width-x,p.y/100*r.height-y);if(d<bd){bd=d;best=i}});if(bd<lens.offsetWidth*.32)show(best)});
 }else{stage.style.cursor='pointer';stage.addEventListener('click',e=>{const r=stage.getBoundingClientRect();const x=e.clientX-r.left,y=e.clientY-r.top;let best=0,bd=1e9;P.forEach((p,i)=>{const d=Math.hypot(p.x/100*r.width-x,p.y/100*r.height-y);if(d<bd){bd=d;best=i}});focusPart(best,true)})}
-function sides(){const narrow=stage.offsetWidth<760;P.forEach(p=>{const d=narrow?(p.x>50?'l':'r'):p.d;p.l.className='lab '+d+(p.l.classList.contains('show')?' show':'')})}
+function sides(){const W=stage.offsetWidth,off=W<700?82:132;P.forEach(p=>{const px=p.x/100*W,lw=p.l.offsetWidth||140;let d=p.d;if(d==='r'&&px+off+lw>W)d='l';if(d==='l'&&px-off-lw<0)d='r';p.l.className='lab '+d+(p.l.classList.contains('show')?' show':'')})}
 sides();addEventListener('resize',()=>{sides();if(active>=0)focusPart(active,false)});
 /* flip */
 const card=document.getElementById('card'),fs=document.querySelector('.flip-sec');
