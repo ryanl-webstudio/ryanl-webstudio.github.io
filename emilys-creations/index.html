@@ -76,6 +76,7 @@ section{padding:110px 0}
 .builder{background:radial-gradient(ellipse at 30% 40%,#fbf7ef,#ece3d3 70%)}
 .table{position:relative;padding:20px 0 0}
 .frameWrap{position:relative;aspect-ratio:1;display:grid;place-items:center}
+@media(max-width:600px){.frameWrap{aspect-ratio:auto;height:86vw}}
 .frame{position:relative;overflow:hidden;width:93%;height:66%;border-radius:18px;box-shadow:0 2px 0 #fff inset,0 40px 60px -20px rgba(60,45,25,.45),0 12px 20px -8px rgba(60,45,25,.3);transition:width .9s cubic-bezier(.6,0,.2,1),height .9s cubic-bezier(.6,0,.2,1),border-radius .9s cubic-bezier(.6,0,.2,1);background:#3b2c1e}
 .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity .8s,transform 1.4s cubic-bezier(.2,.8,.2,1)}
 .frame img.on{opacity:1;transform:scale(1)}
@@ -84,7 +85,8 @@ section{padding:110px 0}
 .ram i{display:block;width:86px;height:86px;border-radius:50%;border:7px solid #fff;box-shadow:0 14px 22px -6px rgba(60,45,25,.45),inset 0 0 0 1px rgba(0,0,0,.06);background-repeat:no-repeat}
 .ram span{display:block;margin-top:6px;font-family:"Cormorant Garamond";font-style:italic;font-size:16px;color:var(--ink);white-space:nowrap}
 @keyframes drop{from{opacity:0;transform:translate(-50%,-80%) scale(.8)}}
-@media(max-width:600px){.ram{width:62px}.ram i{width:62px;height:62px;border-width:5px}.ram span{font-size:13px}}
+@media(max-width:600px){.sides{position:static;display:flex;justify-content:center;flex-wrap:wrap;gap:8px 14px;min-height:0;margin-top:6px}.ram{position:static!important;transform:none;width:66px;animation-name:drop2}.ram i{width:62px;height:62px;border-width:5px;margin:0 auto}.ram span{font-size:13px}.dim .line,.dim b{margin-right:0!important}}
+@keyframes drop2{from{opacity:0;transform:translateY(-14px)}}
 .dim{position:relative;display:flex;flex-direction:column;align-items:center;margin-top:0}
 .dim .line{display:block;height:1px;background:var(--ink);position:relative;transition:width .9s cubic-bezier(.6,0,.2,1)}
 .dim .line:before,.dim .line:after{content:"";position:absolute;top:-6px;width:1px;height:13px;background:var(--ink)}
@@ -281,9 +283,9 @@ function render(){
  SIZES.forEach((z,i)=>{const b=document.createElement('button');b.type='button';b.className='size';b.setAttribute('aria-pressed',st.size===i);b.innerHTML=`<div><b>${z.n}</b><small>${z.s} · ${z.d}</small></div><span class="p">${z.p?'$'+z.p:'Quote'}</span>`;b.onclick=()=>{st.size=i;render()};S.appendChild(b)});
  ADDS.forEach(a=>{const on=st.adds.includes(a.n);const b=document.createElement('button');b.type='button';b.className='add';b.setAttribute('aria-pressed',on);const t=document.createElement('i');crop(t,a,40,200);b.appendChild(t);b.appendChild(document.createTextNode(a.n));b.onclick=()=>{st.adds=on?st.adds.filter(x=>x!==a.n):[...st.adds,a.n];render()};A.appendChild(b)});
  const z=SIZES[st.size];
- frame.style.width=(z.w*80)+'%';frame.style.height=(z.h*80)+'%';frame.style.marginRight='14%';frame.style.borderRadius=z.r;
+ frame.style.width=(z.w*80)+'%';frame.style.height=(z.h*80)+'%';frame.style.marginRight=innerWidth<=600?'0':'14%';frame.style.borderRadius=z.r;
  imgs.forEach((im,i)=>im.classList.toggle('on',i===st.size));
- document.getElementById('dimLine').style.width=(z.w*80)+'%';document.getElementById('dimLine').style.marginRight='14%';document.getElementById('dimLabel').textContent=z.dim;
+ document.getElementById('dimLine').style.width=(z.w*80)+'%';document.getElementById('dimLine').style.marginRight=innerWidth<=600?'0':'14%';document.getElementById('dimLabel').textContent=z.dim;
  document.getElementById('servesTxt').textContent=z.s;
  const pl=document.getElementById('plates');pl.innerHTML='';for(let i=0;i<Math.min(z.serve,15);i++){const d=document.createElement('i');d.style.animationDelay=(i*35)+'ms';pl.appendChild(d)}if(z.serve>15){const m=document.createElement('em');m.textContent='+ more';pl.appendChild(m)}
  /* ramekins beside the platter */
@@ -296,7 +298,8 @@ function render(){
  const body=`Hi Emily! I'd like to order a ${z.n.toLowerCase()} (${z.s}, ${z.d}).\nExtras: ${st.adds.join(', ')||'none'}\nOccasion: \nDate needed: \nPickup or delivery: `;
  document.getElementById('sms').href='sms:+19792298500?&body='+encodeURIComponent(body);
  document.getElementById('mail').href='mailto:Emilyscreations10@gmail.com?subject='+encodeURIComponent(z.n+' order')+'&body='+encodeURIComponent(body);}
-render();
+function placeSides(){const t=document.querySelector('.table'),fw=document.querySelector('.frameWrap');if(innerWidth<=600){if(sides.parentNode!==t)t.insertBefore(sides,document.querySelector('.dim'))}else if(sides.parentNode!==fw)fw.appendChild(sides)}
+placeSides();render();addEventListener('resize',()=>{placeSides();render()});
 </script>
 </body>
 </html>
