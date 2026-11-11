@@ -131,6 +131,23 @@ nav .wrap{height:74px;display:flex;align-items:center;justify-content:space-betw
 .clip.in{clip-path:inset(0 0 0 0 round var(--r))}
 
 
+/* ---------- photo band + card photos ---------- */
+.band{position:relative;height:105vh;overflow:hidden;display:grid;place-items:center}
+.band img{position:absolute;left:0;top:-15%;width:100%;height:130%;object-fit:cover;will-change:transform}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0%,transparent 28%,transparent 68%,var(--bg) 100%),rgba(0,0,0,.38)}
+.band .bt{position:relative;z-index:1;font-family:var(--disp);font-size:clamp(48px,8.5vw,140px);text-align:center;line-height:.9;letter-spacing:-.035em;font-weight:700;padding:0 20px;text-shadow:0 10px 60px rgba(0,0,0,.5)}
+.band .bt em{font-style:normal;color:var(--a)}
+.pnote{position:absolute;bottom:26px;right:28px;z-index:2;font-size:12px;color:rgba(255,255,255,.65);background:rgba(0,0,0,.35);padding:6px 12px;border-radius:999px;backdrop-filter:blur(6px)}
+.svc.has-img{justify-content:flex-start;padding-top:0}
+.sim{margin:0 -34px 26px;height:230px;overflow:hidden;position:relative}
+.sim::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,var(--bg2))}
+.sim img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 1.4s var(--ease)}
+.svc:hover .sim img{transform:scale(1.02)}
+.svc.has-img .n{position:absolute;top:168px;right:26px;font-size:84px;-webkit-text-stroke:1px rgba(255,255,255,.75);z-index:1}
+.svc.has-img .tag{z-index:2;background:rgba(0,0,0,.45);backdrop-filter:blur(6px)}
+@media (max-width:900px){.band{height:70vh}.sim{height:200px}.svc.has-img .n{top:140px;font-size:64px}}
+
+
 .ba{position:relative;margin-top:56px;height:min(62vh,560px);border-radius:var(--r);overflow:hidden;border:1px solid var(--line);user-select:none;touch-action:pan-y;cursor:ew-resize}
 .ba-layer{position:absolute;inset:0}
 .slab{position:absolute;inset:0;background:
@@ -243,9 +260,11 @@ footer{padding:80px 0 120px;border-top:1px solid var(--line);overflow:hidden}
 
 <section class="scrub" id="scrub"><div class="stick"><div class="wrap"><p id="scrubp">Pollen, mildew and red Texas dirt <hl>don't stand a chance.</hl> One visit and your place looks the way it did the day you moved in.</p></div></div></section>
 
+<section class="band"><img alt="" loading="lazy" src="https://images.unsplash.com/photo-1610891170442-79392fc76493?auto=format&fit=crop&w=2000&q=75"><div class="bt rv">Years of grime.<br><em>Gone in an afternoon.</em></div><span class="pnote">Preview photos · your own job photos go here</span></section>
+
 <section class="hz" id="services"><div class="stick">
   <div class="wrap hz-head"><div><div class="eyebrow">What we clean</div><h2 class="h2">Top to bottom.<br><em>Curb to roof.</em></h2></div><p class="lead" style="max-width:380px;font-size:17px">Soft wash where it's delicate, pressure where it's tough. The right method for every surface.</p></div>
-  <div class="track" id="track"><article class="svc"><div class="n">01</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><h3>House Washing</h3><p>Low-pressure soft wash that lifts mildew and grime off siding and brick without damaging it. Perfect before painting or selling.</p></div></article><article class="svc"><span class="tag">Customer favorite</span><div class="n">02</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 13L12 5l10 8"/><path d="M5 11v8h14v-8"/><path d="M8 3v3M12 1v3M16 3v3"/></svg></div><h3>Roof Soft Wash</h3><p>Those black streaks are algae. We clear them gently so your roof looks new and lasts longer.</p></div></article><article class="svc"><div class="n">03</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21L10 3M16 21L14 3"/><path d="M12 6v2M12 11v2M12 16v2"/></svg></div><h3>Driveways &amp; Sidewalks</h3><p>Oil spots, tire marks and years of dirt, gone. Concrete comes back bright.</p></div></article><article class="svc"><div class="n">04</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M17 11v9"/><path d="M8 15c0 1.5-1 2.5-1 3.5a1 1 0 0 0 2 0c0-1-1-2-1-3.5z"/></svg></div><h3>Gutter Cleaning</h3><p>Cleared out and flowing again before the next storm turns them into a waterfall.</p></div></article><article class="svc"><div class="n">05</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l2-5h14l2 5"/><path d="M4 9v11h16V9"/><path d="M3 9h18"/><path d="M9 20v-6h6v6"/></svg></div><h3>Commercial &amp; Storefronts</h3><p>Sidewalks, entryways and building exteriors that make a strong first impression on your customers.</p></div></article></div>
+  <div class="track" id="track"><article class="svc has-img"><div class="sim"><img loading="lazy" alt="" src="https://images.unsplash.com/photo-1786295866836-2949bbd847cd?auto=format&fit=crop&w=900&q=75"></div><div class="n">01</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><h3>House Washing</h3><p>Low-pressure soft wash that lifts mildew and grime off siding and brick without damaging it. Perfect before painting or selling.</p></div></article><article class="svc has-img"><div class="sim"><img loading="lazy" alt="" src="https://images.unsplash.com/photo-1762374974129-f9266d9c4efc?auto=format&fit=crop&w=900&q=75"></div><span class="tag">Customer favorite</span><div class="n">02</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 13L12 5l10 8"/><path d="M5 11v8h14v-8"/><path d="M8 3v3M12 1v3M16 3v3"/></svg></div><h3>Roof Soft Wash</h3><p>Those black streaks are algae. We clear them gently so your roof looks new and lasts longer.</p></div></article><article class="svc has-img"><div class="sim"><img loading="lazy" alt="" src="https://images.unsplash.com/photo-1718152521364-b9655b8a7926?auto=format&fit=crop&w=900&q=75"></div><div class="n">03</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21L10 3M16 21L14 3"/><path d="M12 6v2M12 11v2M12 16v2"/></svg></div><h3>Driveways &amp; Sidewalks</h3><p>Oil spots, tire marks and years of dirt, gone. Concrete comes back bright.</p></div></article><article class="svc has-img"><div class="sim"><img loading="lazy" alt="" src="https://images.unsplash.com/photo-1677956787377-a0f32c0974af?auto=format&fit=crop&w=900&q=75"></div><div class="n">04</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M17 11v9"/><path d="M8 15c0 1.5-1 2.5-1 3.5a1 1 0 0 0 2 0c0-1-1-2-1-3.5z"/></svg></div><h3>Gutter Cleaning</h3><p>Cleared out and flowing again before the next storm turns them into a waterfall.</p></div></article><article class="svc has-img"><div class="sim"><img loading="lazy" alt="" src="https://images.unsplash.com/photo-1763026227930-ec2c91d4e7f2?auto=format&fit=crop&w=900&q=75"></div><div class="n">05</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l2-5h14l2 5"/><path d="M4 9v11h16V9"/><path d="M3 9h18"/><path d="M9 20v-6h6v6"/></svg></div><h3>Commercial &amp; Storefronts</h3><p>Sidewalks, entryways and building exteriors that make a strong first impression on your customers.</p></div></article></div>
 </div></section>
 
 
@@ -400,6 +419,11 @@ $$('[data-to]').forEach(el=>co.observe(el));
   addEventListener('scroll',()=>{const y=scrollY;n.classList.toggle('solid',y>40);n.classList.toggle('hide',y>ly&&y>500);ly=y;p.style.transform=`scaleX(${y/(document.documentElement.scrollHeight-innerHeight)})`;mb&&mb.classList.toggle('show',y>innerHeight*.6)},{passive:true});
 })();
 document.getElementById('yr').textContent=new Date().getFullYear();
+
+
+/* photo band parallax */
+(function(){const b=document.querySelector('.band');if(!b||RM)return;const im=b.querySelector('img');
+addEventListener('scroll',()=>{const r=b.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;im.style.transform=`translate3d(0,${(r.top/innerHeight)*-12}%,0) scale(1.05)`},{passive:true});})();
 
 
 (function(){const r=document.getElementById('barange'),d=document.getElementById('badirty'),h=document.getElementById('bah');

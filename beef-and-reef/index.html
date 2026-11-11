@@ -131,6 +131,23 @@ nav .wrap{height:74px;display:flex;align-items:center;justify-content:space-betw
 .clip.in{clip-path:inset(0 0 0 0 round var(--r))}
 
 
+/* ---------- photo band + card photos ---------- */
+.band{position:relative;height:105vh;overflow:hidden;display:grid;place-items:center}
+.band img{position:absolute;left:0;top:-15%;width:100%;height:130%;object-fit:cover;will-change:transform}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0%,transparent 28%,transparent 68%,var(--bg) 100%),rgba(0,0,0,.38)}
+.band .bt{position:relative;z-index:1;font-family:var(--disp);font-size:clamp(48px,8.5vw,140px);text-align:center;line-height:.9;letter-spacing:-.035em;font-weight:400;padding:0 20px;text-shadow:0 10px 60px rgba(0,0,0,.5)}
+.band .bt em{font-style:normal;color:var(--a)}
+.pnote{position:absolute;bottom:26px;right:28px;z-index:2;font-size:12px;color:rgba(255,255,255,.65);background:rgba(0,0,0,.35);padding:6px 12px;border-radius:999px;backdrop-filter:blur(6px)}
+.svc.has-img{justify-content:flex-start;padding-top:0}
+.sim{margin:0 -34px 26px;height:230px;overflow:hidden;position:relative}
+.sim::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,var(--bg2))}
+.sim img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 1.4s var(--ease)}
+.svc:hover .sim img{transform:scale(1.02)}
+.svc.has-img .n{position:absolute;top:168px;right:26px;font-size:84px;-webkit-text-stroke:1px rgba(255,255,255,.75);z-index:1}
+.svc.has-img .tag{z-index:2;background:rgba(0,0,0,.45);backdrop-filter:blur(6px)}
+@media (max-width:900px){.band{height:70vh}.sim{height:200px}.svc.has-img .n{top:140px;font-size:64px}}
+
+
 .h1{text-transform:uppercase;letter-spacing:-.01em;line-height:.88}
 .h2,.svc h3,.panel h3,.mega,.scrub p,.mq .t,.stat b,.q p,#pre .pn{text-transform:uppercase;letter-spacing:0}
 .pick{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;margin-top:46px;padding:8px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
@@ -236,9 +253,11 @@ footer{padding:80px 0 120px;border-top:1px solid var(--line);overflow:hidden}
 
 <section class="scrub" id="scrub"><div class="stick"><div class="wrap"><p id="scrubp">Some nights you want <hl>steak.</hl> Some nights you want <hl>shrimp.</hl> On Northgate, you don't have to pick.</p></div></div></section>
 
+<section class="band"><img alt="" loading="lazy" src="https://images.unsplash.com/photo-1519861155730-0b5fbf0dd889?auto=format&fit=crop&w=2000&q=75"><div class="bt rv">Follow the smoke.<br><em>Find the tacos.</em></div><span class="pnote">Preview photos · your truck &amp; food photos go here</span></section>
+
 <section class="hz" id="services"><div class="stick">
   <div class="wrap hz-head"><div><div class="eyebrow">Off the grill</div><h2 class="h2">The <em>menu.</em></h2></div><p class="lead" style="max-width:380px;font-size:17px">Made to order, every time. Ask at the window about today's specials.</p></div>
-  <div class="track" id="track"><article class="svc"><span class="tag">Fan favorite</span><div class="n">01</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 15a9 9 0 0 1 18 0z"/><path d="M7 15c1-3 3-5 5-5s4 2 5 5"/></svg></div><h3>Steak Quesadilla</h3><p>Grilled steak and melted cheese in a crisp tortilla. The one reviewers keep talking about.</p></div></article><article class="svc"><div class="n">02</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22c4 0 7-3 7-7 0-5-5-7-5-12-3 2-5 5-5 8-1-1-2-2-2-4-2 2-2 5-2 8 0 4 3 7 7 7z"/></svg></div><h3>Steak Tacos</h3><p>Charred steak on warm tortillas, topped and ready to go.</p></div></article><article class="svc"><div class="n">03</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 8a8 8 0 1 0-8 8h4"/><path d="M16 16l3 4M16 16l-1 5"/><circle cx="15" cy="6" r=".8" fill="currentColor"/></svg></div><h3>Camarón a la Diabla</h3><p>Shrimp in a red, spicy diabla sauce. The reef side of the truck, with some heat.</p></div></article><article class="svc"><div class="n">04</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11h16l-2 9H6z"/><path d="M8 11c0-3 2-6 4-6s4 3 4 6"/><path d="M12 5V2"/></svg></div><h3>The Salsa</h3><p>Made in-house. It's what pulls the whole thing together.</p></div></article></div>
+  <div class="track" id="track"><article class="svc has-img"><div class="sim"><img loading="lazy" alt="" src="https://images.unsplash.com/photo-1665541719551-655b587161e4?auto=format&fit=crop&w=900&q=75"></div><span class="tag">Fan favorite</span><div class="n">01</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 15a9 9 0 0 1 18 0z"/><path d="M7 15c1-3 3-5 5-5s4 2 5 5"/></svg></div><h3>Steak Quesadilla</h3><p>Grilled steak and melted cheese in a crisp tortilla. The one reviewers keep talking about.</p></div></article><article class="svc has-img"><div class="sim"><img loading="lazy" alt="" src="https://images.unsplash.com/photo-1648437595587-e6a8b0cdf1f9?auto=format&fit=crop&w=900&q=75"></div><div class="n">02</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22c4 0 7-3 7-7 0-5-5-7-5-12-3 2-5 5-5 8-1-1-2-2-2-4-2 2-2 5-2 8 0 4 3 7 7 7z"/></svg></div><h3>Steak Tacos</h3><p>Charred steak on warm tortillas, topped and ready to go.</p></div></article><article class="svc has-img"><div class="sim"><img loading="lazy" alt="" src="https://images.unsplash.com/photo-1660180750968-4fbc84789a96?auto=format&fit=crop&w=900&q=75"></div><div class="n">03</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 8a8 8 0 1 0-8 8h4"/><path d="M16 16l3 4M16 16l-1 5"/><circle cx="15" cy="6" r=".8" fill="currentColor"/></svg></div><h3>Camarón a la Diabla</h3><p>Shrimp in a red, spicy diabla sauce. The reef side of the truck, with some heat.</p></div></article><article class="svc has-img"><div class="sim"><img loading="lazy" alt="" src="https://images.unsplash.com/photo-1593759608136-45eb2ad9507d?auto=format&fit=crop&w=900&q=75"></div><div class="n">04</div><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11h16l-2 9H6z"/><path d="M8 11c0-3 2-6 4-6s4 3 4 6"/><path d="M12 5V2"/></svg></div><h3>The Salsa</h3><p>Made in-house. It's what pulls the whole thing together.</p></div></article></div>
 </div></section>
 
 
@@ -378,6 +397,11 @@ $$('[data-to]').forEach(el=>co.observe(el));
   addEventListener('scroll',()=>{const y=scrollY;n.classList.toggle('solid',y>40);n.classList.toggle('hide',y>ly&&y>500);ly=y;p.style.transform=`scaleX(${y/(document.documentElement.scrollHeight-innerHeight)})`;mb&&mb.classList.toggle('show',y>innerHeight*.6)},{passive:true});
 })();
 document.getElementById('yr').textContent=new Date().getFullYear();
+
+
+/* photo band parallax */
+(function(){const b=document.querySelector('.band');if(!b||RM)return;const im=b.querySelector('img');
+addEventListener('scroll',()=>{const r=b.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;im.style.transform=`translate3d(0,${(r.top/innerHeight)*-12}%,0) scale(1.05)`},{passive:true});})();
 
 
 (function(){const w=document.getElementById('pickw'),vt=document.getElementById('vt'),vs=document.getElementById('vs');
