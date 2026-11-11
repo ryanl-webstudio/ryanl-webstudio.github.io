@@ -41,17 +41,23 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .picado span:nth-child(5n+1){background:var(--hib)}.picado span:nth-child(5n+2){background:var(--sun);animation-delay:-.6s}.picado span:nth-child(5n+3){background:var(--lime);animation-delay:-1.2s}.picado span:nth-child(5n+4){background:#3fc1c9;animation-delay:-1.8s}.picado span:nth-child(5n){background:var(--red);animation-delay:-2.4s}
 @keyframes sway{50%{transform:rotate(4deg)}}
 /* fusion hero */
-.fusion{position:relative;height:calc(100vh - 110px);min-height:560px;overflow:hidden;user-select:none;touch-action:pan-y}
+.fusion{position:relative;height:calc(100vh - 64px);min-height:560px;overflow:hidden;user-select:none;touch-action:pan-y}
 .side{position:absolute;inset:0;display:grid;align-items:center}
-.mex{background:radial-gradient(circle at 20% 30%,#ff5a3c,var(--red) 60%,#b51f12)}
-.isl{background:radial-gradient(circle at 80% 30%,#18797b,var(--teal) 70%);clip-path:inset(0 0 0 var(--cut,50%))}
-.side .lbl{position:absolute;top:22px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:rgba(255,255,255,.85)}
+.side{background:#111 url(https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=2000&q=75&auto=format&fit=crop) center 55%/cover}
+.mex{filter:saturate(1.25) contrast(1.05)}
+.mex:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(150,25,10,.55),rgba(230,70,30,.18) 60%,transparent);mix-blend-mode:multiply}
+.isl:before{content:"";position:absolute;inset:0;background:#0b6e70;mix-blend-mode:color}
+.isl:after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,rgba(5,40,42,.65),rgba(5,40,42,.15) 60%,transparent)}
+.fusion:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse at center,rgba(0,0,0,.15),rgba(0,0,0,.55)),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E")}
+.isl{clip-path:inset(0 0 0 var(--cut,50%))}
+.side .lbl{position:absolute;z-index:3;top:22px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:rgba(255,255,255,.85)}
 .mex .lbl{left:26px}.isl .lbl{right:26px}
 .deco{position:absolute;pointer-events:none}
 .center{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#fff;z-index:3;pointer-events:none;padding:0 5vw}
 .center .k{font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:13px;opacity:.9}
-.center h1{font-size:clamp(64px,13vw,200px);margin:10px 0 4px;text-shadow:0 8px 40px rgba(0,0,0,.25)}
-.center h1 .script{display:block;font-size:.42em;color:var(--sun);margin-top:-.05em;text-shadow:none}
+.center h1{font-size:clamp(64px,13vw,200px);margin:10px 0 4px;text-shadow:0 8px 50px rgba(0,0,0,.55)}
+.center p{text-shadow:0 2px 16px rgba(0,0,0,.6)}
+.center h1 .script{display:block;font-size:.42em;color:var(--sun);margin-top:-.05em;text-shadow:0 4px 30px rgba(0,0,0,.4)}
 .center p{font-size:clamp(17px,2vw,22px);font-weight:700;max-width:640px;margin:14px auto 0}
 .center .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px;pointer-events:auto}
 .handle{position:absolute;top:0;bottom:0;left:var(--cut,50%);width:4px;background:#fff;z-index:4;transform:translateX(-2px);cursor:ew-resize}
@@ -92,7 +98,7 @@ footer{padding:34px 0 50px;color:var(--mute);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .credit{display:block;width:100%;font-size:12px;opacity:.75}
 .callbar{display:none}
-@media(max-width:720px){.callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:40;gap:10px}.callbar a{flex:1;box-shadow:0 10px 30px rgba(0,0,0,.25)}footer{padding-bottom:100px}nav .btn{display:none}.fusion{height:calc(100svh - 110px)}}
+@media(max-width:720px){.callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:40;gap:10px}.callbar a{flex:1;box-shadow:0 10px 30px rgba(0,0,0,.25)}footer{padding-bottom:100px}nav .btn{display:none}.fusion{height:calc(100svh - 64px)}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 :focus-visible{outline:3px solid var(--sun);outline-offset:3px}
 </style>
@@ -104,18 +110,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   <div class="links"><a href="#menu">Menu</a><a href="#order">Order &amp; catering</a><a href="#find">Find the truck</a></div>
   <a class="btn" href="tel:+19794128654">Call in an order</a>
 </div></nav>
-<div class="picado" aria-hidden="true" id="picado"></div>
 
 <main id="top">
 <div class="fusion" id="fusion" aria-label="Drag the divider to blend Mexico and the Pacific Islands">
   <div class="side mex">
-    <svg class="deco" style="left:6%;top:12%;width:120px" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 10 C70 30 70 60 50 92 C30 60 30 30 50 10Z" fill="#2fa84f"/><path d="M50 6 l6 8 h-12z" fill="#1f7a37"/></svg>
-    <svg class="deco" style="left:14%;bottom:18%;width:90px" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" fill="#ffcc29"/><circle cx="50" cy="50" r="28" fill="#ffdf6b"/></svg>
     <span class="lbl">Authentic Mexican</span>
   </div>
   <div class="side isl" id="isl">
-    <svg class="deco" style="right:7%;top:12%;width:150px" viewBox="0 0 100 100" aria-hidden="true"><g fill="#ff3d7f"><ellipse cx="50" cy="28" rx="16" ry="24"/><ellipse cx="50" cy="28" rx="16" ry="24" transform="rotate(72 50 50)"/><ellipse cx="50" cy="28" rx="16" ry="24" transform="rotate(144 50 50)"/><ellipse cx="50" cy="28" rx="16" ry="24" transform="rotate(216 50 50)"/><ellipse cx="50" cy="28" rx="16" ry="24" transform="rotate(288 50 50)"/></g><circle cx="50" cy="50" r="7" fill="#ffcc29"/></svg>
-    <svg class="deco" style="right:0;bottom:0;width:60%" viewBox="0 0 600 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 Q75 20 150 60 T300 60 T450 60 T600 60 V120 H0Z" fill="#3fc1c9" opacity=".5"/><path d="M0 85 Q75 50 150 85 T300 85 T450 85 T600 85 V120 H0Z" fill="#3fc1c9" opacity=".8"/></svg>
     <span class="lbl">Pacific Islander roots</span>
   </div>
   <div class="center">
@@ -177,7 +178,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const pic=document.getElementById('picado');for(let i=0;i<40;i++)pic.appendChild(document.createElement('span'));
+
 /* fusion divider */
 (function(){const f=document.getElementById('fusion'),h=document.getElementById('handle');let cut=50,drag=false,touched=false;
 function set(v){cut=Math.max(8,Math.min(92,v));f.style.setProperty('--cut',cut+'%');h.setAttribute('aria-valuenow',Math.round(cut))}
