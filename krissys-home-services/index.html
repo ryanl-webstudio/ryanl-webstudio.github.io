@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Krissy's Home Services | House Cleaning &amp; Home Organization in Bryan–College Station</title>
+<meta name="description" content="Krissy's Home Services: house cleaning, deep cleans, home organization, make-ready, Airbnb and commercial cleaning in Bryan, College Station and surrounding areas. Text (979) 575-8849.">
+<meta name="theme-color" content="#f8f2ea">
+<!-- CONCEPT PREVIEW: remove robots tag + .concept strip at launch -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HouseCleaningService","name":"Krissy's Home Services","founder":{"@type":"Person","name":"Kriscilla Ortiz"},"telephone":"+1-979-575-8849","email":"krissyservices@yahoo.com","address":{"@type":"PostalAddress","addressLocality":"Bryan","addressRegion":"TX","addressCountry":"US"},"areaServed":["Bryan","College Station","Brazos Valley"],"sameAs":["https://www.instagram.com/krissyshomeservices_/","https://www.facebook.com/p/krissyshomeservices_-100088961120683/"]}</script>
+<style>
+:root{--cocoa:#4a3326;--cocoa2:#6b4c3a;--latte:#c8a78a;--cream:#f8f2ea;--sand:#ecdfcf;--sage:#9fae98;--mute:#86705f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip;scroll-behavior:smooth}
+body{background:var(--cream);color:var(--cocoa);font-family:"Albert Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1180px,90vw);margin:0 auto}
+.serif{font-family:"Instrument Serif",serif;font-weight:400}
+.concept{background:var(--cocoa);color:var(--sand);font-size:12.5px;text-align:center;padding:6px 10px}
+@media(max-width:560px){.concept .cfull{display:none}}
+nav{position:sticky;top:0;z-index:40;background:rgba(248,242,234,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(74,51,38,.1)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
+.logo{text-decoration:none;line-height:1}
+.logo b{font-family:"Instrument Serif";font-weight:400;font-size:28px}
+.logo b i{color:var(--latte)}
+.logo span{display:block;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);margin-top:3px}
+.links{display:flex;gap:26px;font-weight:600;font-size:14.5px}
+.links a{text-decoration:none;color:var(--mute)}
+.links a:hover{color:var(--cocoa)}
+@media(max-width:860px){.links{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;background:var(--cocoa);color:var(--cream);text-decoration:none;border:0;font:600 15px "Albert Sans";cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:var(--cocoa2)}
+.btn.soft{background:var(--sand);color:var(--cocoa)}
+.btn.soft:hover{background:#e2d1bd}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+h2{font-family:"Instrument Serif";font-weight:400;font-size:clamp(50px,7vw,104px);line-height:.92;letter-spacing:-.01em}
+h2 em,h1 em{color:var(--latte)}
+
+/* hero wipe */
+.hero{padding:50px 0 80px}
+.hgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+@media(max-width:900px){.hgrid{grid-template-columns:1fr;gap:26px}.hero{padding-top:26px}}
+.hero h1{font-family:"Instrument Serif";font-weight:400;font-size:clamp(64px,8.6vw,132px);line-height:.88;letter-spacing:-.015em}
+.hero p.l{font-size:clamp(17px,1.5vw,19px);color:var(--mute);max-width:470px;margin-top:20px}
+.hero .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.hero .meta{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap}
+.hero .meta b{display:block;font-size:26px;line-height:1;font-weight:700}
+.hero .meta span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.window{position:relative;aspect-ratio:5/4.4;border-radius:300px 300px 28px 28px;overflow:hidden;box-shadow:0 40px 80px rgba(74,51,38,.18);background:var(--sand)}
+.window img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#grime{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:grab}
+#grime:active{cursor:grabbing}
+#spark{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.wipe-ui{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);display:flex;align-items:center;gap:12px;background:rgba(248,242,234,.94);border-radius:999px;padding:8px 8px 8px 18px;box-shadow:0 10px 30px rgba(74,51,38,.2);white-space:nowrap}
+.wipe-ui .m{width:110px;height:6px;border-radius:9px;background:var(--sand);overflow:hidden}
+.wipe-ui .m i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--sage),var(--latte));transition:width .3s}
+.wipe-ui b{font-size:14px;min-width:96px}
+.wipe-ui button{border:0;border-radius:999px;background:var(--cocoa);color:var(--cream);font:600 13px "Albert Sans";padding:9px 14px;cursor:pointer}
+@media(max-width:520px){.wipe-ui{padding:6px 6px 6px 14px;gap:8px}.wipe-ui .m{width:60px}.wipe-ui b{font-size:13px;min-width:86px}}
+.hint{position:absolute;top:22%;left:50%;transform:translateX(-50%);font-family:"Instrument Serif";font-style:italic;font-size:clamp(26px,3vw,38px);color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.4);pointer-events:none;transition:opacity .5s;text-align:center;white-space:nowrap}
+
+/* services w/ organic masks */
+section.pad{padding:110px 0}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 30px;margin-top:56px}
+@media(max-width:900px){.svc{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.svc{grid-template-columns:1fr}}
+.svc .s .m{aspect-ratio:1/1;overflow:hidden;transition:border-radius 1.2s cubic-bezier(.2,.8,.2,1)}
+.svc .s .m img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.svc .s:hover .m img{transform:scale(1.07)}
+.svc .s:nth-child(1) .m{border-radius:62% 38% 46% 54%/55% 45% 55% 45%}
+.svc .s:nth-child(2) .m{border-radius:50% 50% 12px 12px/40% 40% 12px 12px}
+.svc .s:nth-child(3) .m{border-radius:42% 58% 63% 37%/41% 44% 56% 59%}
+.svc .s:nth-child(4) .m{border-radius:50% 50% 50% 50%/60% 60% 40% 40%}
+.svc .s:nth-child(5) .m{border-radius:38% 62% 30% 70%/56% 38% 62% 44%}
+.svc .s:nth-child(6) .m{border-radius:12px 12px 50% 50%/12px 12px 40% 40%}
+.svc .s:hover .m{border-radius:26px}
+.svc h3{font-family:"Instrument Serif";font-weight:400;font-size:34px;line-height:1.05;margin-top:18px}
+.svc p{color:var(--mute);font-size:15.5px;margin-top:4px}
+
+/* big numbered steps */
+.steps{background:var(--sand);padding:110px 0}
+.st{display:grid;grid-template-columns:auto 1fr 300px;gap:40px;align-items:center;padding:34px 0;border-top:1px solid rgba(74,51,38,.15)}
+.st:last-child{border-bottom:1px solid rgba(74,51,38,.15)}
+.st .n{font-family:"Instrument Serif";font-size:clamp(110px,16vw,230px);line-height:.75;color:var(--cocoa);letter-spacing:-.04em;min-width:1.2em}
+.st h3{font-family:"Instrument Serif";font-weight:400;font-size:clamp(36px,4vw,58px);line-height:1}
+.st p{color:var(--mute);margin-top:8px;max-width:440px}
+.st .pic{aspect-ratio:4/3;overflow:hidden;border-radius:140px 26px 140px 26px}
+.st .pic img{width:100%;height:100%;object-fit:cover}
+@media(max-width:860px){.st{grid-template-columns:auto 1fr;gap:20px}.st .pic{grid-column:1/3}.st .n{font-size:110px}}
+
+/* request builder */
+.req{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:start}
+@media(max-width:900px){.req{grid-template-columns:1fr;gap:30px}}
+.card{background:#fff;border-radius:30px;padding:30px;box-shadow:0 30px 70px rgba(74,51,38,.1)}
+.q{margin-bottom:22px}
+.q h4{font-size:12.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{border:1.5px solid #e4d6c6;background:var(--cream);color:var(--cocoa);border-radius:999px;padding:9px 15px;font:600 14.5px "Albert Sans";cursor:pointer;transition:all .2s}
+.chips button[aria-pressed=true]{background:var(--cocoa);color:var(--cream);border-color:var(--cocoa)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:480px){.two{grid-template-columns:1fr}}
+.card label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-bottom:8px}
+.card input,.card textarea,.card select{width:100%;border:1.5px solid #e4d6c6;background:var(--cream);border-radius:16px;padding:12px 14px;font:500 15.5px "Albert Sans";color:var(--cocoa)}
+.card textarea{min-height:80px;resize:vertical}
+.summary{margin-top:20px;background:var(--cream);border-radius:20px;padding:18px 20px;font-size:15px;white-space:pre-line;color:var(--cocoa2);border:1.5px dashed #dccab5}
+.card .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+
+/* reviews */
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+@media(max-width:900px){.rv{grid-template-columns:1fr}}
+.rv blockquote{background:#fff;border-radius:28px;padding:28px;font-family:"Instrument Serif";font-size:25px;line-height:1.25;box-shadow:0 2px 0 rgba(74,51,38,.06)}
+.rv cite{display:block;font:700 12px "Albert Sans";letter-spacing:.18em;text-transform:uppercase;color:var(--mute);margin-top:14px;font-style:normal}
+
+/* contact */
+.contact{background:var(--cocoa);color:var(--cream);padding:110px 0 80px;border-radius:44px 44px 0 0}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+@media(max-width:860px){.cgrid{grid-template-columns:1fr;gap:30px}}
+.contact h2 em{color:var(--latte)}
+.clinks a{display:flex;justify-content:space-between;gap:16px;padding:19px 0;border-bottom:1px solid rgba(248,242,234,.16);text-decoration:none;font-weight:600}
+.clinks a span{color:var(--latte);font-weight:500}
+footer{background:var(--cocoa);color:#c9b5a3;font-size:13.5px;padding:28px 0 46px;border-top:1px solid rgba(248,242,234,.12)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.credit{width:100%;font-size:11.5px;opacity:.7}
+.callbar{display:none}
+@media(max-width:720px){.callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:45;gap:8px}.callbar a{flex:1}footer{padding-bottom:100px}nav .btn{display:none}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--latte);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="concept">Concept preview <span class="cfull">· designed for Krissy's Home Services, not the official site yet</span></div>
+<nav aria-label="Main"><div class="wrap">
+  <a class="logo" href="#top"><b>Krissy's <i>Home</i></b><span>Cleaning · Organizing</span></a>
+  <div class="links"><a href="#services">Services</a><a href="#how">How it works</a><a href="#request">Request a clean</a><a href="#reviews">Reviews</a></div>
+  <a class="btn" href="sms:+19795758849">Text Krissy</a>
+</div></nav>
+
+<main id="top">
+<header class="hero">
+  <div class="wrap hgrid">
+    <div>
+      <div class="eyebrow">Bryan · College Station · &amp; surrounding areas</div>
+      <h1 style="margin-top:14px">Come home<br>to <em>sparkle.</em></h1>
+      <p class="l">House cleaning and home organization from Kriscilla “Krissy” Ortiz and her team. Residential, commercial, make-ready and Airbnb.</p>
+      <div class="row"><a class="btn" href="#request">Request a clean</a><a class="btn soft" href="tel:+19795758849">Call (979) 575-8849</a></div>
+      <div class="meta"><div><b>100%</b><span>Recommend · Facebook</span></div><div><b>716</b><span>Facebook followers</span></div></div>
+    </div>
+    <div class="window" id="win">
+      <img src="https://images.unsplash.com/photo-1776482128012-a47f853abd57?w=1400&q=72&auto=format" alt="Bright, freshly cleaned living room with a sofa and armchair">
+      <canvas id="grime" aria-label="Dusty overlay. Drag across the photo to wipe it clean." role="img"></canvas>
+      <canvas id="spark" aria-hidden="true"></canvas>
+      <div class="hint" id="hint">Wipe it clean ✨</div>
+      <div class="wipe-ui"><span class="m"><i id="meter"></i></span><b id="pct" aria-live="polite">0% sparkling</b><button type="button" id="auto">Clean it for me</button></div>
+    </div>
+  </div>
+</header>
+
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="eyebrow reveal">What we do</div>
+    <h2 class="reveal">Every room,<br><em>every corner.</em></h2>
+    <div class="svc">
+      <div class="s reveal"><div class="m"><img loading="lazy" src="https://images.unsplash.com/photo-1609347744403-2306e8a9ae27?w=800&q=70&auto=format" alt="Spotless kitchen with a marble island"></div><h3>Residential cleaning</h3><p>Regular cleans that keep your home feeling fresh week to week.</p></div>
+      <div class="s reveal"><div class="m"><img loading="lazy" src="https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=800&q=70&auto=format" alt="Gloved hand wiping a white surface"></div><h3>Deep cleans</h3><p>Top-to-bottom cleans for when the house needs a reset.</p></div>
+      <div class="s reveal"><div class="m"><img loading="lazy" src="https://images.unsplash.com/photo-1786398018370-079064d79d84?w=800&q=70&auto=format" alt="Labeled woven baskets on organized pantry shelves"></div><h3>Home organization</h3><p>Pantries, closets and cabinets sorted so everything has a place.</p></div>
+      <div class="s reveal"><div class="m"><img loading="lazy" src="https://images.unsplash.com/photo-1614631446501-abcf76949eca?w=800&q=70&auto=format" alt="Neatly folded white towels on a shelf"></div><h3>Airbnb turnovers</h3><p>Guest-ready between stays, fresh towels and all.</p></div>
+      <div class="s reveal"><div class="m"><img loading="lazy" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=70&auto=format" alt="Clean, empty living room ready for new tenants"></div><h3>Make-ready</h3><p>Move-in and move-out cleans for renters, landlords and property managers.</p></div>
+      <div class="s reveal"><div class="m"><img loading="lazy" src="https://images.unsplash.com/photo-1627905646269-7f034dcc5738?w=800&q=70&auto=format" alt="Gloved hands cleaning an office desk"></div><h3>Commercial</h3><p>Offices and shared spaces kept clean for your team and customers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="how">
+  <div class="wrap">
+    <div class="eyebrow reveal">How it works</div>
+    <h2 class="reveal" style="margin-bottom:46px">Three steps<br>to <em>sparkly.</em></h2>
+    <div class="st reveal"><div class="n">01</div><div><h3>Text Krissy</h3><p>Tell her what you need, how big the space is and when. The request builder below writes the text for you.</p></div><div class="pic"><img loading="lazy" src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=700&q=70&auto=format" alt="Hand holding a yellow spray bottle"></div></div>
+    <div class="st reveal"><div class="n">02</div><div><h3>We clean &amp; organize</h3><p>Krissy and her team show up and take care of the details.</p></div><div class="pic"><img loading="lazy" src="https://images.unsplash.com/photo-1642505172378-a6f5e5b15580?w=700&q=70&auto=format" alt="Person cleaning a kitchen sink with a cloth"></div></div>
+    <div class="st reveal"><div class="n">03</div><div><h3>Come home to sparkle</h3><p>Walk in, breathe out. That's it.</p></div><div class="pic"><img loading="lazy" src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=700&q=70&auto=format" alt="Clean modern kitchen with a marble island"></div></div>
+  </div>
+</section>
+
+<section class="pad" id="request">
+  <div class="wrap req">
+    <div><div class="eyebrow reveal">Request a clean</div><h2 class="reveal">Tell us<br>about your <em>space.</em></h2><p class="reveal" style="color:var(--mute);margin-top:18px;max-width:420px">Tap your answers and hit send. It opens a text to Krissy with everything filled in, so she can get back to you with a quote.</p></div>
+    <div class="card reveal">
+      <div class="q"><h4>What do you need?</h4><div class="chips" data-k="svc"><button type="button">Regular cleaning</button><button type="button">Deep clean</button><button type="button">Organizing</button><button type="button">Move-in / move-out</button><button type="button">Airbnb turnover</button><button type="button">Commercial</button></div></div>
+      <div class="q"><h4>How often?</h4><div class="chips" data-k="freq" data-single><button type="button">One time</button><button type="button">Weekly</button><button type="button">Every 2 weeks</button><button type="button">Monthly</button></div></div>
+      <div class="two q"><div><label for="beds">Bedrooms</label><select id="beds"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option><option>Not a home</option></select></div><div><label for="baths">Bathrooms</label><select id="baths"><option>1</option><option selected>2</option><option>3</option><option>4+</option><option>Not a home</option></select></div></div>
+      <div class="two q"><div><label for="date">Preferred date</label><input id="date" type="date"></div><div><label for="area">Area</label><select id="area"><option>Bryan</option><option>College Station</option><option>Somewhere nearby</option></select></div></div>
+      <div class="q" style="margin-bottom:0"><label for="notes">Anything else?</label><textarea id="notes" placeholder="Pets, problem spots, gate code, etc."></textarea></div>
+      <div class="summary" id="sum" aria-live="polite"></div>
+      <div class="row"><a class="btn" id="send" href="sms:+19795758849">Text this to Krissy</a><a class="btn soft" href="tel:+19795758849">Or call</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="reviews" style="padding-top:20px">
+  <div class="wrap">
+    <div class="eyebrow reveal">Reviews · 100% recommend on Facebook</div>
+    <h2 class="reveal">“Actually <em>sparkling.</em>”</h2>
+    <div class="rv">
+      <blockquote class="reveal">“I'd give 100 stars if I could! Kriscilla came into my house at the last minute and made it sparkly clean.”<cite>Alanna S. · Facebook</cite></blockquote>
+      <blockquote class="reveal">“She accommodated us on short notice for a deep clean of our house. She did a great job, the house is actually sparkling.”<cite>Courtney C. · Facebook</cite></blockquote>
+      <blockquote class="reveal">“Best cleaning services, great team and they work with your schedule.”<cite>Mayra V. · Facebook</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap cgrid">
+    <div><div class="eyebrow" style="color:var(--latte)">Get in touch</div><h2 style="margin-top:14px">Let's make it<br><em>sparkle.</em></h2><p style="color:#d9c7b6;margin-top:18px;max-width:420px">Serving Bryan, College Station and the surrounding areas.</p></div>
+    <div class="clinks">
+      <a href="sms:+19795758849">Text <span>(979) 575-8849</span></a>
+      <a href="tel:+19795758849">Call <span>(979) 575-8849</span></a>
+      <a href="mailto:krissyservices@yahoo.com">Email <span>krissyservices@yahoo.com</span></a>
+      <a href="https://www.instagram.com/krissyshomeservices_/" target="_blank" rel="noopener">Instagram <span>@krissyshomeservices_</span></a>
+      <a href="https://www.facebook.com/p/krissyshomeservices_-100088961120683/" target="_blank" rel="noopener">Facebook <span>krissyshomeservices_</span></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>© <span id="yr"></span> Krissy's Home Services · Bryan–College Station, TX</span><span>Cleaning · Organizing · Make-ready · Airbnb · Commercial</span><span class="credit">Site by Ryan L. Web Studio</span></div></footer>
+<div class="callbar"><a class="btn" href="sms:+19795758849">Text Krissy</a><a class="btn soft" href="#request">Request</a></div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* wipe to clean */
+(function(){
+ const win=document.getElementById('win'),g=document.getElementById('grime'),s=document.getElementById('spark'),gx=g.getContext('2d'),sx=s.getContext('2d');
+ const meter=document.getElementById('meter'),pct=document.getElementById('pct'),hint=document.getElementById('hint'),auto=document.getElementById('auto');
+ let W,H,dpr=Math.min(2,devicePixelRatio||1),done=false,sparks=[],lastP=null,seed=7;
+ function rnd(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646}
+ function paint(){const r=win.getBoundingClientRect();W=r.width;H=r.height;[g,s].forEach(c=>{c.width=W*dpr;c.height=H*dpr});gx.setTransform(dpr,0,0,dpr,0,0);sx.setTransform(dpr,0,0,dpr,0,0);seed=7;
+  gx.globalCompositeOperation='source-over';
+  gx.fillStyle='rgba(122,104,84,.80)';gx.fillRect(0,0,W,H);
+  for(let i=0;i<26;i++){const x=rnd()*W,y=rnd()*H,rr=40+rnd()*130;const gr=gx.createRadialGradient(x,y,0,x,y,rr);gr.addColorStop(0,`rgba(${88+rnd()*30|0},${72+rnd()*20|0},${55+rnd()*15|0},.55)`);gr.addColorStop(1,'rgba(90,75,60,0)');gx.fillStyle=gr;gx.beginPath();gx.arc(x,y,rr,0,7);gx.fill()}
+  for(let i=0;i<1800;i++){gx.fillStyle=`rgba(${rnd()>.5?70:200},${rnd()>.5?58:185},${rnd()>.5?46:165},${.12+rnd()*.25})`;gx.fillRect(rnd()*W,rnd()*H,1+rnd()*2.2,1+rnd()*2.2)}
+  gx.strokeStyle='rgba(235,225,210,.18)';gx.lineCap='round';for(let i=0;i<9;i++){gx.lineWidth=10+rnd()*24;gx.beginPath();const x=rnd()*W,y=rnd()*H;gx.moveTo(x,y);gx.bezierCurveTo(x+rnd()*160-80,y+rnd()*80,x+rnd()*220-110,y+rnd()*120,x+rnd()*260-130,y+rnd()*90);gx.stroke()}
+  gx.fillStyle='rgba(60,48,38,.22)';for(let i=0;i<7;i++){const x=rnd()*W,y=rnd()*H;for(let k=0;k<5;k++){gx.beginPath();gx.ellipse(x+k*14,y+Math.sin(k)*8,7,11,0.3,0,7);gx.fill()}}
+  if(done){gx.clearRect(0,0,W,H)}}
+ function wipe(x,y,r){gx.globalCompositeOperation='destination-out';const gr=gx.createRadialGradient(x,y,0,x,y,r);gr.addColorStop(0,'rgba(0,0,0,1)');gr.addColorStop(.6,'rgba(0,0,0,.85)');gr.addColorStop(1,'rgba(0,0,0,0)');gx.fillStyle=gr;gx.beginPath();gx.arc(x,y,r,0,7);gx.fill();gx.globalCompositeOperation='source-over';
+  if(!reduce&&Math.random()<.5)sparks.push({x:x+(Math.random()-.5)*r,y:y+(Math.random()-.5)*r,t:performance.now(),s:4+Math.random()*7})}
+ function line(a,b,r){const d=Math.hypot(b.x-a.x,b.y-a.y),n=Math.max(1,Math.ceil(d/(r*.35)));for(let i=1;i<=n;i++)wipe(a.x+(b.x-a.x)*i/n,a.y+(b.y-a.y)*i/n,r)}
+ let checkT=0;
+ function measure(){if(done)return;const d=gx.getImageData(0,0,g.width,g.height).data;let clear=0,tot=0;for(let i=3;i<d.length;i+=4*97){tot++;if(d[i]<60)clear++}
+  const p=Math.round(clear/tot*100);meter.style.width=p+'%';pct.textContent=p+'% sparkling';if(p>=72)finish()}
+ function finish(){if(done)return;done=true;meter.style.width='100%';pct.textContent='100% sparkling ✨';auto.textContent='Make it dusty';
+  const t0=performance.now();(function fade(){const k=Math.min(1,(performance.now()-t0)/700);gx.globalCompositeOperation='destination-out';gx.fillStyle=`rgba(0,0,0,${.15+k*.3})`;gx.fillRect(0,0,W,H);gx.globalCompositeOperation='source-over';if(k<1)requestAnimationFrame(fade);else gx.clearRect(0,0,W,H)})();
+  if(!reduce)for(let i=0;i<46;i++)sparks.push({x:Math.random()*W,y:Math.random()*H,t:performance.now()+Math.random()*500,s:5+Math.random()*10})}
+ function pos(e){const r=g.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}}
+ let down=false;const R=()=>Math.max(34,W*.075);
+ g.addEventListener('pointerdown',e=>{down=true;g.setPointerCapture(e.pointerId);lastP=pos(e);wipe(lastP.x,lastP.y,R());hint.style.opacity=0});
+ g.addEventListener('pointermove',e=>{if(!down)return;const p=pos(e);line(lastP,p,R());lastP=p;if(performance.now()-checkT>250){checkT=performance.now();measure()}});
+ const up=()=>{if(down){down=false;measure()}};g.addEventListener('pointerup',up);g.addEventListener('pointercancel',up);
+ auto.addEventListener('click',()=>{if(done){done=false;paint();meter.style.width='0';pct.textContent='0% sparkling';auto.textContent='Clean it for me';hint.style.opacity=1;return}
+  hint.style.opacity=0;if(reduce){finish();return}let t=0;const rows=6,r=R()*1.15;(function sweep(){const steps=4;for(let k=0;k<steps;k++){t+=.012;const row=Math.floor(t*rows),fx=(t*rows)%1,x=(row%2?1-fx:fx)*W,y=(row+.5)/rows*H;if(row>=rows){measure();finish();return}wipe(x,y,r)}
+   if(performance.now()-checkT>200){checkT=performance.now();measure()}if(!done)requestAnimationFrame(sweep)})()});
+ (function sp(){const now=performance.now();sx.clearRect(0,0,W,H);sparks=sparks.filter(p=>now-p.t<1100);sparks.forEach(p=>{const a=(now-p.t)/1100;if(a<0)return;const k=Math.sin(a*Math.PI),sz=p.s*k;sx.save();sx.translate(p.x,p.y);sx.rotate(a*1.5);sx.globalAlpha=k;sx.fillStyle='#fff';sx.shadowColor='rgba(255,255,255,.9)';sx.shadowBlur=10;sx.beginPath();sx.moveTo(0,-sz);sx.quadraticCurveTo(0,0,sz,0);sx.quadraticCurveTo(0,0,0,sz);sx.quadraticCurveTo(0,0,-sz,0);sx.quadraticCurveTo(0,0,0,-sz);sx.fill();sx.restore()});requestAnimationFrame(sp)})();
+ paint();let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(paint,150)});
+})();
+/* request builder */
+const st={svc:new Set(['Regular cleaning']),freq:'Every 2 weeks'};
+document.querySelectorAll('.chips').forEach(c=>{const k=c.dataset.k,single=c.hasAttribute('data-single');[...c.children].forEach(b=>{
+ const sel=()=>single?st[k]===b.textContent:st[k].has(b.textContent);b.setAttribute('aria-pressed',sel());
+ b.onclick=()=>{if(single)st[k]=b.textContent;else{st[k].has(b.textContent)?st[k].delete(b.textContent):st[k].add(b.textContent)}[...c.children].forEach(x=>x.setAttribute('aria-pressed',single?st[k]===x.textContent:st[k].has(x.textContent)));upd()}})});
+['beds','baths','date','area','notes'].forEach(id=>document.getElementById(id).addEventListener('input',upd));
+function upd(){const v=id=>document.getElementById(id).value;const d=v('date')?new Date(v('date')+'T12:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}):'Flexible';
+ const txt=`Hi Krissy! I'd like a quote.\nService: ${[...st.svc].join(', ')||'Not sure yet'}\nHow often: ${st.freq}\nSize: ${v('beds')} bed / ${v('baths')} bath\nArea: ${v('area')}\nPreferred date: ${d}${v('notes')?'\nNotes: '+v('notes'):''}`;
+ document.getElementById('sum').textContent=txt;document.getElementById('send').href='sms:+19795758849?&body='+encodeURIComponent(txt)}
+upd();
+/* reveals */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

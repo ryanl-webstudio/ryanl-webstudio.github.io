@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Toasted Daybreak Cafe | Loaded Toast, Coffee &amp; Smoothies in Bryan, TX</title>
+<meta name="description" content="Toasted Daybreak Cafe in Bryan, TX: loaded sweet and savory toasts, specialty coffee, matcha and lemonade. 4012 Stillmeadow Dr. Open Mon–Fri 7–2, Sat 7–1. Order online for pickup.">
+<meta name="theme-color" content="#fbf3e6">
+<!-- CONCEPT PREVIEW: remove robots tag + .concept strip at launch -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Toasted Daybreak Cafe","telephone":"+1-979-810-0570","email":"toastedbcs@gmail.com","servesCuisine":["Breakfast","Coffee","Toast"],"priceRange":"$","address":{"@type":"PostalAddress","streetAddress":"4012 Stillmeadow Dr","addressLocality":"Bryan","addressRegion":"TX","postalCode":"77802","addressCountry":"US"},"openingHours":["Mo-Fr 07:00-14:00","Sa 07:00-13:00"],"hasMenu":"https://toast.app/r/toasted-daybreak-cafe-4012-stillmeadow/order","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"70"},"sameAs":["https://www.instagram.com/toasted.tx/","https://www.facebook.com/p/Toasted-Daybreak-Cafe-61570542032937/"]}</script>
+<style>
+:root{--cream:#fbf3e6;--cream2:#f3e6cf;--crust:#6b3f1d;--ink:#2a1c12;--honey:#e3a03a;--honey2:#f3c76d;--sage:#8f9f74;--mute:#7d6a58}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip;scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+.serif{font-family:"Young Serif",Georgia,serif;font-weight:400}
+.wrap{width:min(1180px,90vw);margin:0 auto}
+.concept{background:var(--crust);color:var(--cream);font-size:12.5px;text-align:center;padding:6px 10px}
+@media(max-width:560px){.concept .cfull{display:none}}
+nav{position:sticky;top:0;z-index:40;background:rgba(251,243,230,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(107,63,29,.12)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
+.logo{text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 50% 110%,var(--honey) 0 45%,transparent 46%),var(--cream2);box-shadow:inset 0 0 0 2px var(--crust);flex:none}
+.logo b{font-family:"Young Serif";font-weight:400;font-size:22px;letter-spacing:.01em}
+.logo small{display:block;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);margin-top:-2px}
+.links{display:flex;gap:26px;font-weight:600;font-size:14px}
+.links a{text-decoration:none;color:var(--mute)}
+.links a:hover{color:var(--crust)}
+@media(max-width:860px){.links{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;background:var(--ink);color:var(--cream);text-decoration:none;border:0;font:700 14.5px "Plus Jakarta Sans";cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:var(--crust)}
+.btn.honey{background:var(--honey);color:var(--ink)}
+.btn.honey:hover{background:var(--honey2)}
+.btn.ghost{background:transparent;border:2px solid currentColor;color:inherit}
+.eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--honey)}
+#honey{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:35}
+
+/* daybreak scroll story */
+.story{height:420vh;position:relative;background:var(--ink)}
+.sstage{position:sticky;top:64px;height:calc(100vh - 64px);overflow:hidden}
+.sstage .ph{position:absolute;inset:0;opacity:0;transition:opacity .9s ease}
+.sstage .ph.on{opacity:1}
+.sstage .ph img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 6s cubic-bezier(.2,.8,.2,1)}
+.sstage .ph.on img{transform:scale(1.02)}
+.sstage .sky{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(30,18,40,.75),rgba(227,160,58,.25) 55%,rgba(42,28,18,.55));mix-blend-mode:multiply;transition:opacity .4s}
+.sstage .vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 55%,transparent 40%,rgba(20,12,6,.6));pointer-events:none}
+.sstage .sun{position:absolute;left:50%;width:min(52vw,520px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,214,130,.85),rgba(255,180,80,.25) 45%,transparent 70%);transform:translate(-50%,50%);pointer-events:none;mix-blend-mode:screen;will-change:bottom}
+.cap{position:absolute;left:0;right:0;bottom:9vh;color:var(--cream);text-align:center;padding:0 5vw}
+.cap h1,.cap .w{font-family:"Young Serif";font-weight:400;font-size:clamp(78px,15vw,230px);line-height:.85;letter-spacing:-.02em;text-shadow:0 10px 40px rgba(0,0,0,.35)}
+.cap p{font-size:clamp(16px,1.6vw,20px);max-width:560px;margin:16px auto 0;color:#f7e9d4}
+.cap .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.prog{position:absolute;right:3vw;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px}
+.prog i{width:6px;height:26px;border-radius:9px;background:rgba(255,255,255,.3)}
+.prog i.on{background:var(--honey)}
+.sstage .clock{position:absolute;left:4vw;top:4vh;color:var(--cream);font-weight:800;font-size:13px;letter-spacing:.24em;text-transform:uppercase}
+.sstage .clock b{font-size:28px;letter-spacing:0;display:block;font-weight:700}
+
+/* split decision */
+.split{padding:120px 0 110px}
+.shead{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+@media(max-width:860px){.shead{grid-template-columns:1fr;gap:14px}}
+h2{font-family:"Young Serif";font-weight:400;font-size:clamp(52px,7vw,104px);line-height:.92;letter-spacing:-.02em}
+.lede{color:var(--mute);font-size:18px;max-width:520px}
+.sbox{display:grid;grid-template-columns:260px 1fr 260px;gap:28px;margin-top:50px;align-items:center}
+@media(max-width:980px){.sbox{grid-template-columns:1fr 1fr}.sbox .toast{grid-column:1/3;grid-row:1}}
+.pick h3{font-size:12.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-bottom:12px}
+.pick button{display:block;width:100%;text-align:left;background:#fff;border:2px solid transparent;border-radius:16px;padding:12px 14px;margin-bottom:8px;cursor:pointer;font:inherit;transition:border-color .2s,transform .2s;box-shadow:0 2px 0 rgba(107,63,29,.08)}
+.pick button b{display:block;font-family:"Young Serif";font-weight:400;font-size:19px;line-height:1.1}
+.pick button span{font-size:12.5px;color:var(--mute);line-height:1.35;display:block;margin-top:2px}
+.pick button[aria-pressed=true]{border-color:var(--honey);transform:translateX(4px)}
+.pick.r button[aria-pressed=true]{transform:translateX(-4px)}
+@media(max-width:980px){.pick button{padding:10px 12px}.pick button b{font-size:16.5px}.pick button span{display:none}.pick.r button[aria-pressed=true],.pick button[aria-pressed=true]{transform:none}}
+.toast{position:relative}
+.slice{position:relative;aspect-ratio:1/1;border-radius:44% 44% 10px 10px/34% 34% 10px 10px;overflow:hidden;box-shadow:0 0 0 12px #c78a4a,0 0 0 15px #8a552a,0 40px 70px rgba(107,63,29,.35);background:#c78a4a;touch-action:none;cursor:ew-resize;user-select:none}
+@media(max-width:600px){.slice{box-shadow:0 0 0 8px #c78a4a,0 0 0 10px #8a552a,0 30px 50px rgba(107,63,29,.35)}}
+.half{position:absolute;inset:0}
+.half img{width:100%;height:100%;object-fit:cover;transition:opacity .45s}
+.half.L{clip-path:inset(0 50% 0 0)}
+.knife{position:absolute;top:-4%;bottom:-4%;left:50%;width:4px;margin-left:-2px;background:var(--cream);box-shadow:0 0 0 1px rgba(0,0,0,.15),0 0 20px rgba(255,255,255,.6)}
+.knife:after{content:"⇆";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:var(--cream);color:var(--crust);display:grid;place-items:center;font-size:20px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.tag{position:absolute;bottom:16px;padding:7px 12px;border-radius:999px;background:rgba(251,243,230,.95);font-weight:700;font-size:13px;color:var(--ink);pointer-events:none;max-width:44%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tag.L{left:14px}.tag.R{right:14px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.order{margin-top:46px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:var(--ink);color:var(--cream);border-radius:26px;padding:24px 28px}
+.order .t{font-family:"Young Serif";font-size:clamp(22px,2.4vw,30px);line-height:1.15}
+.order .t small{display:block;font-family:"Plus Jakarta Sans";font-size:13px;color:var(--honey2);font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.order .p{font-weight:800;font-size:28px;color:var(--honey2)}
+
+/* menu */
+.menu{background:var(--cream2);padding:120px 0}
+.mgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;margin-top:50px}
+@media(max-width:900px){.mgrid{grid-template-columns:1fr;gap:40px}}
+.mlist .it{display:grid;grid-template-columns:1fr auto;gap:4px 18px;padding:16px 0;border-bottom:1px dashed rgba(107,63,29,.3)}
+.mlist .it b{font-family:"Young Serif";font-weight:400;font-size:23px;line-height:1.15}
+.mlist .it em{font-style:normal;font-weight:800;font-size:16px;color:var(--crust)}
+.mlist .it span{grid-column:1/3;color:var(--mute);font-size:15px}
+.mcol h3{font-size:12.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--crust);margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.chips span{background:#fff;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600}
+.chips span i{font-style:normal;color:var(--mute);font-weight:500;margin-left:6px}
+.bubble{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/3}
+.bubble img{width:100%;height:100%;object-fit:cover}
+
+/* about + reviews */
+.about{padding:120px 0}
+.agrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+@media(max-width:900px){.agrid{grid-template-columns:1fr}}
+.aimg{border-radius:220px 220px 26px 26px;overflow:hidden;aspect-ratio:4/5}
+.aimg img{width:100%;height:100%;object-fit:cover}
+.stars{display:flex;align-items:baseline;gap:14px;margin-top:28px}
+.stars b{font-size:72px;font-weight:800;line-height:1;letter-spacing:-.03em;color:var(--crust)}
+.stars span{color:var(--mute);font-size:15px}
+.quotes{display:grid;gap:14px;margin-top:24px}
+.quotes blockquote{background:#fff;border-radius:22px;padding:20px 22px;font-family:"Young Serif";font-size:21px;line-height:1.3;box-shadow:0 2px 0 rgba(107,63,29,.08)}
+.quotes cite{display:block;font:700 12px "Plus Jakarta Sans";letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-top:8px;font-style:normal}
+
+/* visit */
+.visit{background:var(--ink);color:var(--cream);padding:110px 0 80px;border-radius:44px 44px 0 0}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+@media(max-width:860px){.vgrid{grid-template-columns:1fr;gap:34px}}
+.vaddr{font-family:"Young Serif";font-size:clamp(40px,5vw,70px);line-height:1}
+.hrs{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:8px 28px;font-size:16.5px;max-width:340px}
+.hrs dt{color:#c7b59f}
+.vlinks a{display:flex;justify-content:space-between;gap:16px;padding:19px 0;border-bottom:1px solid rgba(251,243,230,.15);text-decoration:none;font-weight:600}
+.vlinks a span{color:var(--honey2);font-weight:500}
+footer{background:var(--ink);color:#b5a28c;font-size:13.5px;padding:28px 0 46px;border-top:1px solid rgba(251,243,230,.12)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.credit{width:100%;font-size:11.5px;opacity:.7}
+.callbar{display:none}
+@media(max-width:720px){.callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:45;gap:8px}.callbar a{flex:1}footer{padding-bottom:100px}nav .btn{display:none}.prog{display:none}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--honey);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}.story{height:auto}.sstage{position:relative;top:0;height:86vh}#honey{display:none}}
+</style>
+</head>
+<body>
+<canvas id="honey" aria-hidden="true"></canvas>
+<div class="concept">Concept preview <span class="cfull">· designed for Toasted Daybreak Cafe, not the official site yet</span></div>
+<nav aria-label="Main"><div class="wrap">
+  <a class="logo" href="#top"><i></i><span><b>Toasted</b><small>Daybreak Cafe</small></span></a>
+  <div class="links"><a href="#split">Split Decision</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#visit">Visit</a></div>
+  <a class="btn honey" href="https://toast.app/r/toasted-daybreak-cafe-4012-stillmeadow/order" target="_blank" rel="noopener">Order pickup</a>
+</div></nav>
+
+<main id="top">
+<div class="story" id="story">
+  <div class="sstage">
+    <div class="ph on"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1800&q=70&auto=format" alt="Barista pouring latte art into a white cup"></div>
+    <div class="ph"><img src="https://images.unsplash.com/photo-1588137378633-dea1336ce1e2?w=1800&q=70&auto=format" alt="Two slices of avocado toast on a white plate with lemon"></div>
+    <div class="ph"><img src="https://images.unsplash.com/photo-1557925923-5dfbb22c50ca?w=1800&q=70&auto=format" alt="Toast topped with sliced strawberries"></div>
+    <div class="ph"><img src="https://images.unsplash.com/photo-1592663527359-cf6642f54cff?w=1800&q=70&auto=format" alt="Cream being poured into a glass of iced coffee"></div>
+    <div class="sky" id="sky"></div><div class="sun" id="sun"></div><div class="vig"></div>
+    <div class="clock" aria-hidden="true">Bryan, TX<b id="clk">6:58 AM</b></div>
+    <div class="cap"><div class="w" id="word" aria-hidden="true">Pour.</div><h1 class="sr">Toasted Daybreak Cafe: loaded toast and coffee in Bryan, TX</h1><p id="line">Specialty coffee, poured the way you like it.</p>
+      <div class="row"><a class="btn honey" href="#split">Build a Split Decision</a><a class="btn ghost" href="#menu">See the menu</a></div></div>
+    <div class="prog" id="prog"><i class="on"></i><i></i><i></i><i></i></div>
+  </div>
+</div>
+
+<section class="split" id="split">
+  <div class="wrap">
+    <div class="shead">
+      <div><div class="eyebrow reveal">Can't decide? Pick two.</div><h2 class="reveal">The Split<br>Decision.</h2></div>
+      <p class="lede reveal">One toast, two toppings. Pick a left half and a right half, then drag the knife to see them together. It's on the real menu for $11.</p>
+    </div>
+    <div class="sbox">
+      <div class="pick l" id="pickL" role="group" aria-label="Left half"><h3>Left half</h3></div>
+      <div class="toast">
+        <div class="slice" id="slice">
+          <div class="half R"><img id="imgR" alt=""></div>
+          <div class="half L" id="halfL"><img id="imgL" alt=""></div>
+          <div class="knife" id="knife" aria-hidden="true"></div>
+          <span class="tag L" id="tagL"></span><span class="tag R" id="tagR"></span>
+        </div>
+        <label class="sr" for="cut">Move the split</label><input class="sr" type="range" id="cut" min="15" max="85" value="50">
+      </div>
+      <div class="pick r" id="pickR" role="group" aria-label="Right half"><h3>Right half</h3></div>
+    </div>
+    <div class="order reveal"><div class="t"><small>Your Split Decision</small><span id="combo">The OG + Toast-Lache</span></div><div class="p">$11</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn honey" href="https://toast.app/r/toasted-daybreak-cafe-4012-stillmeadow/order" target="_blank" rel="noopener">Order on Toast</a><a class="btn ghost" href="tel:+19798100570">Call it in</a></div></div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="eyebrow reveal">The menu</div><h2 class="reveal">Loaded with<br>goodness.</h2>
+    <div class="mgrid">
+      <div class="mlist reveal">
+        <div class="it"><b>The OG</b><em>$8.00</em><span>Avocado, cream cheese, everything bagel &amp; lemon</span></div>
+        <div class="it"><b>Nuttin' Better</b><em>$8.50</em><span>Nut spread, strawberry, banana &amp; coconut flakes</span></div>
+        <div class="it"><b>Toast-Lache</b><em>$8.50</em><span>Cream cheese, strawberries, honey &amp; powdered sugar</span></div>
+        <div class="it"><b>Easy Preze</b><em>$8.50</em><span>Avocado, tomato, shallots, goat cheese &amp; balsamic glaze</span></div>
+        <div class="it"><b>Honey Harvest</b><em>$9.00</em><span>Fig spread, whipped goat cheese, salted pistachio &amp; your choice of honey</span></div>
+        <div class="it"><b>Lox &amp; Love</b><em>$10.00</em><span>Cream cheese, cucumbers, salmon, capers &amp; dill</span></div>
+        <div class="it"><b>Split Decision</b><em>$11.00</em><span>Can't decide? One toast, two toppings</span></div>
+      </div>
+      <div class="mcol reveal">
+        <div class="bubble" style="margin-bottom:30px"><img loading="lazy" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=900&q=70&auto=format" alt="Iced latte in a glass on a table"></div>
+        <h3>Coffee favorites</h3>
+        <div class="chips"><span>Mocha Howdy<i>$5+</i></span><span>Banana Bread Shaken Espresso<i>$5.50+</i></span><span>Creme Brulee Latte<i>$7+</i></span><span>Ube Vanilla Latte<i>$6.50+</i></span><span>Matcha Latte<i>$7+</i></span><span>Cinnamon Dulce<i>$5+</i></span></div>
+        <h3>Daydreamer lemonades</h3>
+        <div class="chips"><span>Classic<i>$4.50+</i></span><span>Lavender<i>$4.75+</i></span><span>Raspberry Sunbreak<i>$4.75+</i></span></div>
+        <h3>Muffin tops · $4.95</h3>
+        <div class="chips"><span>Blueberry</span><span>Lemon Poppyseed</span><span>Crème Brûlée</span><span>Banana Nut</span><span>Pumpkin Spice</span><span>Apple Maple</span></div>
+        <h3>Little ones</h3>
+        <div class="chips"><span>Kids combo: toast + drink<i>$5</i></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap agrid">
+    <div class="aimg reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=900&q=70&auto=format" alt="Heart latte art seen from above"></div>
+    <div>
+      <div class="eyebrow reveal">Your new morning stop</div>
+      <h2 class="reveal" style="font-size:clamp(44px,5.4vw,80px)">Made by an Aggie, for Bryan.</h2>
+      <p class="lede reveal" style="margin-top:16px">Toasted is run by Bryn, a 2017 Texas A&amp;M grad. It's a cozy spot on Stillmeadow for a loaded toast, a fresh smoothie or a coffee before class or work.</p>
+      <div class="stars reveal"><b>4.8★</b><span>Google rating<br>from 70 reviews</span></div>
+      <div class="quotes">
+        <blockquote class="reveal">“Great coffee, great atmosphere, and great service.”<cite>Google review</cite></blockquote>
+        <blockquote class="reveal">“Adorable cafe, super friendly staff, and delicious food!”<cite>Google review</cite></blockquote>
+        <blockquote class="reveal">“Cozy space to catch up on some work and get a good iced coffee!”<cite>Google review</cite></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap vgrid">
+    <div><div class="eyebrow">Come say good morning</div><p class="vaddr" style="margin-top:14px">4012 Stillmeadow Dr<br>Bryan, TX 77802</p>
+      <dl class="hrs"><dt>Mon – Fri</dt><dd>7 AM – 2 PM</dd><dt>Saturday</dt><dd>7 AM – 1 PM</dd><dt>Sunday</dt><dd>Closed</dd></dl></div>
+    <div class="vlinks">
+      <a href="https://toast.app/r/toasted-daybreak-cafe-4012-stillmeadow/order" target="_blank" rel="noopener">Order pickup or delivery <span>Toast</span></a>
+      <a href="tel:+19798100570">Call <span>(979) 810-0570</span></a>
+      <a href="mailto:toastedbcs@gmail.com">Email <span>toastedbcs@gmail.com</span></a>
+      <a href="https://maps.google.com/?q=4012+Stillmeadow+Dr,+Bryan,+TX+77802" target="_blank" rel="noopener">Directions <span>Google Maps</span></a>
+      <a href="https://www.instagram.com/toasted.tx/" target="_blank" rel="noopener">Instagram <span>@toasted.tx</span></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>© <span id="yr"></span> Toasted Daybreak Cafe · Bryan, Texas</span><span>Toast · Coffee · Smoothies · Lemonade</span><span class="credit">Site by Ryan L. Web Studio</span></div></footer>
+<div class="callbar"><a class="btn honey" href="https://toast.app/r/toasted-daybreak-cafe-4012-stillmeadow/order" target="_blank" rel="noopener">Order</a><a class="btn" href="tel:+19798100570">Call</a></div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* daybreak story */
+const S=[{w:'Pour.',l:'Specialty coffee, poured the way you like it.',c:'6:58 AM'},{w:'Toast.',l:'Gourmet toast, loaded sweet or savory.',c:'7:30 AM'},{w:'Top.',l:'Strawberries, avocado, salmon, fig and honey.',c:'9:15 AM'},{w:'Good morning.',l:'Toasted Daybreak Cafe · Bryan, Texas',c:'10:40 AM'}];
+const story=document.getElementById('story'),phs=[...story.querySelectorAll('.ph')],pips=[...document.querySelectorAll('#prog i')],word=document.getElementById('word'),line=document.getElementById('line'),sun=document.getElementById('sun'),sky=document.getElementById('sky'),clk=document.getElementById('clk');
+let cur=0;
+function onS(){const r=story.getBoundingClientRect();const p=reduce?0:Math.min(1,Math.max(0,-r.top/(story.offsetHeight-innerHeight)));
+ const i=Math.min(3,Math.floor(p*4));if(i!==cur){cur=i;phs.forEach((e,j)=>e.classList.toggle('on',j===i));pips.forEach((e,j)=>e.classList.toggle('on',j<=i));word.textContent=S[i].w;line.textContent=S[i].l;clk.textContent=S[i].c}
+ sun.style.bottom=(p*70-10)+'%';sky.style.opacity=1-p*.85}
+addEventListener('scroll',()=>requestAnimationFrame(onS),{passive:true});onS();
+/* split decision */
+const T=[
+ {n:'The OG',d:'Avocado, cream cheese, everything bagel & lemon',i:'1588137378633-dea1336ce1e2',a:'Avocado toast with lemon'},
+ {n:"Nuttin' Better",d:'Nut spread, strawberry, banana & coconut',i:'1767876728081-446db5577f72',a:'Toast with nut spread, banana and strawberry'},
+ {n:'Toast-Lache',d:'Cream cheese, strawberries, honey & powdered sugar',i:'1557925923-5dfbb22c50ca',a:'Toast topped with sliced strawberries'},
+ {n:'Easy Preze',d:'Avocado, tomato, shallots, goat cheese & balsamic',i:'1623691752358-0be1e4235183',a:'Avocado toast with crumbled cheese and tomatoes'},
+ {n:'Honey Harvest',d:'Fig spread, whipped goat cheese, pistachio & honey',i:'1602857061021-be4f190eba74',a:'Toast topped with sliced figs'},
+ {n:'Lox & Love',d:'Cream cheese, cucumbers, salmon, capers & dill',i:'1608039867578-2bba47388911',a:'Smoked salmon toast'}];
+const url=id=>`https://images.unsplash.com/photo-${id}?w=1000&h=1000&fit=crop&q=72&auto=format`;
+T.forEach(t=>{const im=new Image();im.src=url(t.i)});
+let L=0,R=2;
+function build(el,side){T.forEach((t,i)=>{const b=document.createElement('button');b.type='button';b.innerHTML=`<b>${t.n}</b><span>${t.d}</span>`;b.onclick=()=>{if(side==='L')L=i;else R=i;render()};el.appendChild(b)})}
+build(document.getElementById('pickL'),'L');build(document.getElementById('pickR'),'R');
+function render(){const iL=document.getElementById('imgL'),iR=document.getElementById('imgR');
+ iL.src=url(T[L].i);iL.alt=T[L].a;iR.src=url(T[R].i);iR.alt=T[R].a;
+ document.getElementById('tagL').textContent=T[L].n;document.getElementById('tagR').textContent=T[R].n;
+ document.getElementById('combo').textContent=L===R?T[L].n+' (both halves)':T[L].n+' + '+T[R].n;
+ [...document.querySelectorAll('#pickL button')].forEach((b,i)=>b.setAttribute('aria-pressed',i===L));
+ [...document.querySelectorAll('#pickR button')].forEach((b,i)=>b.setAttribute('aria-pressed',i===R))}
+render();
+const slice=document.getElementById('slice'),halfL=document.getElementById('halfL'),knife=document.getElementById('knife'),cut=document.getElementById('cut');
+function setCut(v){v=Math.max(15,Math.min(85,v));halfL.style.clipPath=`inset(0 ${100-v}% 0 0)`;knife.style.left=v+'%';cut.value=v}
+let drag=false;
+slice.addEventListener('pointerdown',e=>{drag=true;slice.setPointerCapture(e.pointerId);mv(e)});
+slice.addEventListener('pointermove',e=>{if(drag)mv(e)});
+slice.addEventListener('pointerup',()=>drag=false);slice.addEventListener('pointercancel',()=>drag=false);
+function mv(e){const r=slice.getBoundingClientRect();setCut((e.clientX-r.left)/r.width*100)}
+cut.addEventListener('input',()=>setCut(+cut.value));setCut(50);
+/* honey drizzle cursor (desktop) */
+(function(){const c=document.getElementById('honey'),x=c.getContext('2d');
+ const fine=matchMedia('(pointer:fine)').matches;if(!fine||reduce){c.remove();return}
+ const MAXW=22,LIFE=3200;let pts=[],dpr=Math.min(2,devicePixelRatio||1),last=null,cx=null,cy=null,py=scrollY;
+ function size(){c.width=innerWidth*dpr;c.height=innerHeight*dpr;x.setTransform(dpr,0,0,dpr,0,0)}size();addEventListener('resize',size);
+ function add(X,Y){const p={x:X,y:Y,t:performance.now()};if(last){const d=Math.hypot(p.x-last.x,p.y-last.y);const st=Math.min(8,Math.floor(d/6));for(let i=1;i<=st;i++)pts.push({x:last.x+(p.x-last.x)*i/(st+1),y:last.y+(p.y-last.y)*i/(st+1),t:p.t})}pts.push(p);last=p}
+ addEventListener('pointermove',e=>{cx=e.clientX;cy=e.clientY;add(cx,cy)});
+ addEventListener('scroll',()=>{const dy=scrollY-py;py=scrollY;pts.forEach(p=>p.y-=dy);if(last)last.y-=dy;if(cx!==null)add(cx,cy)},{passive:true});
+ function pass(col,wm,am,off){for(let i=1;i<pts.length-1;i++){const a=pts[i-1],b=pts[i],n=pts[i+1],now=performance.now(),age=(now-b.t)/LIFE;const w=MAXW*wm*(1-Math.pow(age,3))*Math.min(1,i/6);
+   x.globalAlpha=Math.max(0,am-Math.pow(age,2.2)*am);x.strokeStyle=col;x.lineWidth=Math.max(.5,w);x.beginPath();x.moveTo((a.x+b.x)/2+off,(a.y+b.y)/2+off);x.quadraticCurveTo(b.x+off,b.y+off,(b.x+n.x)/2+off,(b.y+n.y)/2+off);x.stroke()}}
+ (function frame(){const now=performance.now();pts=pts.filter(p=>now-p.t<LIFE);x.clearRect(0,0,innerWidth,innerHeight);
+  if(pts.length>2){x.lineCap='round';x.lineJoin='round';pass('rgba(140,80,10,1)',1,.35,2);pass('#e09a2c',1,.92,0);pass('#f6c862',.55,.9,-1);pass('rgba(255,248,220,1)',.16,.85,-3)}
+  x.globalAlpha=1;requestAnimationFrame(frame)})();
+})();
+/* reveals */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
