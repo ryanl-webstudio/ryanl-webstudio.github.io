@@ -248,7 +248,7 @@ function chips(){const K=document.getElementById('kinds');K.innerHTML='';Object.
 function fmt(d){return d.toLocaleDateString('en-US',{weekday:'short',month:'long',day:'numeric'})}
 function draw(){chips();const ev=new Date(di.value+'T12:00');const tl=document.getElementById('tl');tl.innerHTML='';const today=new Date();
  if(isNaN(ev)){tl.innerHTML='<p style="color:#b9b0a6">Pick a date to see your timeline.</p>';return}
- KINDS[kind].forEach(([days,t,d])=>{const dt=new Date(ev);dt.setDate(dt.getDate()-days);const past=dt<today;const el=document.createElement('div');el.className='tli'+(past?' past':'');el.innerHTML=`<span>${past?'As soon as possible':'Around '+fmt(dt)}</span><b>${t}</b><p>${d}</p>`;tl.appendChild(el)});
+ KINDS[kind].forEach(([days,t,d])=>{const dt=new Date(ev);dt.setDate(dt.getDate()-days);if(dt.getDay()===0)dt.setDate(dt.getDate()-1);const past=dt<today;const el=document.createElement('div');el.className='tli'+(past?' past':'');el.innerHTML=`<span>${past?'As soon as possible':'Around '+fmt(dt)}</span><b>${t}</b><p>${d}</p>`;tl.appendChild(el)});
  const e=document.createElement('div');e.className='tli past';e.innerHTML=`<span>${fmt(ev)}</span><b><em>The day.</em></b>`;tl.appendChild(e);
  const body=`Hi Carolina! I'd like to book a fitting.\nWhat: ${kind}\nEvent date: ${fmt(ev)}\nName: `;document.getElementById('sms').href='sms:+19798223097?&body='+encodeURIComponent(body)}
 di.oninput=draw;draw();
