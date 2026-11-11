@@ -156,7 +156,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     <div class="ph"><img src="https://images.unsplash.com/photo-1557925923-5dfbb22c50ca?w=1800&q=70&auto=format" alt="Toast topped with sliced strawberries"></div>
     <div class="ph"><img src="https://images.unsplash.com/photo-1592663527359-cf6642f54cff?w=1800&q=70&auto=format" alt="Cream being poured into a glass of iced coffee"></div>
     <div class="sky" id="sky"></div><div class="sun" id="sun"></div><div class="vig"></div>
-    <div class="clock" aria-hidden="true">Bryan, TX<b id="clk">6:58 AM</b></div>
+    <div class="clock" aria-hidden="true">Bryan, TX<b id="clk">7:00 AM</b></div>
     <div class="cap"><div class="w" id="word" aria-hidden="true">Pour.</div><h1 class="sr">Toasted Daybreak Cafe: loaded toast and coffee in Bryan, TX</h1><p id="line">Specialty coffee, poured the way you like it.</p>
       <div class="row"><a class="btn honey" href="#split">Build a Split Decision</a><a class="btn ghost" href="#menu">See the menu</a></div></div>
     <div class="prog" id="prog"><i class="on"></i><i></i><i></i><i></i></div>
@@ -253,7 +253,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 document.getElementById('yr').textContent=new Date().getFullYear();
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 /* daybreak story */
-const S=[{w:'Pour.',l:'Specialty coffee, poured the way you like it.',c:'6:58 AM'},{w:'Toast.',l:'Gourmet toast, loaded sweet or savory.',c:'7:30 AM'},{w:'Top.',l:'Strawberries, avocado, salmon, fig and honey.',c:'9:15 AM'},{w:'Good morning.',l:'Toasted Daybreak Cafe · Bryan, Texas',c:'10:40 AM'}];
+const S=[{w:'Pour.',l:'Specialty coffee, poured the way you like it.',c:'7:00 AM'},{w:'Toast.',l:'Gourmet toast, loaded sweet or savory.',c:'7:30 AM'},{w:'Top.',l:'Strawberries, avocado, salmon, fig and honey.',c:'9:15 AM'},{w:'Good morning.',l:'Toasted Daybreak Cafe · Bryan, Texas',c:'10:40 AM'}];
 const story=document.getElementById('story'),phs=[...story.querySelectorAll('.ph')],pips=[...document.querySelectorAll('#prog i')],word=document.getElementById('word'),line=document.getElementById('line'),sun=document.getElementById('sun'),sky=document.getElementById('sky'),clk=document.getElementById('clk');
 let cur=0;
 function onS(){const r=story.getBoundingClientRect();const p=reduce?0:Math.min(1,Math.max(0,-r.top/(story.offsetHeight-innerHeight)));
