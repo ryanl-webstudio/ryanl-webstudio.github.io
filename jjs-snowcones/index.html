@@ -46,7 +46,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .copy .row{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
 @media(max-width:860px){.copy .row{justify-content:center;margin-top:16px}}
 .cupWrap{position:relative;height:min(68vh,560px);display:grid;place-items:end center}
-@media(max-width:860px){.cupWrap{height:46vh}}
+@media(max-width:860px){.cupWrap{height:38vh;place-items:center;align-self:start;margin-top:14px}.fstage{align-content:start;padding-top:4vh}}
 .cupWrap svg{height:100%;width:auto;overflow:visible}
 .flake{position:absolute;width:7px;height:7px;background:#fff;border-radius:2px;opacity:.9;pointer-events:none}
 .stepTag{position:absolute;top:8%;right:0;background:#fff;border-radius:16px;padding:10px 14px;font-weight:900;box-shadow:0 10px 24px rgba(17,38,74,.1);transition:opacity .3s}
@@ -63,9 +63,9 @@ h2{font-size:clamp(44px,6vw,80px)}
 .builder{background:#fff;border-radius:40px;margin:0 2vw;box-shadow:0 30px 60px rgba(17,38,74,.08)}
 .bgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;margin-top:40px;align-items:center}
 @media(max-width:900px){.bgrid{grid-template-columns:1fr}}
-.mini{display:grid;place-items:center;background:var(--sky);border-radius:30px;padding:30px;min-height:420px;position:relative}
+.mini{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--sky);border-radius:30px;padding:30px;min-height:420px;position:relative}
 .mini svg{width:min(280px,70vw);height:auto}
-.mini .name{position:absolute;bottom:18px;left:0;right:0;text-align:center;font-family:"Lilita One";font-size:26px}
+.mini .name{margin-top:14px;text-align:center;line-height:1.1;font-family:"Lilita One";font-size:26px}
 .q{margin-bottom:24px}
 .q h3{font-size:26px;margin-bottom:10px}
 .q h3 small{font-family:Nunito;font-size:14px;color:var(--mute);font-weight:800;margin-left:6px}
