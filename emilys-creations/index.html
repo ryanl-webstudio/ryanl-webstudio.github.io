@@ -73,10 +73,26 @@ h2 i{color:var(--maroon)}
 .lede{color:var(--mute);font-size:19px;max-width:620px;margin-top:14px}
 section{padding:110px 0}
 /* builder */
-.builder{background:var(--sage2)}
+.builder{background:#171612;color:#f3ede1}
+.builder .eyebrow{color:#b9c9ad}.builder h2 i{color:#e8b4a0}.builder .lede{color:#b8b1a3}
+.stage{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:#0d0c0a}
+.stage svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.spot{transform-box:fill-box;transform-origin:center;transform:scale(0);transition:transform 1.1s cubic-bezier(.2,.8,.2,1)}
+.spot.in{transform:scale(1)}
+.labels{position:absolute;inset:0;pointer-events:none}
+.lab{position:absolute;display:flex;align-items:center;gap:8px;transform:translate(14px,-50%);opacity:0;transition:opacity .6s,transform .6s;white-space:nowrap}
+.lab i{position:relative;width:28px;height:1px;background:rgba(255,255,255,.8)}
+.lab i:before{content:"";position:absolute;left:-4px;top:50%;width:7px;height:7px;border-radius:50%;background:#fff;transform:translateY(-50%);box-shadow:0 0 0 4px rgba(255,255,255,.18)}
+.lab span{font-family:"Cormorant Garamond";font-style:italic;font-size:19px;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.7)}
+.lab.flip{flex-direction:row-reverse;transform:translate(calc(-100% - 14px),-50%)}
+.lab.flip i:before{left:auto;right:-4px}
+.lab.in{opacity:1}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.12;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.caption{display:flex;justify-content:space-between;margin-top:14px;font-size:14px;color:#b8b1a3;letter-spacing:.06em;text-transform:uppercase}
+.btn.light{background:#f3ede1;color:#171612}
 .bgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;margin-top:44px;align-items:start}
 @media(max-width:900px){.bgrid{grid-template-columns:1fr}}
-.boardBox{background:var(--paper);border-radius:28px;padding:24px;position:sticky;top:92px}
+.boardBox{position:sticky;top:92px}
 @media(max-width:900px){.boardBox{position:relative;top:0}}
 .boardBox svg{width:100%;height:auto;display:block}
 .piece{transition:transform .5s cubic-bezier(.2,1.4,.4,1),opacity .4s;transform-box:fill-box;transform-origin:center}
@@ -84,16 +100,20 @@ section{padding:110px 0}
 .q{margin-bottom:26px}
 .q h3{font-size:30px;font-weight:500;margin-bottom:12px}
 .sizes{display:grid;gap:10px}
-.size{display:grid;grid-template-columns:1fr auto;align-items:center;text-align:left;background:var(--paper);border:2px solid transparent;border-radius:16px;padding:14px 18px;cursor:pointer;font:inherit;color:var(--ink)}
+.size{display:grid;grid-template-columns:1fr auto;align-items:center;text-align:left;background:rgba(255,255,255,.04);border:1px solid rgba(243,237,225,.14);border-radius:14px;padding:14px 18px;cursor:pointer;font:inherit;color:#f3ede1}
 .size b{font-family:"Cormorant Garamond";font-size:24px;font-weight:600;display:block}
-.size small{color:var(--mute);font-size:14px}
-.size span.p{font-family:"Cormorant Garamond";font-size:28px;color:var(--maroon);font-weight:600}
-.size[aria-pressed=true]{border-color:var(--leaf);box-shadow:0 8px 20px rgba(63,90,58,.14)}
+.size small{color:#a39c8e;font-size:14px}
+.size span.p{font-family:"Cormorant Garamond";font-size:28px;color:#e8b4a0;font-weight:600}
+.size[aria-pressed=true]{border-color:#e8b4a0;background:rgba(232,180,160,.08)}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chip{background:var(--paper);border:1.5px solid rgba(63,90,58,.25);border-radius:999px;padding:9px 15px;font:500 15px "DM Sans",sans-serif;cursor:pointer;color:var(--ink)}
+.builder .chip{background:transparent;border-color:rgba(243,237,225,.22);color:#f3ede1}
+.builder .chip[aria-pressed=true]{background:#f3ede1;color:#171612;border-color:#f3ede1}
 .chip[aria-pressed=true]{background:var(--leaf);color:#fff;border-color:var(--leaf)}
 .total{display:flex;justify-content:space-between;align-items:baseline;margin:18px 0 6px;font-family:"Cormorant Garamond";font-size:30px}
 .total b{color:var(--maroon)}
+.builder .total b{color:#e8b4a0}
+.builder .fine{color:#8f897c}
 .fine{font-size:13.5px;color:var(--mute);margin-top:8px}
 .send{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 .send a{flex:1}
@@ -134,9 +154,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <div class="gig"><b>★</b> Proudly Aggie owned · Gig 'em</div>
     </div>
     <div class="heroWrap">
-      <svg class="leafL" viewBox="0 0 120 120" aria-hidden="true"><path d="M10 110 C40 70 70 50 115 40" stroke="#3f5a3a" stroke-width="2.5" fill="none"/><g fill="#7d9471"><ellipse cx="35" cy="82" rx="14" ry="7" transform="rotate(-40 35 82)"/><ellipse cx="55" cy="66" rx="14" ry="7" transform="rotate(-30 55 66)"/><ellipse cx="78" cy="54" rx="14" ry="7" transform="rotate(-20 78 54)"/><ellipse cx="100" cy="45" rx="12" ry="6" transform="rotate(-15 100 45)"/><ellipse cx="45" cy="92" rx="12" ry="6" transform="rotate(50 45 92)"/><ellipse cx="66" cy="76" rx="12" ry="6" transform="rotate(55 66 76)"/></g></svg>
       <div class="heroImg"><img id="heroImg" src="https://images.unsplash.com/photo-1784294460349-591c4cd81400?w=1200&q=70&auto=format&fit=crop" alt="A large charcuterie board with cheeses, fruit and meats"></div>
-      <svg class="leafR" viewBox="0 0 120 120" aria-hidden="true"><path d="M10 110 C40 70 70 50 115 40" stroke="#3f5a3a" stroke-width="2.5" fill="none"/><g fill="#7d9471"><ellipse cx="35" cy="82" rx="14" ry="7" transform="rotate(-40 35 82)"/><ellipse cx="55" cy="66" rx="14" ry="7" transform="rotate(-30 55 66)"/><ellipse cx="78" cy="54" rx="14" ry="7" transform="rotate(-20 78 54)"/><ellipse cx="45" cy="92" rx="12" ry="6" transform="rotate(50 45 92)"/></g></svg>
     </div>
   </header>
 </div>
@@ -162,17 +180,32 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <section class="builder" id="build">
   <div class="wrap">
     <div class="eyebrow">Build a board</div>
-    <h2>Pick a size, <i>watch it fill.</i></h2>
-    <p class="lede">Choose a board and add-ons. The board fills in as you go, then send it to Emily to order.</p>
+    <h2>Pick a size, <i>watch it come together.</i></h2>
+    <p class="lede">Choose a board and your add-ons. Everything you pick comes into focus on the board, then send it to Emily to order.</p>
     <div class="bgrid">
-      <div class="boardBox"><svg id="board" viewBox="0 0 600 420" role="img" aria-label="Preview of your board"></svg></div>
+      <div class="boardBox">
+        <div class="stage" id="stage">
+          <svg id="board" viewBox="0 120 1000 1250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Photo of a charcuterie board; the items you choose come into focus">
+            <defs>
+              <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="26"/></filter>
+              <filter id="dim"><feGaussianBlur stdDeviation="14"/><feColorMatrix type="saturate" values=".35"/><feComponentTransfer><feFuncR type="linear" slope=".42"/><feFuncG type="linear" slope=".42"/><feFuncB type="linear" slope=".42"/></feComponentTransfer></filter>
+              <mask id="reveal" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1499"><rect width="1000" height="1499" fill="#000"/><g id="spots" filter="url(#soft)"></g></mask>
+            </defs>
+            <image href="https://images.unsplash.com/photo-1773754109448-13d2af138059?w=1400&q=75&auto=format" width="1000" height="1499" filter="url(#dim)"/>
+            <image href="https://images.unsplash.com/photo-1773754109448-13d2af138059?w=1400&q=75&auto=format" width="1000" height="1499" mask="url(#reveal)"/>
+          </svg>
+          <div class="labels" id="labels"></div>
+          <div class="grain" aria-hidden="true"></div>
+        </div>
+        <div class="caption"><span id="capSize">Medium board</span><span id="capCount">5 of 12 on the board</span></div>
+      </div>
       <div>
         <div class="q"><h3>Board size</h3><div class="sizes" id="sizes"></div></div>
         <div class="q"><h3>Add-ons</h3><div class="chips" id="adds"></div></div>
         <div class="q"><h3>Occasion</h3><div class="chips" id="occs"></div></div>
         <div class="total"><span>Starting at</span><b id="price">$120</b></div>
-        <div class="send"><a class="btn" id="sms" href="#">Text Emily</a><a class="btn maroon" id="mail" href="#">Email Emily</a></div>
-        <p class="fine">Prices are starting points and can change based on what you request.</p>
+        <div class="send"><a class="btn light" id="sms" href="#">Text Emily</a><a class="btn maroon" id="mail" href="#">Email Emily</a></div>
+        <p class="fine">Prices are starting points and can change based on what you request. Photo is a placeholder for Emily's own boards.</p>
       </div>
     </div>
   </div>
@@ -213,38 +246,44 @@ const occ=document.getElementById('occasions'),track=document.getElementById('tr
 function onScroll(){const y=scrollY;if(!reduce)hi.style.transform=`scale(${1.15-Math.min(.15,y/3000)}) rotate(${Math.min(6,y/120)}deg)`;
 const r=occ.getBoundingClientRect();const p=Math.min(1,Math.max(0,-r.top/(occ.offsetHeight-innerHeight)));const max=track.scrollWidth-innerWidth+innerWidth*.08;track.style.transform=`translateX(${-p*Math.max(0,max)}px)`}
 addEventListener('scroll',()=>requestAnimationFrame(onScroll),{passive:true});addEventListener('resize',onScroll);onScroll();
-/* board builder */
-const NS='http://www.w3.org/2000/svg';const svg=document.getElementById('board');
-function el(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e}
-el('rect',{x:20,y:30,width:560,height:360,rx:40,fill:'#b98552'});el('rect',{x:34,y:44,width:532,height:332,rx:32,fill:'#c99663'});
-for(let i=0;i<7;i++)el('path',{d:`M40 ${70+i*46} Q300 ${60+i*46} 560 ${74+i*46}`,stroke:'#b07c47','stroke-width':2,fill:'none',opacity:.6});
+/* board builder: focus-pull reveal on a real photo */
 const SIZES=[{n:'Small board',s:'Serves up to 4 · 3 cheeses, 1 meat',p:75,c:3,m:1},{n:'Medium board',s:'Serves 5–7 · 3 cheeses, 2 meats',p:120,c:3,m:2},{n:'Large board',s:'Serves 8–10 · 4 cheeses, 3 meats',p:170,c:4,m:3},{n:'Extra large board',s:'Serves up to 15 · 5 cheeses, 3 meats',p:215,c:5,m:3},{n:'Grazing table',s:'Serves 30+ · priced to your party',p:null,c:5,m:3}];
-const ADDS=['Fresh fruit','Sweets & chocolate','Crackers & bread','Nuts & dried fruit','Aggie picks & tags'];
+const ADDS=['Fresh fruit','Crackers','Jams & honey','Candied nuts','Herbs & garnish'];
 const OCCS=['Game day','Shower','Birthday','Gift box','Office','Wedding','Holiday'];
-const st={size:1,adds:['Fresh fruit','Crackers & bread'],occ:'Game day'};
-/* pieces */
-const g=el('g',{});const P={cheese:[],meat:[],fruit:[],sweet:[],cracker:[],nut:[],pick:[]};
-const cheeseSpots=[[130,120],[250,300],[420,130],[480,300],[300,180]];const cheeseCol=['#f3d27a','#fff3c4','#f0b54a','#fbe6a6','#e9c46a'];
-cheeseSpots.forEach((p,i)=>{const gg=el('g',{class:'piece off'},g);for(let k=0;k<3;k++)el('polygon',{points:`${p[0]-30+k*16},${p[1]+18} ${p[0]+k*16},${p[1]-22} ${p[0]+26+k*16},${p[1]+18}`,fill:cheeseCol[i],stroke:'#d9a53f','stroke-width':2},gg);P.cheese.push(gg)});
-const meatSpots=[[200,200],[380,230],[120,300]];meatSpots.forEach(p=>{const gg=el('g',{class:'piece off'},g);for(let k=0;k<5;k++)el('circle',{cx:p[0]+k*10,cy:p[1]-k*4,r:22,fill:k%2?'#b8323f':'#c94754',stroke:'#8f1f2b','stroke-width':1.5},gg);P.meat.push(gg)});
-[[470,210],[90,190]].forEach(p=>{const gg=el('g',{class:'piece off'},g);[[0,0],[14,-6],[26,4],[10,12],[22,16],[-10,10]].forEach((d,i)=>el('circle',{cx:p[0]+d[0],cy:p[1]+d[1],r:9,fill:i%2?'#7a3b8f':'#9b59b6'},gg));el('path',{d:`M${p[0]+40} ${p[1]+30} q12 -14 24 0 q-12 18 -24 0`,fill:'#e63946'},gg);P.fruit.push(gg)});
-[[330,330],[530,120]].forEach(p=>{const gg=el('g',{class:'piece off'},g);for(let k=0;k<4;k++)el('rect',{x:p[0]+k*18-30,y:p[1]-10,width:14,height:14,rx:3,fill:'#5b3a29'},gg);P.sweet.push(gg)});
-[[300,90],[200,345]].forEach(p=>{const gg=el('g',{class:'piece off'},g);for(let k=0;k<6;k++)el('rect',{x:p[0]-50+k*16,y:p[1]-14,width:12,height:28,rx:2,fill:'#e7c48a',stroke:'#c79c55'},gg);P.cracker.push(gg)});
-[[400,340],[60,110]].forEach(p=>{const gg=el('g',{class:'piece off'},g);for(let k=0;k<7;k++)el('ellipse',{cx:p[0]+(k%4)*12,cy:p[1]+Math.floor(k/4)*12,rx:6,ry:4,fill:'#a0703b'},gg);P.nut.push(gg)});
-[[160,90],[440,90],[520,350]].forEach(p=>{const gg=el('g',{class:'piece off'},g);el('line',{x1:p[0],y1:p[1],x2:p[0],y2:p[1]+40,stroke:'#555','stroke-width':2},gg);el('rect',{x:p[0],y:p[1],width:30,height:20,fill:'#500000'},gg);el('text',{x:p[0]+15,y:p[1]+14,'text-anchor':'middle','font-size':10,'font-family':'DM Sans','font-weight':700,fill:'#fff'},gg).textContent='GIG';P.pick.push(gg)});
-el('path',{d:'M560 380 q-40 -20 -70 0',stroke:'#3f5a3a','stroke-width':3,fill:'none'});
-function show(arr,n){arr.forEach((x,i)=>x.classList.toggle('off',i>=n))}
+/* hotspots in image pixels (1000 x 1499) */
+const H={
+ cheese:[{x:440,y:520,r:120,l:'Triple-cream brie'},{x:170,y:1010,r:130,l:'Blue cheese'},{x:140,y:1120,r:110,l:'Aged cheddar'}],
+ meat:[{x:150,y:600,r:170,l:'Salami'},{x:220,y:820,r:150,l:'Prosciutto'},{x:310,y:1180,r:140,l:'Coppa'}],
+ 'Fresh fruit':[{x:480,y:1050,r:150,l:'Green grapes'},{x:190,y:690,r:90,l:'Figs'},{x:90,y:1270,r:110}],
+ 'Crackers':[{x:420,y:360,r:120,l:'Seeded crackers'},{x:580,y:440,r:120},{x:690,y:610,r:120}],
+ 'Jams & honey':[{x:610,y:720,r:130,l:'Fig jam'}],
+ 'Candied nuts':[{x:290,y:930,r:90,l:'Candied pecans'}],
+ 'Herbs & garnish':[{x:340,y:560,r:80,l:'Rosemary'}]};
+const st={size:1,adds:['Fresh fruit','Crackers'],occ:'Game day'};
+const spots=document.getElementById('spots'),labels=document.getElementById('labels');const NS='http://www.w3.org/2000/svg';
+const VB={x:0,y:120,w:1000,h:1250};
+const all=[];
+function addSpot(group,h){const c=document.createElementNS(NS,'circle');c.setAttribute('cx',h.x);c.setAttribute('cy',h.y);c.setAttribute('r',h.r);c.setAttribute('fill','#fff');c.setAttribute('class','spot');spots.appendChild(c);
+ let lab=null;if(h.l){lab=document.createElement('div');lab.className='lab';lab.innerHTML=`<i></i><span>${h.l}</span>`;labels.appendChild(lab)}
+ const o={group,h,c,lab};all.push(o);return o}
+const G={};for(const k in H)G[k]=H[k].map(h=>addSpot(k,h));
+function placeLabels(){const st=document.getElementById('stage');const W=st.offsetWidth,Hh=st.offsetHeight;const sc=Math.max(W/VB.w,Hh/VB.h);const ox=(W-VB.w*sc)/2,oy=(Hh-VB.h*sc)/2;
+ all.forEach(o=>{if(!o.lab)return;const px=ox+(o.h.x-VB.x)*sc,py=oy+(o.h.y-VB.y)*sc;o.lab.style.left=px+'px';o.lab.style.top=py+'px';o.lab.classList.toggle('flip',px>W*.55)})}
+function on(o,v,delay){o.c.style.transitionDelay=(v?delay:0)+'ms';o.c.classList.toggle('in',v);if(o.lab){o.lab.style.transitionDelay=(v?delay+250:0)+'ms';o.lab.classList.toggle('in',v)}}
 function render(){const S=document.getElementById('sizes'),A=document.getElementById('adds'),O=document.getElementById('occs');S.innerHTML=A.innerHTML=O.innerHTML='';
 SIZES.forEach((z,i)=>{const b=document.createElement('button');b.type='button';b.className='size';b.setAttribute('aria-pressed',st.size===i);b.innerHTML=`<div><b>${z.n}</b><small>${z.s}</small></div><span class="p">${z.p?'$'+z.p:'Quote'}</span>`;b.onclick=()=>{st.size=i;render()};S.appendChild(b)});
-ADDS.forEach(a=>{const on=st.adds.includes(a);const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=a;b.setAttribute('aria-pressed',on);b.onclick=()=>{st.adds=on?st.adds.filter(x=>x!==a):[...st.adds,a];render()};A.appendChild(b)});
+ADDS.forEach(a=>{const sel=st.adds.includes(a);const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=a;b.setAttribute('aria-pressed',sel);b.onclick=()=>{st.adds=sel?st.adds.filter(x=>x!==a):[...st.adds,a];render()};A.appendChild(b)});
 OCCS.forEach(o=>{const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=o;b.setAttribute('aria-pressed',st.occ===o);b.onclick=()=>{st.occ=o;render()};O.appendChild(b)});
-const z=SIZES[st.size];show(P.cheese,z.c);show(P.meat,z.m);
-const has=a=>st.adds.includes(a);show(P.fruit,has('Fresh fruit')?2:0);show(P.sweet,has('Sweets & chocolate')?2:0);show(P.cracker,has('Crackers & bread')?2:0);show(P.nut,has('Nuts & dried fruit')?2:0);show(P.pick,has('Aggie picks & tags')?3:0);
+const z=SIZES[st.size];let d=0,count=0;
+G.cheese.forEach((o,i)=>{const v=i<Math.min(3,z.c);on(o,v,d);if(v){d+=90;count++}});
+G.meat.forEach((o,i)=>{const v=i<z.m;on(o,v,d);if(v){d+=90;count++}});
+ADDS.forEach(a=>G[a].forEach(o=>{const v=st.adds.includes(a);on(o,v,d);if(v){d+=70;if(o.lab)count++}}));
+document.getElementById('capSize').textContent=z.n;document.getElementById('capCount').textContent=`${count} of 12 in focus`;
 document.getElementById('price').textContent=z.p?'$'+z.p:'Custom quote';
 const body=`Hi Emily! I'd like to order a ${z.n.toLowerCase()} (${z.s}).\nAdd-ons: ${st.adds.join(', ')||'none'}\nOccasion: ${st.occ}\nDate needed: \nPickup or delivery: `;
 document.getElementById('sms').href='sms:+19792298500?&body='+encodeURIComponent(body);
 document.getElementById('mail').href='mailto:Emilyscreations10@gmail.com?subject='+encodeURIComponent(z.n+' order')+'&body='+encodeURIComponent(body);}
-render();
+render();placeLabels();addEventListener('resize',placeLabels);new ResizeObserver(placeLabels).observe(document.getElementById('stage'));
 </script>
 </body>
 </html>
