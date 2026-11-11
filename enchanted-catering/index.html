@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Enchanted Catering | Personal Chef &amp; Private Event Catering in Bryan, TX</title>
+<meta name="description" content="Enchanted Catering by Gabriella Martinez: personal chef services, weekly meal prep, and small private event catering in Bryan–College Station. Quesabirria, barbacoa, enchiladas, fresh tortillas and more.">
+<meta name="theme-color" content="#f7f1e6">
+<!-- CONCEPT PREVIEW: remove robots tag + .concept strip at launch -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FoodEstablishment","name":"Enchanted Catering","description":"Personal chef services along with small and private event catering","founder":{"@type":"Person","name":"Gabriella Martinez"},"email":"Gongoragabriella97@gmail.com","servesCuisine":["Mexican","Tex-Mex","Home cooking"],"address":{"@type":"PostalAddress","addressLocality":"Bryan","addressRegion":"TX","addressCountry":"US"},"areaServed":["Bryan, TX","College Station, TX"]}</script>
+<style>
+:root{--cream:#f7f1e6;--cream2:#efe5d3;--cob:#1d3c96;--cob2:#14276a;--sky:#c9d6f2;--terra:#cf5f34;--mari:#efae33;--ink:#1b2340;--mute:#5d6582}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:Outfit,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.02;letter-spacing:-.01em}
+em{font-style:italic;color:var(--cob)}
+.wrap{width:min(1160px,92vw);margin:0 auto}
+.concept{background:var(--cob);color:#fff;font-size:13px;font-weight:600;text-align:center;padding:6px 10px}
+.concept .cfull{font-weight:400;opacity:.85}
+@media(max-width:560px){.concept .cfull{display:none}}
+nav{position:sticky;top:0;z-index:30;background:rgba(247,241,230,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(29,60,150,.12)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+.logo{font-family:Fraunces;font-style:italic;font-size:26px;text-decoration:none;color:var(--cob)}
+.logo small{font-family:Outfit;font-style:normal;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);margin-left:8px}
+.links{display:flex;gap:24px;font-size:15px;font-weight:500}
+.links a{text-decoration:none;color:var(--mute)}
+.links a:hover{color:var(--cob)}
+@media(max-width:860px){.links{display:none}.logo small{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--cob);color:#fff;font-weight:600;text-decoration:none;border:0;border-radius:999px;padding:13px 22px;font-size:16px;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--cob2)}
+.btn.soft{background:transparent;color:var(--cob);border:1.5px solid var(--cob)}
+/* hero with plate */
+.plateStory{height:360vh;position:relative;overflow-x:clip}
+.pstage{position:sticky;top:66px;height:calc(100vh - 66px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:3vw;width:min(1160px,92vw);margin:0 auto}
+@media(max-width:860px){.pstage{grid-template-columns:1fr;grid-template-rows:auto 1fr;align-content:center;gap:14px;text-align:center}}
+.intro .k{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--terra);font-weight:600}
+.intro h1{font-size:clamp(44px,6.6vw,92px);margin:14px 0 18px}
+.intro p{color:var(--mute);font-size:19px;max-width:470px}
+@media(max-width:860px){.intro p{margin:0 auto;font-size:16.5px}.intro h1{margin:8px 0 10px}}
+.intro .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+@media(max-width:860px){.intro .row{justify-content:center;margin-top:16px}}
+.plateWrap{position:relative;width:min(560px,42vw);aspect-ratio:1;justify-self:center}
+@media(max-width:860px){.plateWrap{width:min(72vw,36vh)}}
+.plate{position:absolute;inset:0;will-change:transform}
+.plate svg{width:100%;height:100%}
+.dish{position:absolute;inset:19%;border-radius:50%;overflow:hidden;box-shadow:inset 0 0 0 6px rgba(255,255,255,.6),0 10px 30px rgba(27,35,64,.25)}
+.dish img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.12) rotate(-6deg);transition:opacity .7s,transform .9s}
+.dish img.on{opacity:1;transform:none}
+.label{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);background:#fff;border:1.5px solid var(--cob);color:var(--cob);border-radius:999px;padding:8px 18px;font-family:Fraunces;font-style:italic;font-size:19px;white-space:nowrap;box-shadow:0 8px 20px rgba(27,35,64,.12)}
+.course{position:absolute;top:2%;right:0;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);font-weight:600}
+/* tile divider */
+.tiles{height:64px;background:var(--cob);overflow:hidden}
+.tiles svg{display:block;width:100%;height:64px}
+section{padding:110px 0}
+.eyebrow{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:14px}
+h2{font-size:clamp(40px,5.4vw,72px)}
+.lede{color:var(--mute);font-size:19px;max-width:620px;margin-top:16px}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+@media(max-width:860px){.svc{grid-template-columns:1fr}}
+.s{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 14px 34px rgba(27,35,64,.07)}
+.s img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.s div{padding:22px 24px 26px}
+.s h3{font-size:30px}
+.s p{color:var(--mute);font-size:16px;margin-top:8px}
+/* planner */
+.plan{background:var(--cob);color:#fff;position:relative}
+.plan .eyebrow{color:var(--mari)}
+.plan em{color:var(--mari)}
+.plan .lede{color:var(--sky)}
+.pgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;margin-top:46px;align-items:start}
+@media(max-width:900px){.pgrid{grid-template-columns:1fr}}
+.q{margin-bottom:30px}
+.q h3{font-size:24px;margin-bottom:12px}
+.q h3 small{font-family:Outfit;font-size:13px;color:var(--sky);margin-left:8px;letter-spacing:.04em}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.25);color:#fff;border-radius:999px;padding:10px 16px;font:500 15px Outfit,sans-serif;cursor:pointer}
+.chip[aria-pressed=true]{background:#fff;color:var(--cob);border-color:#fff}
+.chip:disabled{opacity:.35;cursor:not-allowed}
+.guests{display:flex;align-items:center;gap:18px}
+.guests input{flex:1;accent-color:var(--mari);height:28px}
+.guests output{font-family:Fraunces;font-size:40px;min-width:90px;text-align:right}
+.card{background:var(--cream);color:var(--ink);border-radius:20px;padding:34px 30px;position:sticky;top:96px;text-align:center;border:10px solid #fff;outline:2px solid var(--cob);outline-offset:-18px}
+@media(max-width:900px){.card{position:relative;top:0}}
+.card .k{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--terra);font-weight:600}
+.card h3{font-size:34px;font-style:italic;color:var(--cob);margin:8px 0 4px}
+.card .meta{color:var(--mute);font-size:15px}
+.card ul{list-style:none;margin:22px 0;display:grid;gap:10px}
+.card li{font-family:Fraunces;font-size:22px}
+.card li:before{content:"✦";color:var(--terra);font-size:13px;margin-right:10px;vertical-align:3px}
+.card .none{color:var(--mute);font-family:Outfit;font-size:15px}
+.card .btn{width:100%}
+.card .fine{font-size:13px;color:var(--mute);margin-top:10px}
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+@media(max-width:860px){.about .wrap{grid-template-columns:1fr}}
+.arch{border-radius:300px 300px 24px 24px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 20px 50px rgba(27,35,64,.15)}
+.arch img{width:100%;height:100%;object-fit:cover}
+blockquote{margin-top:34px;padding:26px 28px;background:#fff;border-radius:20px;border-left:6px solid var(--terra)}
+blockquote p{font-family:Fraunces;font-style:italic;font-size:22px;line-height:1.35}
+blockquote cite{display:block;font-style:normal;color:var(--mute);font-size:14.5px;margin-top:10px}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+@media(max-width:760px){.gal{grid-template-columns:1fr 1fr}}
+.gal figure{border-radius:50%;overflow:hidden;aspect-ratio:1;border:8px solid #fff;outline:2px solid var(--cob);outline-offset:-14px;box-shadow:0 10px 26px rgba(27,35,64,.1);transition:transform .5s}
+.gal figure:hover{transform:rotate(8deg) scale(1.03)}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal figcaption{position:absolute;left:-9999px}
+/* contact */
+.contact{text-align:center;background:var(--cream2)}
+.contact .row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+footer{padding:34px 0 50px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.credit{display:block;width:100%;font-size:12px;opacity:.75}
+.callbar{display:none}
+@media(max-width:720px){.callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:40}.callbar a{flex:1;box-shadow:0 10px 30px rgba(20,39,106,.35)}footer{padding-bottom:100px}.course{display:none}nav .btn{display:none}.logo{font-size:23px;white-space:nowrap}.pstage{padding-bottom:70px}.intro h1{font-size:40px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+:focus-visible{outline:3px solid var(--mari);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="concept">Concept preview <span class="cfull">· designed for Enchanted Catering, not the official site yet</span></div>
+<nav aria-label="Main"><div class="wrap">
+  <a class="logo" href="#top">Enchanted Catering<small>Bryan, TX</small></a>
+  <div class="links"><a href="#services">Services</a><a href="#plan">Plan your event</a><a href="#about">About Gabriella</a><a href="#contact">Contact</a></div>
+  <a class="btn" href="#plan">Plan an event</a>
+</div></nav>
+
+<main id="top">
+<div class="plateStory" id="plateStory">
+  <div class="pstage">
+    <div class="intro">
+      <div class="k">Personal chef · Private events · Meal prep</div>
+      <h1>Home cooking, <em>set</em> for your table.</h1>
+      <p>Gabriella Martinez cooks the food your family actually wants at the party, for your small event, your private dinner or your week of meals.</p>
+      <div class="row"><a class="btn" href="#plan">Plan your menu</a><a class="btn soft" href="#services">What I offer</a></div>
+    </div>
+    <div class="plateWrap">
+      <div class="course" id="course">Course 1 of 4</div>
+      <div class="plate" id="plate"><svg viewBox="0 0 400 400" aria-hidden="true">
+        <defs><pattern id="rim" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#fff"/><path d="M20 4c5 7 5 9 0 16-5-7-5-9 0-16zM20 36c5-7 5-9 0-16-5 7-5 9 0 16zM4 20c7-5 9-5 16 0-7 5-9 5-16 0zM36 20c-7-5-9-5-16 0 7 5 9 5 16 0z" fill="#1d3c96"/><circle cx="20" cy="20" r="3" fill="#efae33"/><circle cx="0" cy="0" r="4" fill="#1d3c96"/><circle cx="40" cy="0" r="4" fill="#1d3c96"/><circle cx="0" cy="40" r="4" fill="#1d3c96"/><circle cx="40" cy="40" r="4" fill="#1d3c96"/></pattern></defs>
+        <circle cx="200" cy="200" r="198" fill="#fff"/>
+        <circle cx="200" cy="200" r="190" fill="url(#rim)"/>
+        <circle cx="200" cy="200" r="190" fill="none" stroke="#1d3c96" stroke-width="4"/>
+        <circle cx="200" cy="200" r="132" fill="#fff" stroke="#1d3c96" stroke-width="3"/>
+        <circle cx="200" cy="200" r="140" fill="none" stroke="#cf5f34" stroke-width="2" stroke-dasharray="3 7"/>
+      </svg></div>
+      <div class="dish" id="dish">
+        <img class="on" src="https://images.unsplash.com/photo-1768967145720-1eae9fe6ecb7?w=900&h=900&q=70&auto=format&fit=crop" alt="Crispy tacos with onion and cilantro">
+        <img src="https://images.unsplash.com/photo-1613514785940-daed07799d9b?w=900&h=900&q=70&auto=format&fit=crop" alt="Plated home-cooked meal on a blue and white plate">
+        <img src="https://images.unsplash.com/photo-1693193433392-da83457dff20?w=900&h=900&q=70&auto=format&fit=crop" alt="Fresh tortillas">
+        <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=900&h=900&q=70&auto=format&fit=crop" alt="Buffet table with chafing dishes">
+      </div>
+      <div class="label" id="dishLabel">Quesabirria tacos</div>
+    </div>
+  </div>
+</div>
+
+<div class="tiles" aria-hidden="true"><svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 1600 64"><defs><pattern id="tl" width="64" height="64" patternUnits="userSpaceOnUse"><rect width="64" height="64" fill="#1d3c96"/><path d="M32 6c8 11 8 15 0 26-8-11-8-15 0-26zM32 58c8-11 8-15 0-26-8 11-8 15 0 26zM6 32c11-8 15-8 26 0-11 8-15 8-26 0zM58 32c-11-8-15-8-26 0 11 8 15 8 26 0z" fill="#f7f1e6"/><circle cx="32" cy="32" r="5" fill="#efae33"/></pattern></defs><rect width="1600" height="64" fill="url(#tl)"/></svg></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow">What I offer</div>
+    <h2>Three ways to <em>eat well.</em></h2>
+    <div class="svc">
+      <article class="s"><img loading="lazy" src="https://images.unsplash.com/photo-1555244162-803834f70033?w=900&q=70&auto=format&fit=crop" alt="Catered buffet with chafing dishes"><div><h3>Small &amp; private events</h3><p>Graduations, birthdays, showers and family parties. Food that has guests going back for seconds.</p></div></article>
+      <article class="s"><img loading="lazy" src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=900&q=70&auto=format&fit=crop" alt="Beef tacos with onion and cilantro"><div><h3>Personal chef</h3><p>A dinner cooked for you and your people, from tacos and barbacoa to steak and sides.</p></div></article>
+      <article class="s"><img loading="lazy" src="https://images.unsplash.com/photo-1543352632-5a4b24e4d2a6?w=900&q=70&auto=format&fit=crop" alt="Meal prep containers"><div><h3>Weekly meal prep</h3><p>Real home-cooked meals portioned and ready, so your week runs on good food, not drive-thrus.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="plan" id="plan">
+  <div class="wrap">
+    <div class="eyebrow">Plan your event</div>
+    <h2>Build your <em>menu card.</em></h2>
+    <p class="lede">Pick the occasion, the headcount and up to three favorites. Your menu card fills in on the right, then send it to Gabriella in one tap.</p>
+    <div class="pgrid">
+      <div>
+        <div class="q"><h3>The occasion</h3><div class="chips" id="occ"></div></div>
+        <div class="q"><h3>How many guests</h3><div class="guests"><input type="range" id="guests" min="5" max="150" step="5" value="30" aria-label="Number of guests"><output id="gOut">30</output></div></div>
+        <div class="q"><h3>Favorites <small id="pickCount">pick up to 3</small></h3><div class="chips" id="dishes"></div></div>
+      </div>
+      <aside class="card" aria-live="polite">
+        <div class="k">Enchanted Catering</div>
+        <h3 id="cTitle">Graduation party</h3>
+        <div class="meta" id="cMeta">30 guests</div>
+        <ul id="cList"><li class="none">Pick your favorites to fill the menu.</li></ul>
+        <a class="btn" id="send" href="mailto:Gongoragabriella97@gmail.com">Send to Gabriella</a>
+        <p class="fine">Opens an email with your menu filled in. Add your date and any allergies.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="arch"><img loading="lazy" src="https://images.unsplash.com/photo-1648437595587-e6a8b0cdf1f9?w=900&q=70&auto=format&fit=crop" alt="Three tacos with lime on a wooden plate"></div>
+    <div>
+      <div class="eyebrow">Meet the chef</div>
+      <h2>Made by <em>Gabriella.</em></h2>
+      <p class="lede">Enchanted Catering is Gabriella Martinez's kitchen in Bryan. Tortillas off the comal, quesabirria, barbacoa and picadillo by the tray, plus the comfort plates people grew up on.</p>
+      <blockquote><p>“Thank you to Gabriella Martinez with Enchanted Catering for the delicious food… Hit them up for your next event.”</p><cite>Frances G., after a family celebration</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">From the kitchen</div>
+    <h2>On the <em>menu</em> lately.</h2>
+    <div class="gal">
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1768967145720-1eae9fe6ecb7?w=600&h=600&q=70&auto=format&fit=crop" alt="Quesabirria-style tacos"><figcaption>Quesabirria</figcaption></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1693193433392-da83457dff20?w=600&h=600&q=70&auto=format&fit=crop" alt="Fresh tortillas"><figcaption>Fresh tortillas</figcaption></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1613514785940-daed07799d9b?w=600&h=600&q=70&auto=format&fit=crop" alt="Plate on blue and white dish"><figcaption>Plates</figcaption></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=600&h=600&q=70&auto=format&fit=crop" alt="Beef tacos"><figcaption>Tacos</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Let's cook for you</div>
+    <h2>Tell me about <em>your table.</em></h2>
+    <p class="lede" style="margin:16px auto 0">Send the date, headcount and what you're craving.</p>
+    <div class="row"><a class="btn" href="mailto:Gongoragabriella97@gmail.com?subject=Event%20inquiry">Email Gabriella</a><a class="btn soft" href="https://www.facebook.com/cookingwithgabss/" target="_blank" rel="noopener">Message on Facebook</a></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> Enchanted Catering · Bryan, TX · Gongoragabriella97@gmail.com</span><span>Personal chef · Private events · Meal prep</span><span class="credit">Site by Ryan L. Web Studio</span></div></footer>
+<div class="callbar"><a class="btn" href="#plan">Plan your event</a></div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* plate story */
+(function(){const s=document.getElementById('plateStory'),plate=document.getElementById('plate'),imgs=[...document.querySelectorAll('#dish img')],lab=document.getElementById('dishLabel'),course=document.getElementById('course');
+const names=['Quesabirria tacos','Comfort plates','Tortillas off the comal','Set for a crowd'];let cur=-1;
+function on(){const r=s.getBoundingClientRect();const p=Math.min(.999,Math.max(0,-r.top/(s.offsetHeight-innerHeight)));if(!reduce)plate.style.transform=`rotate(${p*220}deg)`;const i=Math.floor(p*imgs.length);if(i!==cur){cur=i;imgs.forEach((im,j)=>im.classList.toggle('on',j===i));lab.textContent=names[i];course.textContent=`Course ${i+1} of ${imgs.length}`}}
+addEventListener('scroll',()=>requestAnimationFrame(on),{passive:true});on();})();
+/* planner */
+const OCC=['Graduation party','Birthday','Private dinner','Weekly meal prep','Office lunch','Family gathering'];
+const DISH=['Quesabirria tacos','Barbacoa','Picadillo','Enchiladas','Carne asada tacos','Fresh tortillas','Chicken kebabs','Steak plates','Beef & broccoli','Meatloaf & mash','Loaded hot dogs','Rice & charro beans'];
+const st={occ:OCC[0],guests:30,picks:[]};
+function chip(p,label,pressed,fn,dis){const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=label;b.setAttribute('aria-pressed',pressed);if(dis)b.disabled=true;b.onclick=fn;p.appendChild(b)}
+function render(){
+  const O=document.getElementById('occ'),D=document.getElementById('dishes');O.innerHTML=D.innerHTML='';
+  OCC.forEach(o=>chip(O,o,st.occ===o,()=>{st.occ=o;render()}));
+  DISH.forEach(d=>{const on=st.picks.includes(d);chip(D,d,on,()=>{st.picks=on?st.picks.filter(x=>x!==d):[...st.picks,d];render()},!on&&st.picks.length>=3)});
+  document.getElementById('pickCount').textContent=st.picks.length?`${st.picks.length} of 3 picked`:'pick up to 3';
+  const meal=st.occ==='Weekly meal prep';
+  document.getElementById('cTitle').textContent=st.occ;
+  document.getElementById('cMeta').textContent=meal?`${st.guests} meals`:`${st.guests} guests`;
+  document.getElementById('cList').innerHTML=st.picks.length?st.picks.map(p=>`<li>${p}</li>`).join(''):'<li class="none">Pick your favorites to fill the menu.</li>';
+  const body=`Hi Gabriella,\n\nI found your menu card and I'd love to book Enchanted Catering.\n\nOccasion: ${st.occ}\n${meal?'Meals':'Guests'}: ${st.guests}\nFavorites: ${st.picks.join(', ')||'Open to your suggestions'}\nDate: \nLocation: \nAllergies or notes: \n\nThank you!`;
+  document.getElementById('send').href=`mailto:Gongoragabriella97@gmail.com?subject=${encodeURIComponent(st.occ+' inquiry')}&body=${encodeURIComponent(body)}`;
+}
+const g=document.getElementById('guests');g.oninput=()=>{st.guests=+g.value;document.getElementById('gOut').textContent=g.value;render()};
+render();
+</script>
+</body>
+</html>
