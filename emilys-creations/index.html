@@ -85,11 +85,11 @@ section{padding:110px 0}
 .ram span{display:block;margin-top:6px;font-family:"Cormorant Garamond";font-style:italic;font-size:16px;color:var(--ink);white-space:nowrap}
 @keyframes drop{from{opacity:0;transform:translate(-50%,-80%) scale(.8)}}
 @media(max-width:600px){.ram{width:62px}.ram i{width:62px;height:62px;border-width:5px}.ram span{font-size:13px}}
-.dim{position:relative;display:flex;flex-direction:column;align-items:center;margin-top:18px}
+.dim{position:relative;display:flex;flex-direction:column;align-items:center;margin-top:0}
 .dim .line{display:block;height:1px;background:var(--ink);position:relative;transition:width .9s cubic-bezier(.6,0,.2,1)}
 .dim .line:before,.dim .line:after{content:"";position:absolute;top:-6px;width:1px;height:13px;background:var(--ink)}
 .dim .line:before{left:0}.dim .line:after{right:0}
-.dim b{margin-top:10px;font-family:"Cormorant Garamond";font-style:italic;font-size:20px;font-weight:500}
+.dim b{margin-right:14%;margin-top:10px;font-family:"Cormorant Garamond";font-style:italic;font-size:20px;font-weight:500}
 .serves{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:14px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);flex-wrap:wrap}
 .plates{display:flex;gap:5px;flex-wrap:wrap;align-items:center}
 .plates i{width:13px;height:13px;border-radius:50%;border:1.5px solid var(--leaf);animation:pop .4s both}
@@ -281,14 +281,14 @@ function render(){
  SIZES.forEach((z,i)=>{const b=document.createElement('button');b.type='button';b.className='size';b.setAttribute('aria-pressed',st.size===i);b.innerHTML=`<div><b>${z.n}</b><small>${z.s} · ${z.d}</small></div><span class="p">${z.p?'$'+z.p:'Quote'}</span>`;b.onclick=()=>{st.size=i;render()};S.appendChild(b)});
  ADDS.forEach(a=>{const on=st.adds.includes(a.n);const b=document.createElement('button');b.type='button';b.className='add';b.setAttribute('aria-pressed',on);const t=document.createElement('i');crop(t,a,40,200);b.appendChild(t);b.appendChild(document.createTextNode(a.n));b.onclick=()=>{st.adds=on?st.adds.filter(x=>x!==a.n):[...st.adds,a.n];render()};A.appendChild(b)});
  const z=SIZES[st.size];
- frame.style.width=(z.w*100)+'%';frame.style.height=(z.h*100)+'%';frame.style.borderRadius=z.r;
+ frame.style.width=(z.w*80)+'%';frame.style.height=(z.h*80)+'%';frame.style.marginRight='14%';frame.style.borderRadius=z.r;
  imgs.forEach((im,i)=>im.classList.toggle('on',i===st.size));
- document.getElementById('dimLine').style.width=(z.w*100)+'%';document.getElementById('dimLabel').textContent=z.dim;
+ document.getElementById('dimLine').style.width=(z.w*80)+'%';document.getElementById('dimLine').style.marginRight='14%';document.getElementById('dimLabel').textContent=z.dim;
  document.getElementById('servesTxt').textContent=z.s;
  const pl=document.getElementById('plates');pl.innerHTML='';for(let i=0;i<Math.min(z.serve,15);i++){const d=document.createElement('i');d.style.animationDelay=(i*35)+'ms';pl.appendChild(d)}if(z.serve>15){const m=document.createElement('em');m.textContent='+ more';pl.appendChild(m)}
  /* ramekins beside the platter */
  sides.innerHTML='';const picked=ADDS.filter(a=>st.adds.includes(a.n));
- const spots=[[94,8],[100,34],[96,62],[4,86],[30,96]];
+ const spots=[[91,16],[93,40],[91,64],[86,86],[66,96]];
  picked.forEach((a,i)=>{const r=document.createElement('div');r.className='ram';const inner=document.createElement('i');crop(inner,a,86,190);r.appendChild(inner);const lab=document.createElement('span');lab.textContent=a.n;r.appendChild(lab);r.style.left=spots[i][0]+'%';r.style.top=spots[i][1]+'%';r.style.animationDelay=(i*80)+'ms';sides.appendChild(r)});
  document.getElementById('tagTitle').textContent=z.n;document.getElementById('tagSub').textContent=`${z.s} · ${z.d}`;
  document.getElementById('tagExtras').textContent=st.adds.length?'+ '+st.adds.join(', '):'No extras yet';
