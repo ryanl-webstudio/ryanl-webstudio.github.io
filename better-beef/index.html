@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Better Beef Smashburgers | Smashburger Food Truck in Bryan–College Station</title>
+<meta name="description" content="Smashed, seared and stacked to order. Better Beef Smashburgers is a food truck serving Bryan and College Station. Find the truck, build your stack, book us for your event.">
+<meta name="theme-color" content="#0e0c0a">
+<!-- CONCEPT PREVIEW: remove robots tag + .concept strip at launch -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FoodEstablishment","name":"Better Beef Smashburgers","servesCuisine":"Burgers","telephone":"+1-979-422-1435","email":"Betterbeefsmashburgers@gmail.com","address":{"@type":"PostalAddress","addressLocality":"College Station","addressRegion":"TX","addressCountry":"US"},"areaServed":["Bryan, TX","College Station, TX"]}</script>
+<style>
+:root{--ink:#0e0c0a;--ink2:#1a1714;--m:#ffc21a;--k:#e6372b;--bun:#f4e3c3;--mut:#a39a8c;--line:rgba(244,227,195,.14);--d:"Anton",Impact,sans-serif;--s:"Space Grotesk",system-ui,sans-serif;--o:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip}
+body{background:var(--ink);color:var(--bun);font-family:var(--s);-webkit-font-smoothing:antialiased;overflow-x:clip;line-height:1.55}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+img{display:block;max-width:100%}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+.concept{position:fixed;top:0;left:0;right:0;z-index:70;height:30px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;background:var(--m);color:var(--ink);font-weight:700;white-space:nowrap;overflow:hidden}
+nav{position:fixed;top:30px;left:0;right:0;z-index:60;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
+nav.s{background:rgba(14,12,10,.9);backdrop-filter:blur(10px);border-color:var(--line)}
+nav .wrap{height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--d);font-size:22px;letter-spacing:.02em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.logo b{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--k);color:var(--bun);font-weight:400;font-size:16px;transform:rotate(-8deg)}
+.nl{display:flex;gap:28px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+.nl a:hover{color:var(--m)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 24px;border-radius:999px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:14px;transition:transform .3s var(--o),background .3s,color .3s}
+.btn:hover{transform:translateY(-3px) rotate(-1deg)}
+.bm{background:var(--m);color:var(--ink)}.bm:hover{background:#ffd75c}
+.bo{border:2px solid var(--bun)}.bo:hover{background:var(--bun);color:var(--ink)}
+/* hero */
+.hero{position:relative;min-height:100svh;padding:150px 0 70px;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+#sizzle{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.smash{font-family:var(--d);text-transform:uppercase;line-height:.8;font-size:clamp(78px,25vw,400px);white-space:nowrap;letter-spacing:-.01em;color:var(--m);text-align:center;transform-origin:50% 100%;will-change:transform;position:relative;z-index:2;user-select:none}
+.smash span{display:inline-block;opacity:0;transform:translateY(-120%)}
+.ready .smash span{animation:drop .9s var(--o) forwards}
+@keyframes drop{60%{transform:translateY(4%) scaleY(.82) scaleX(1.08)}100%{opacity:1;transform:none}}
+.hrow{position:relative;z-index:3;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:30px;margin-top:-6vw}
+.plate{width:clamp(220px,30vw,400px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid var(--ink);box-shadow:0 0 0 2px var(--m),0 40px 80px rgba(0,0,0,.6);opacity:0;transform:scale(.6) rotate(-20deg);transition:opacity .8s .5s,transform 1.2s .5s var(--o)}
+.ready .plate{opacity:1;transform:none}
+.plate img{width:100%;height:100%;object-fit:cover}
+.hl{font-size:clamp(17px,1.6vw,21px);max-width:330px;color:var(--bun)}
+.hl strong{color:var(--m)}
+.hr{justify-self:end;text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.sticker{position:absolute;z-index:4;top:22%;right:7%;width:128px;height:128px;border-radius:50%;background:var(--k);color:var(--bun);display:grid;place-items:center;text-align:center;font-family:var(--d);text-transform:uppercase;font-size:17px;line-height:1.05;transform:rotate(12deg);box-shadow:0 10px 30px rgba(230,55,43,.35);animation:wob 4s ease-in-out infinite}
+@keyframes wob{50%{transform:rotate(4deg) scale(1.05)}}
+/* ticker */
+.tick{background:var(--k);color:var(--bun);transform:rotate(-2deg);margin:30px -20px;overflow:hidden;border-block:3px solid var(--ink)}
+.tick div{display:flex;width:max-content;animation:tk 22s linear infinite;font-family:var(--d);font-size:clamp(28px,4vw,46px);text-transform:uppercase;padding:12px 0}
+.tick span{padding:0 22px}
+.tick i{font-style:normal;color:var(--m)}
+@keyframes tk{to{transform:translateX(-50%)}}
+section{position:relative}
+.eyebrow{font-weight:700;text-transform:uppercase;letter-spacing:.18em;font-size:13px;color:var(--m);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:3px;background:var(--k)}
+h2{font-family:var(--d);text-transform:uppercase;font-weight:400;font-size:clamp(48px,7.5vw,108px);line-height:.9;margin:16px 0 22px}
+h2 em{font-style:normal;color:var(--m)}
+.lead{color:var(--mut);max-width:560px;font-size:18px}
+/* smash steps */
+.steps{height:300vh}
+.stick{position:sticky;top:0;height:100svh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px}
+.griddle{position:relative;aspect-ratio:1;max-width:520px;width:100%;justify-self:center;border-radius:28px;background:radial-gradient(circle at 50% 55%,#2b2622,#141210 70%);border:2px solid var(--line);overflow:hidden}
+.griddle::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 38px,rgba(255,255,255,.025) 38px 40px)}
+.patty{position:absolute;left:50%;top:56%;width:36%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 40% 35%,#c2442d,#7d2416 70%);transform:translate(-50%,-50%) scale(var(--sx,1),var(--sy,1));box-shadow:0 18px 30px rgba(0,0,0,.5);transition:background .2s}
+.press{position:absolute;left:50%;top:0;width:58%;height:20%;transform:translate(-50%,var(--py,-120%));background:linear-gradient(#55504a,#2a2623);border-radius:12px 12px 6px 6px;box-shadow:0 10px 0 #1a1714}
+.press::before{content:"";position:absolute;left:50%;top:-60%;width:14%;height:70%;transform:translateX(-50%);background:#3b3632;border-radius:8px}
+.cheese{position:absolute;left:50%;top:56%;width:52%;aspect-ratio:1;transform:translate(-50%,-50%) rotate(45deg) scale(var(--cs,0));background:linear-gradient(135deg,#ffd451,#f2a81b);border-radius:10px;opacity:.92;mix-blend-mode:normal}
+.steam{position:absolute;left:50%;top:40%;width:60%;height:40%;transform:translateX(-50%);opacity:var(--st,0);pointer-events:none}
+.steam i{position:absolute;bottom:0;width:10px;height:70px;border-radius:10px;background:linear-gradient(transparent,rgba(255,255,255,.35));filter:blur(6px);animation:rise 2.4s ease-in infinite}
+@keyframes rise{from{transform:translateY(20px);opacity:0}40%{opacity:1}to{transform:translateY(-80px);opacity:0}}
+.slist{list-style:none;display:flex;flex-direction:column;gap:26px;margin-top:10px}
+.slist li{opacity:.28;transition:opacity .4s,transform .4s var(--o);border-left:3px solid var(--line);padding-left:20px}
+.slist li.on{opacity:1;transform:translateX(8px);border-color:var(--m)}
+.slist b{display:block;font-family:var(--d);font-weight:400;font-size:clamp(30px,3.4vw,46px);text-transform:uppercase;line-height:1}
+.slist b span{color:var(--k)}
+.slist p{color:var(--mut);max-width:420px;margin-top:6px}
+/* gallery */
+.gal{padding:90px 0;display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:280px 280px;gap:16px}
+.gal figure{position:relative;overflow:hidden;border-radius:22px;background:var(--ink2)}
+.gal figure:first-child{grid-row:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 1.2s var(--o)}
+.gal figure.in img{transform:scale(1)}
+.gal figure:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;left:14px;bottom:14px;background:var(--ink);color:var(--m);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.12em;padding:7px 12px;border-radius:999px}
+/* truck */
+.truck{padding:110px 0;background:var(--bun);color:var(--ink);overflow:hidden}
+.truck .eyebrow{color:var(--k)}
+.truck .eyebrow::before{background:var(--ink)}
+.truck h2 em{color:var(--k)}
+.truck .lead{color:#5a5248}
+.tgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
+.ticket{position:relative;background:var(--ink);color:var(--bun);border-radius:20px;padding:34px 34px 30px;transform:rotate(-2.5deg);box-shadow:16px 16px 0 var(--k)}
+.ticket::before,.ticket::after{content:"";position:absolute;top:58%;width:34px;height:34px;border-radius:50%;background:var(--bun)}
+.ticket::before{left:-17px}.ticket::after{right:-17px}
+.ticket .t1{font-size:12px;text-transform:uppercase;letter-spacing:.2em;color:var(--m);font-weight:700}
+.ticket .t2{font-family:var(--d);font-size:clamp(34px,4vw,52px);text-transform:uppercase;line-height:.95;margin:10px 0 6px}
+.ticket .t3{color:var(--mut)}
+.ticket hr{border:0;border-top:2px dashed rgba(244,227,195,.25);margin:26px 0 18px}
+.ticket .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-weight:700}
+.ticket .row span{color:var(--m)}
+.tphoto{border-radius:24px;overflow:hidden;aspect-ratio:4/5;transform:rotate(2deg);border:5px solid var(--ink)}
+.tphoto img{width:100%;height:100%;object-fit:cover}
+/* builder */
+.build{padding:120px 0}
+.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.stack{position:relative;height:430px;display:flex;flex-direction:column-reverse;align-items:center;justify-content:flex-start;padding-bottom:30px}
+.layer{width:300px;transition:all .45s var(--o);transform-origin:center bottom;animation:pop .45s var(--o)}
+@keyframes pop{from{transform:translateY(-60px) scale(.9);opacity:0}}
+.bun-b{height:46px;border-radius:10px 10px 26px 26px;background:linear-gradient(#e9a858,#c4782f)}
+.bun-t{height:96px;border-radius:150px 150px 16px 16px;background:radial-gradient(circle at 30% 30%,#f2bb6b,#c4782f 70%);position:relative}
+.bun-t::after{content:"";position:absolute;inset:18px 40px auto;height:30px;background:radial-gradient(circle,#f8e7c4 2px,transparent 3px) 0 0/22px 14px;opacity:.9}
+.l-patty{height:34px;width:318px;border-radius:18px;background:linear-gradient(#8a3220,#5c1d11);box-shadow:inset 0 -6px 0 rgba(0,0,0,.25)}
+.l-cheese{height:12px;width:330px;background:#ffc21a;clip-path:polygon(0 0,100% 0,100% 40%,88% 100%,76% 40%,58% 100%,42% 40%,24% 100%,10% 40%,0 60%)}
+.l-onion{height:12px;width:290px;border-radius:10px;background:repeating-linear-gradient(90deg,#c88c4a 0 14px,#a8692f 14px 22px)}
+.l-pickle{height:10px;width:280px;background:radial-gradient(ellipse at center,#7c9a2a 55%,transparent 58%) 0 0/46px 10px}
+.l-sauce{height:9px;width:296px;border-radius:9px;background:var(--k)}
+.opts{display:flex;flex-direction:column;gap:22px}
+.og label{display:block;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:var(--mut);margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:12px 18px;border-radius:999px;border:2px solid var(--line);font-weight:700;transition:all .25s}
+.chip:hover{border-color:var(--m)}
+.chip[aria-pressed=true]{background:var(--m);color:var(--ink);border-color:var(--m)}
+.summary{font-family:var(--d);font-size:30px;text-transform:uppercase;line-height:1.05;color:var(--m);min-height:64px}
+/* events */
+.events{padding:110px 0;border-top:1px solid var(--line)}
+.egrid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1/-1}
+.f span{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.inp{background:var(--ink2);border:2px solid var(--line);border-radius:14px;padding:15px 16px;color:var(--bun);font:inherit;outline:none;transition:border-color .25s}
+.inp:focus{border-color:var(--m)}
+textarea.inp{min-height:110px;resize:vertical}
+.perks{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:26px}
+.perks li{display:flex;gap:14px;align-items:flex-start}
+.perks li::before{content:"";flex:none;width:12px;height:12px;margin-top:7px;border-radius:50%;background:var(--k);box-shadow:0 0 0 4px rgba(230,55,43,.2)}
+.cta-big{padding:120px 0 80px;text-align:center}
+.cta-big a.phone{display:block;font-family:var(--d);font-size:clamp(54px,11vw,160px);line-height:.9;color:var(--m);transition:color .3s}
+.cta-big a.phone:hover{color:var(--k)}
+footer{border-top:1px solid var(--line);padding:30px 0 50px;color:var(--mut);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s var(--o)}
+.rv.in{opacity:1;transform:none}
+.mob{display:none}
+@media(max-width:900px){
+.nl{display:none}
+nav .wrap>.btn{display:none}
+.hrow{grid-template-columns:1fr;justify-items:center;text-align:center;margin-top:18px}
+.hr{justify-self:center;align-items:center;text-align:center}
+.hl{margin:0 auto}
+.sticker{top:auto;bottom:40%;right:4%;width:96px;height:96px;font-size:13px}
+.stick{grid-template-columns:1fr;align-content:center;gap:24px;padding-top:110px}
+.griddle{max-width:300px}
+.slist{gap:14px}.slist p{display:none}.slist li.on p{display:block}
+.gal{grid-template-columns:1fr 1fr;grid-template-rows:240px 200px 200px}
+.gal figure:first-child{grid-column:span 2;grid-row:auto}
+.tgrid,.bgrid,.egrid{grid-template-columns:1fr}
+.tphoto{max-height:420px}
+.stack{height:360px}.layer{transform:scale(.85)}
+form{grid-template-columns:1fr}
+.mob{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:65;gap:10px}
+.mob a{flex:1;justify-content:center}
+footer{padding-bottom:100px}
+}
+@media(max-width:540px){.cfull{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.smash span,.plate,.rv{opacity:1!important;transform:none!important}}
+</style>
+</head>
+<body>
+<div class="concept">Concept preview<span class="cfull">· designed for Better Beef Smashburgers, not the official site yet</span></div>
+<nav id="nav"><div class="wrap">
+<a href="#top" class="logo"><b>BB</b>Better Beef</a>
+<div class="nl"><a href="#smash">The Smash</a><a href="#truck">Find the Truck</a><a href="#build">Build a Stack</a><a href="#events">Events</a></div>
+<a href="tel:+19794221435" class="btn bm">Call the truck</a>
+</div></nav>
+
+<header class="hero" id="top">
+<canvas id="sizzle"></canvas>
+<h1 class="smash" id="smashTxt" aria-label="Smash"><span>S</span><span>M</span><span>A</span><span>S</span><span>H</span></h1>
+<div class="hrow wrap">
+<p class="hl"><strong>Better Beef Smashburgers.</strong> Fresh beef, smashed thin on a screaming-hot flat-top until the edges go lacy and crisp. Rolling around Bryan–College Station.</p>
+<div class="plate"><img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=900&q=80" alt="Double patty smashburger with melted cheese"></div>
+<div class="hr"><a href="#truck" class="btn bm">Where's the truck?</a><a href="#events" class="btn bo">Book us for an event</a></div>
+</div>
+<div class="sticker">Smashed<br>to<br>order</div>
+</header>
+
+<div class="tick" aria-hidden="true"><div>
+<span>Smashed</span><i>✦</i><span>Seared</span><i>✦</i><span>Stacked</span><i>✦</i><span>Bryan</span><i>✦</i><span>College Station</span><i>✦</i><span>Smashed</span><i>✦</i><span>Seared</span><i>✦</i><span>Stacked</span><i>✦</i><span>Bryan</span><i>✦</i><span>College Station</span><i>✦</i>
+</div></div>
+
+<section class="steps" id="smash">
+<div class="stick wrap">
+<div class="griddle" id="griddle" aria-hidden="true">
+<div class="steam" id="steam"><i style="left:20%"></i><i style="left:45%;animation-delay:.7s"></i><i style="left:70%;animation-delay:1.4s"></i></div>
+<div class="patty" id="patty"></div>
+<div class="cheese" id="cheese"></div>
+<div class="press" id="press"></div>
+</div>
+<div>
+<p class="eyebrow">How it's made</p>
+<h2>Why it's <em>better</em></h2>
+<ul class="slist" id="slist">
+<li class="on"><b><span>01</span> Ball</b><p>Fresh beef, loosely rolled. No frozen pre-formed patties, ever.</p></li>
+<li><b><span>02</span> Smash</b><p>Pressed hard and thin onto a ripping-hot flat-top. That's where the flavor happens.</p></li>
+<li><b><span>03</span> Crust</b><p>The edges go dark, crispy and lacy while the middle stays juicy.</p></li>
+<li><b><span>04</span> Melt</b><p>Cheese goes on, gets a quick steam, then onto a toasted bun and into your hands.</p></li>
+</ul>
+</div>
+</div>
+</section>
+
+<div class="wrap"><div class="gal">
+<figure class="rv"><img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?auto=format&fit=crop&w=1100&q=80" alt="Double cheeseburger with pickles" loading="lazy"><figcaption>The double</figcaption></figure>
+<figure class="rv"><img src="https://images.unsplash.com/photo-1678110707289-ab14382a1625?auto=format&fit=crop&w=800&q=80" alt="Cheeseburger on a grill" loading="lazy"><figcaption>Off the flat-top</figcaption></figure>
+<figure class="rv"><img src="https://images.unsplash.com/photo-1639020715392-2d8346c3acb0?auto=format&fit=crop&w=800&q=80" alt="Gloved hand holding a cheeseburger" loading="lazy"><figcaption>Hand-held</figcaption></figure>
+<figure class="rv"><img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=800&q=80" alt="Burger with fries" loading="lazy"><figcaption>Make it a meal</figcaption></figure>
+<figure class="rv"><img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=800&q=80" alt="Close-up of a burger" loading="lazy"><figcaption>All crust</figcaption></figure>
+</div></div>
+
+<section class="truck" id="truck">
+<div class="wrap tgrid">
+<div class="rv">
+<p class="eyebrow">Find the truck</p>
+<h2>Follow the <em>sizzle</em></h2>
+<p class="lead">We move around Bryan–College Station: breweries, events and pop-ups. Here's a recent stop. Check our Facebook for this week's spots, or call to see where we're parked today.</p>
+<div style="height:36px"></div>
+<div class="ticket">
+<div class="t1">Recent stop</div>
+<div class="t2">Blackwater Draw</div>
+<div class="t3">Downtown Bryan, TX</div>
+<hr>
+<div class="row"><div>Saturday</div><div><span>12 PM – 5 PM</span></div></div>
+</div>
+<div style="height:36px"></div>
+<a href="tel:+19794221435" class="btn bm" style="background:var(--ink);color:var(--m)">Where are you today? (979) 422-1435</a>
+</div>
+<div class="tphoto rv"><img src="https://images.unsplash.com/photo-1760411070365-714fa3a186db?auto=format&fit=crop&w=900&q=80" alt="People ordering from a food truck at night" loading="lazy"></div>
+</div>
+</section>
+
+<section class="build" id="build">
+<div class="wrap bgrid">
+<div class="stack" id="stack" aria-hidden="true"></div>
+<div class="rv">
+<p class="eyebrow">Build a stack</p>
+<h2>Make it <em>yours</em></h2>
+<div class="opts">
+<div class="og"><label>Patties</label><div class="chips" data-g="p" data-single>
+<button class="chip" aria-pressed="false" data-v="1">Single</button><button class="chip" aria-pressed="true" data-v="2">Double</button><button class="chip" aria-pressed="false" data-v="3">Triple</button></div></div>
+<div class="og"><label>Toppings</label><div class="chips" data-g="t">
+<button class="chip" aria-pressed="true" data-v="cheese">Cheese</button><button class="chip" aria-pressed="false" data-v="onion">Grilled onions</button><button class="chip" aria-pressed="true" data-v="pickle">Pickles</button><button class="chip" aria-pressed="false" data-v="sauce">House sauce</button></div></div>
+<div class="summary" id="sum"></div>
+<p style="color:var(--mut);font-size:14px">Prices are on the menu board at the truck. Want a big order ready when you arrive? Call ahead.</p>
+<div><a href="tel:+19794221435" class="btn bm">Call in this order</a></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="events" id="events">
+<div class="wrap egrid">
+<div class="rv">
+<p class="eyebrow">Events &amp; catering</p>
+<h2>Bring the <em>truck</em> to you</h2>
+<p class="lead">Tailgates, office lunches, birthday parties, weddings, breweries. We'll roll up and feed everybody hot off the flat-top.</p>
+<ul class="perks">
+<li>Hot, made-to-order burgers. Nothing sits in a warmer</li>
+<li>Great for Aggie game days and tailgates</li>
+<li>Private events and public pop-ups</li>
+</ul>
+</div>
+<form id="ev" class="rv">
+<label class="f"><span>Your name</span><input class="inp" name="name" required></label>
+<label class="f"><span>Phone</span><input class="inp" name="phone" type="tel"></label>
+<label class="f"><span>Event date</span><input class="inp" name="date" type="date"></label>
+<label class="f"><span>Headcount</span><input class="inp" name="count" type="number" min="1" placeholder="e.g. 60"></label>
+<label class="f full"><span>Location</span><input class="inp" name="loc" placeholder="Address or venue"></label>
+<label class="f full"><span>Tell us about it</span><textarea class="inp" name="msg" placeholder="Tailgate, office lunch, party..."></textarea></label>
+<div class="f full"><button class="btn bm" type="submit" style="justify-content:center">Send event request</button></div>
+</form>
+</div>
+</section>
+
+<section class="cta-big">
+<p class="eyebrow" style="justify-content:center">Hungry yet?</p>
+<a class="phone" href="tel:+19794221435">(979) 422-1435</a>
+<p style="color:var(--mut);margin-top:18px"><a href="mailto:Betterbeefsmashburgers@gmail.com">Betterbeefsmashburgers@gmail.com</a></p>
+</section>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> Better Beef Smashburgers · Bryan–College Station, TX</span><span>Smashed · Seared · Stacked</span></div></footer>
+<div class="mob"><a href="tel:+19794221435" class="btn bm">Call</a><a href="#truck" class="btn bo" style="background:var(--ink)">Find truck</a></div>
+
+<script>
+const R=matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.getElementById('yr').textContent=new Date().getFullYear();
+addEventListener('load',()=>{document.body.classList.add('ready');document.querySelectorAll('.smash span').forEach((s,i)=>s.style.animationDelay=(i*.08)+'s')});
+setTimeout(()=>document.body.classList.add('ready'),1500);
+const nav=document.getElementById('nav');
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* sizzle sparks */
+const cv=document.getElementById('sizzle'),cx=cv.getContext('2d');let W,H,P=[];
+function rs(){W=cv.width=cv.offsetWidth*devicePixelRatio;H=cv.height=cv.offsetHeight*devicePixelRatio}rs();addEventListener('resize',rs);
+function sp(){return{x:W*(.3+Math.random()*.4),y:H*(.55+Math.random()*.25),vx:(Math.random()-.5)*2.4*devicePixelRatio,vy:-(1+Math.random()*3)*devicePixelRatio,l:1,r:(1+Math.random()*2)*devicePixelRatio,c:Math.random()<.6?'255,194,26':'230,90,43'}}
+for(let i=0;i<70;i++){const p=sp();p.l=Math.random();P.push(p)}
+let heroVis=true;
+new IntersectionObserver(e=>heroVis=e[0].isIntersecting).observe(document.querySelector('.hero'));
+function loop(){if(heroVis&&!R){cx.clearRect(0,0,W,H);P.forEach((p,i)=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.03*devicePixelRatio;p.l-=.012;if(p.l<=0)P[i]=sp();cx.beginPath();cx.fillStyle=`rgba(${p.c},${Math.max(p.l,0)})`;cx.arc(p.x,p.y,p.r,0,7);cx.fill()})}requestAnimationFrame(loop)}loop();
+/* scroll: squash title + smash steps */
+const st=document.getElementById('smashTxt'),steps=document.querySelector('.steps'),patty=document.getElementById('patty'),press=document.getElementById('press'),cheese=document.getElementById('cheese'),steam=document.getElementById('steam'),lis=[...document.querySelectorAll('#slist li')];
+function onScroll(){const y=scrollY;nav.classList.toggle('s',y>40);
+if(!R){const k=Math.min(y/(innerHeight*.8),1);st.style.transform=`scale(${1+k*.25},${1-k*.55})`}
+const r=steps.getBoundingClientRect(),tot=steps.offsetHeight-innerHeight,p=Math.min(Math.max(-r.top/tot,0),1);
+const stage=Math.min(3,Math.floor(p*4));lis.forEach((l,i)=>l.classList.toggle('on',i===stage));
+// press comes down in stage 1
+const pp=Math.min(Math.max((p-.18)/.17,0),1);
+const down=pp<.7?pp/.7:1-(pp-.7)/.3*.6;
+press.style.setProperty('--py',(-120+down*215)+'%');
+const flat=Math.min(Math.max((p-.25)/.12,0),1);
+patty.style.setProperty('--sx',1+flat*.75);patty.style.setProperty('--sy',1+flat*.75);
+const crust=Math.min(Math.max((p-.5)/.2,0),1);
+patty.style.background=`radial-gradient(circle at 40% 35%,${crust>.5?'#7a3a1c':'#c2442d'},${crust>.5?'#3a170c':'#7d2416'} 70%)`;
+patty.style.boxShadow=`0 0 0 ${crust*10}px rgba(90,40,15,${crust*.9}),0 18px 30px rgba(0,0,0,.5)`;
+cheese.style.setProperty('--cs',Math.min(Math.max((p-.76)/.12,0),1));
+steam.style.setProperty('--st',p>.72?1:0);
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+/* builder */
+const stack=document.getElementById('stack'),sum=document.getElementById('sum');
+document.querySelectorAll('.chips').forEach(g=>g.addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;if(g.hasAttribute('data-single')){g.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true')}else b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true');draw()}));
+function sel(g){return[...document.querySelectorAll(`[data-g=${g}] .chip[aria-pressed=true]`)].map(b=>b.dataset.v)}
+function draw(){const n=+sel('p')[0]||1,t=sel('t');stack.innerHTML='';const add=c=>{const d=document.createElement('div');d.className='layer '+c;stack.appendChild(d)};
+add('bun-b');if(t.includes('sauce'))add('l-sauce');if(t.includes('pickle'))add('l-pickle');
+for(let i=0;i<n;i++){add('l-patty');if(t.includes('cheese'))add('l-cheese')}
+if(t.includes('onion'))add('l-onion');add('bun-t');
+const names={1:'Single',2:'Double',3:'Triple'},tp={cheese:'cheese',onion:'grilled onions',pickle:'pickles',sauce:'house sauce'};
+sum.textContent=`${names[n]} smash${t.length?' w/ '+t.map(x=>tp[x]).join(', '):''}`}
+draw();
+/* event form */
+document.getElementById('ev').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);
+const body=`Hi Better Beef!\n\nI'd like to book the truck for an event.\n\nName: ${f.get('name')}\nPhone: ${f.get('phone')}\nDate: ${f.get('date')}\nHeadcount: ${f.get('count')}\nLocation: ${f.get('loc')}\n\n${f.get('msg')}`;
+location.href=`mailto:Betterbeefsmashburgers@gmail.com?subject=${encodeURIComponent('Event request: '+(f.get('date')||''))}&body=${encodeURIComponent(body)}`});
+</script>
+</body>
+</html>
