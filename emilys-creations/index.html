@@ -73,48 +73,63 @@ h2 i{color:var(--maroon)}
 .lede{color:var(--mute);font-size:19px;max-width:620px;margin-top:14px}
 section{padding:110px 0}
 /* builder */
-.builder{background:#171612;color:#f3ede1}
-.builder .eyebrow{color:#b9c9ad}.builder h2 i{color:#e8b4a0}.builder .lede{color:#b8b1a3}
-.stage{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:#0d0c0a}
-.stage svg{position:absolute;inset:0;width:100%;height:100%;display:block}
-.stage:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.45))}
-.spot{transform-box:fill-box;transform-origin:center;transform:scale(0);transition:transform 1.1s cubic-bezier(.2,.8,.2,1)}
-.spot.in{transform:scale(1)}
-.labels{position:absolute;inset:0;pointer-events:none}
-.lab{position:absolute;display:flex;align-items:center;gap:8px;transform:translate(14px,-50%);opacity:0;transition:opacity .6s,transform .6s;white-space:nowrap}
-.lab i{position:relative;width:28px;height:1px;background:rgba(255,255,255,.8)}
-.lab i:before{content:"";position:absolute;left:-4px;top:50%;width:7px;height:7px;border-radius:50%;background:#fff;transform:translateY(-50%);box-shadow:0 0 0 4px rgba(255,255,255,.18)}
-.lab span{font-family:"Cormorant Garamond";font-style:italic;font-size:19px;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.7)}
-.lab.flip{flex-direction:row-reverse;transform:translate(calc(-100% - 14px),-50%)}
-.lab.flip i:before{left:auto;right:-4px}
-.lab.in{opacity:1}
-.grain{position:absolute;inset:0;pointer-events:none;opacity:.12;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.caption{display:flex;justify-content:space-between;margin-top:14px;font-size:14px;color:#b8b1a3;letter-spacing:.06em;text-transform:uppercase}
-.btn.light{background:#f3ede1;color:#171612}
+.builder{background:radial-gradient(ellipse at 30% 40%,#fbf7ef,#ece3d3 70%)}
+.table{position:relative;padding:20px 0 0}
+.frameWrap{position:relative;aspect-ratio:1;display:grid;place-items:center}
+.frame{position:relative;overflow:hidden;width:93%;height:66%;border-radius:18px;box-shadow:0 2px 0 #fff inset,0 40px 60px -20px rgba(60,45,25,.45),0 12px 20px -8px rgba(60,45,25,.3);transition:width .9s cubic-bezier(.6,0,.2,1),height .9s cubic-bezier(.6,0,.2,1),border-radius .9s cubic-bezier(.6,0,.2,1);background:#3b2c1e}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity .8s,transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.frame img.on{opacity:1;transform:scale(1)}
+.sides{position:absolute;inset:0;pointer-events:none}
+.ram{position:absolute;width:86px;transform:translate(-50%,-50%);text-align:center;animation:drop .7s cubic-bezier(.2,1.3,.4,1) both}
+.ram i{display:block;width:86px;height:86px;border-radius:50%;border:7px solid #fff;box-shadow:0 14px 22px -6px rgba(60,45,25,.45),inset 0 0 0 1px rgba(0,0,0,.06);background-repeat:no-repeat}
+.ram span{display:block;margin-top:6px;font-family:"Cormorant Garamond";font-style:italic;font-size:16px;color:var(--ink);white-space:nowrap}
+@keyframes drop{from{opacity:0;transform:translate(-50%,-80%) scale(.8)}}
+@media(max-width:600px){.ram{width:62px}.ram i{width:62px;height:62px;border-width:5px}.ram span{font-size:13px}}
+.dim{position:relative;display:flex;flex-direction:column;align-items:center;margin-top:18px}
+.dim .line{display:block;height:1px;background:var(--ink);position:relative;transition:width .9s cubic-bezier(.6,0,.2,1)}
+.dim .line:before,.dim .line:after{content:"";position:absolute;top:-6px;width:1px;height:13px;background:var(--ink)}
+.dim .line:before{left:0}.dim .line:after{right:0}
+.dim b{margin-top:10px;font-family:"Cormorant Garamond";font-style:italic;font-size:20px;font-weight:500}
+.serves{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:14px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);flex-wrap:wrap}
+.plates{display:flex;gap:5px;flex-wrap:wrap;align-items:center}
+.plates i{width:13px;height:13px;border-radius:50%;border:1.5px solid var(--leaf);animation:pop .4s both}
+.plates em{font-style:normal;color:var(--leaf);font-weight:700;letter-spacing:.06em}
+@keyframes pop{from{transform:scale(0)}}
+.adds{display:flex;flex-wrap:wrap;gap:10px}
+.add{display:inline-flex;align-items:center;gap:10px;background:var(--paper);border:1.5px solid rgba(63,90,58,.2);border-radius:999px;padding:5px 16px 5px 5px;font:500 15px "DM Sans",sans-serif;cursor:pointer;color:var(--ink)}
+.add i{width:40px;height:40px;border-radius:50%;background-repeat:no-repeat;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.add[aria-pressed=true]{border-color:var(--leaf);background:var(--leaf);color:#fff}
+.tag{position:relative;margin-top:8px;background:#c9a77c url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .12 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");color:#2e2214;padding:30px 26px 24px 64px;clip-path:polygon(34px 0,100% 0,100% 100%,34px 100%,0 50%);border-radius:0 10px 10px 0;box-shadow:0 18px 30px -12px rgba(60,45,25,.5)}
+.tag .hole{position:absolute;left:24px;top:50%;width:16px;height:16px;border-radius:50%;background:#ece3d3;transform:translateY(-50%);box-shadow:inset 0 2px 3px rgba(0,0,0,.35)}
+.tk{font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;opacity:.7}
+.tt{font-family:"Cormorant Garamond";font-style:italic;font-size:34px;font-weight:600;line-height:1.05;margin-top:4px}
+.ts{font-size:14px;opacity:.85;margin-top:2px}
+.tx{font-family:"Cormorant Garamond";font-size:19px;margin-top:10px}
+.tp{display:flex;justify-content:space-between;align-items:baseline;border-top:1px dashed rgba(46,34,20,.45);margin-top:14px;padding-top:10px}
+.tp b{font-family:"Cormorant Garamond";font-size:34px;color:var(--maroon)}
+.tag .send{margin-top:12px}
 .bgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;margin-top:44px;align-items:start}
 @media(max-width:900px){.bgrid{grid-template-columns:1fr}}
-.boardBox{position:sticky;top:92px}
-@media(max-width:900px){.boardBox{position:relative;top:0}}
+.table{position:sticky;top:92px}
+@media(max-width:900px){.table{position:relative;top:0}}
 .boardBox svg{width:100%;height:auto;display:block}
 .piece{transition:transform .5s cubic-bezier(.2,1.4,.4,1),opacity .4s;transform-box:fill-box;transform-origin:center}
 .piece.off{opacity:0;transform:scale(.2) translateY(-30px)}
 .q{margin-bottom:26px}
 .q h3{font-size:30px;font-weight:500;margin-bottom:12px}
 .sizes{display:grid;gap:10px}
-.size{display:grid;grid-template-columns:1fr auto;align-items:center;text-align:left;background:rgba(255,255,255,.04);border:1px solid rgba(243,237,225,.14);border-radius:14px;padding:14px 18px;cursor:pointer;font:inherit;color:#f3ede1}
+.size{display:grid;grid-template-columns:1fr auto;align-items:center;text-align:left;background:var(--paper);border:1.5px solid transparent;border-radius:14px;padding:13px 18px;cursor:pointer;font:inherit;color:var(--ink);box-shadow:0 4px 12px rgba(60,45,25,.06)}
 .size b{font-family:"Cormorant Garamond";font-size:24px;font-weight:600;display:block}
-.size small{color:#a39c8e;font-size:14px}
-.size span.p{font-family:"Cormorant Garamond";font-size:28px;color:#e8b4a0;font-weight:600}
-.size[aria-pressed=true]{border-color:#e8b4a0;background:rgba(232,180,160,.08)}
+.size small{color:var(--mute);font-size:13.5px}
+.size span.p{font-family:"Cormorant Garamond";font-size:28px;color:var(--maroon);font-weight:600}
+.size[aria-pressed=true]{border-color:var(--leaf);box-shadow:0 10px 24px rgba(63,90,58,.16)}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chip{background:var(--paper);border:1.5px solid rgba(63,90,58,.25);border-radius:999px;padding:9px 15px;font:500 15px "DM Sans",sans-serif;cursor:pointer;color:var(--ink)}
-.builder .chip{background:transparent;border-color:rgba(243,237,225,.22);color:#f3ede1}
-.builder .chip[aria-pressed=true]{background:#f3ede1;color:#171612;border-color:#f3ede1}
+
 .chip[aria-pressed=true]{background:var(--leaf);color:#fff;border-color:var(--leaf)}
 .total{display:flex;justify-content:space-between;align-items:baseline;margin:18px 0 6px;font-family:"Cormorant Garamond";font-size:30px}
 .total b{color:var(--maroon)}
-.builder .total b{color:#e8b4a0}
-.builder .fine{color:#8f897c}
+
 .fine{font-size:13.5px;color:var(--mute);margin-top:8px}
 .send{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 .send a{flex:1}
@@ -181,32 +196,34 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <section class="builder" id="build">
   <div class="wrap">
     <div class="eyebrow">Build a board</div>
-    <h2>Pick a size, <i>watch it come together.</i></h2>
-    <p class="lede">Choose a board and your add-ons. Everything you pick comes into focus on the board, then send it to Emily to order.</p>
+    <h2>Choose your board, <i>add the extras.</i></h2>
+    <p class="lede">Pick a size and watch the platter change to match, then set out your extras beside it. Send it to Emily when it looks right.</p>
     <div class="bgrid">
-      <div class="boardBox">
-        <div class="stage" id="stage">
-          <svg id="board" viewBox="0 120 1000 1250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Photo of a charcuterie board; the items you choose come into focus">
-            <defs>
-              <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="26"/></filter>
-              <filter id="dim"><feGaussianBlur stdDeviation="14"/><feColorMatrix type="saturate" values=".35"/><feComponentTransfer><feFuncR type="linear" slope=".26"/><feFuncG type="linear" slope=".26"/><feFuncB type="linear" slope=".26"/></feComponentTransfer></filter>
-              <mask id="reveal" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1499"><rect width="1000" height="1499" fill="#000"/><g id="spots" filter="url(#soft)"></g></mask>
-            </defs>
-            <image href="https://images.unsplash.com/photo-1773754109448-13d2af138059?w=1400&q=75&auto=format" width="1000" height="1499" filter="url(#dim)"/>
-            <image href="https://images.unsplash.com/photo-1773754109448-13d2af138059?w=1400&q=75&auto=format" width="1000" height="1499" mask="url(#reveal)"/>
-          </svg>
-          <div class="labels" id="labels"></div>
-          <div class="grain" aria-hidden="true"></div>
+      <div class="table">
+        <div class="frameWrap"><div class="frame" id="frame">
+          <img class="on" src="https://images.unsplash.com/photo-1695606392727-d8b959879721?w=1000&h=1000&fit=crop&q=75&auto=format" alt="Small rustic board with salami, cheese and bread">
+          <img src="https://images.unsplash.com/photo-1773754109448-13d2af138059?w=1200&h=900&fit=crop&crop=center&q=75&auto=format" alt="Board with brie, figs, prosciutto, grapes and crackers">
+          <img src="https://images.unsplash.com/photo-1767500536243-bf6807a331e4?w=1000&h=1000&fit=crop&q=75&auto=format" alt="Large board with fruit, cheeses and bread">
+          <img src="https://images.unsplash.com/photo-1784294460349-591c4cd81400?w=1000&h=1000&fit=crop&q=75&auto=format" alt="Extra large board overflowing with fruit, meats and cheese">
+          <img src="https://images.unsplash.com/photo-1678572823447-45fc146df43c?w=1600&h=900&fit=crop&q=75&auto=format" alt="Grazing table covered in meats, cheeses, fruit and bread">
         </div>
-        <div class="caption"><span id="capSize">Medium board</span><span id="capCount">5 of 12 on the board</span></div>
+        <div class="sides" id="sides"></div></div>
+        <div class="dim"><span class="line" id="dimLine"></span><b id="dimLabel">9 in round platter</b></div>
+        <div class="serves"><span id="servesTxt">Serves up to 4</span><span class="plates" id="plates"></span></div>
       </div>
       <div>
         <div class="q"><h3>Board size</h3><div class="sizes" id="sizes"></div></div>
-        <div class="q"><h3>Add-ons</h3><div class="chips" id="adds"></div></div>
-        <div class="q"><h3>Occasion</h3><div class="chips" id="occs"></div></div>
-        <div class="total"><span>Starting at</span><b id="price">$120</b></div>
-        <div class="send"><a class="btn light" id="sms" href="#">Text Emily</a><a class="btn maroon" id="mail" href="#">Email Emily</a></div>
-        <p class="fine">Prices are starting points and can change based on what you request. Photo is a placeholder for Emily's own boards.</p>
+        <div class="q"><h3>Extras</h3><div class="adds" id="adds"></div></div>
+        <div class="tag" aria-live="polite">
+          <div class="hole"></div>
+          <div class="tk">Emily's Creations</div>
+          <div class="tt" id="tagTitle">Medium board</div>
+          <div class="ts" id="tagSub">Serves 5–7</div>
+          <div class="tx" id="tagExtras">+ Fresh fruit, Crackers</div>
+          <div class="tp"><span>Starting at</span><b id="price">$120</b></div>
+          <div class="send"><a class="btn" id="sms" href="#">Text Emily</a><a class="btn maroon" id="mail" href="#">Email Emily</a></div>
+        </div>
+        <p class="fine">Prices are starting points and can change with your requests. Photos are placeholders for Emily's own boards.</p>
       </div>
     </div>
   </div>
@@ -247,44 +264,39 @@ const occ=document.getElementById('occasions'),track=document.getElementById('tr
 function onScroll(){const y=scrollY;if(!reduce)hi.style.transform=`scale(${1.15-Math.min(.15,y/3000)}) rotate(${Math.min(6,y/120)}deg)`;
 const r=occ.getBoundingClientRect();const p=Math.min(1,Math.max(0,-r.top/(occ.offsetHeight-innerHeight)));const max=track.scrollWidth-innerWidth+innerWidth*.08;track.style.transform=`translateX(${-p*Math.max(0,max)}px)`}
 addEventListener('scroll',()=>requestAnimationFrame(onScroll),{passive:true});addEventListener('resize',onScroll);onScroll();
-/* board builder: focus-pull reveal on a real photo */
-const SIZES=[{n:'Small board',s:'Serves up to 4 · 3 cheeses, 1 meat',p:75,c:3,m:1},{n:'Medium board',s:'Serves 5–7 · 3 cheeses, 2 meats',p:120,c:3,m:2},{n:'Large board',s:'Serves 8–10 · 4 cheeses, 3 meats',p:170,c:4,m:3},{n:'Extra large board',s:'Serves up to 15 · 5 cheeses, 3 meats',p:215,c:5,m:3},{n:'Grazing table',s:'Serves 30+ · priced to your party',p:null,c:5,m:3}];
-const ADDS=['Fresh fruit','Crackers','Jams & honey','Candied nuts','Herbs & garnish'];
-const OCCS=['Game day','Shower','Birthday','Gift box','Office','Wedding','Holiday'];
-/* hotspots in image pixels (1000 x 1499) */
-const H={
- cheese:[{x:440,y:520,r:120,l:'Triple-cream brie'},{x:170,y:1010,r:130,l:'Blue cheese'},{x:140,y:1120,r:110,l:'Aged cheddar'}],
- meat:[{x:150,y:600,r:170,l:'Salami'},{x:220,y:820,r:150,l:'Prosciutto'},{x:310,y:1180,r:140,l:'Coppa'}],
- 'Fresh fruit':[{x:480,y:1050,r:150,l:'Green grapes'},{x:190,y:690,r:90,l:'Figs'},{x:90,y:1270,r:110}],
- 'Crackers':[{x:420,y:360,r:120,l:'Seeded crackers'},{x:580,y:440,r:120},{x:690,y:610,r:120}],
- 'Jams & honey':[{x:610,y:720,r:130,l:'Fig jam'}],
- 'Candied nuts':[{x:290,y:930,r:90,l:'Candied pecans'}],
- 'Herbs & garnish':[{x:340,y:560,r:80,l:'Rosemary'}]};
-const st={size:1,adds:['Fresh fruit','Crackers'],occ:'Game day'};
-const spots=document.getElementById('spots'),labels=document.getElementById('labels');const NS='http://www.w3.org/2000/svg';
-const VB={x:0,y:120,w:1000,h:1250};
-const all=[];
-function addSpot(group,h){const c=document.createElementNS(NS,'circle');c.setAttribute('cx',h.x);c.setAttribute('cy',h.y);c.setAttribute('r',h.r);c.setAttribute('fill','#fff');c.setAttribute('class','spot');spots.appendChild(c);
- let lab=null;if(h.l){lab=document.createElement('div');lab.className='lab';lab.innerHTML=`<i></i><span>${h.l}</span>`;labels.appendChild(lab)}
- const o={group,h,c,lab};all.push(o);return o}
-const G={};for(const k in H)G[k]=H[k].map(h=>addSpot(k,h));
-function placeLabels(){const st=document.getElementById('stage');const W=st.offsetWidth,Hh=st.offsetHeight;const sc=Math.max(W/VB.w,Hh/VB.h);const ox=(W-VB.w*sc)/2,oy=(Hh-VB.h*sc)/2;
- all.forEach(o=>{if(!o.lab)return;const px=ox+(o.h.x-VB.x)*sc,py=oy+(o.h.y-VB.y)*sc;o.lab.style.left=px+'px';o.lab.style.top=py+'px';o.lab.classList.toggle('flip',px>W*.55)})}
-function on(o,v,delay){o.c.style.transitionDelay=(v?delay:0)+'ms';o.c.classList.toggle('in',v);if(o.lab){o.lab.style.transitionDelay=(v?delay+250:0)+'ms';o.lab.classList.toggle('in',v)}}
-function render(){const S=document.getElementById('sizes'),A=document.getElementById('adds'),O=document.getElementById('occs');S.innerHTML=A.innerHTML=O.innerHTML='';
-SIZES.forEach((z,i)=>{const b=document.createElement('button');b.type='button';b.className='size';b.setAttribute('aria-pressed',st.size===i);b.innerHTML=`<div><b>${z.n}</b><small>${z.s}</small></div><span class="p">${z.p?'$'+z.p:'Quote'}</span>`;b.onclick=()=>{st.size=i;render()};S.appendChild(b)});
-ADDS.forEach(a=>{const sel=st.adds.includes(a);const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=a;b.setAttribute('aria-pressed',sel);b.onclick=()=>{st.adds=sel?st.adds.filter(x=>x!==a):[...st.adds,a];render()};A.appendChild(b)});
-OCCS.forEach(o=>{const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=o;b.setAttribute('aria-pressed',st.occ===o);b.onclick=()=>{st.occ=o;render()};O.appendChild(b)});
-const z=SIZES[st.size];let d=0,count=0;
-G.cheese.forEach((o,i)=>{const v=i<Math.min(3,z.c);on(o,v,d);if(v){d+=90;count++}});
-G.meat.forEach((o,i)=>{const v=i<z.m;on(o,v,d);if(v){d+=90;count++}});
-ADDS.forEach(a=>G[a].forEach(o=>{const v=st.adds.includes(a);on(o,v,d);if(v){d+=70;if(o.lab)count++}}));
-document.getElementById('capSize').textContent=z.n;document.getElementById('capCount').textContent=`${count} of 12 in focus`;
-document.getElementById('price').textContent=z.p?'$'+z.p:'Custom quote';
-const body=`Hi Emily! I'd like to order a ${z.n.toLowerCase()} (${z.s}).\nAdd-ons: ${st.adds.join(', ')||'none'}\nOccasion: ${st.occ}\nDate needed: \nPickup or delivery: `;
-document.getElementById('sms').href='sms:+19792298500?&body='+encodeURIComponent(body);
-document.getElementById('mail').href='mailto:Emilyscreations10@gmail.com?subject='+encodeURIComponent(z.n+' order')+'&body='+encodeURIComponent(body);}
-render();placeLabels();addEventListener('resize',placeLabels);new ResizeObserver(placeLabels).observe(document.getElementById('stage'));
+/* board builder: platter configurator */
+const SIZES=[
+ {n:'Small board',s:'Serves up to 4',d:'3 cheeses, 1 meat',p:75,dim:'9 in round platter',w:.60,h:.60,r:'50%',serve:4},
+ {n:'Medium board',s:'Serves 5–7',d:'3 cheeses, 2 meats',p:120,dim:'14 × 10 in platter',w:.93,h:.66,r:'18px',serve:7},
+ {n:'Large board',s:'Serves 8–10',d:'4 cheeses, 3 meats',p:170,dim:'13 in round platter',w:.86,h:.86,r:'50%',serve:10},
+ {n:'Extra large board',s:'Serves up to 15',d:'5 cheeses, 3 meats',p:215,dim:'15 in round platter',w:1,h:1,r:'50%',serve:15},
+ {n:'Grazing table',s:'Serves 30+',d:'Built along your table',p:null,dim:'Laid out on your table',w:1,h:.6,r:'14px',serve:30}];
+const PHOTO='https://images.unsplash.com/photo-1773754109448-13d2af138059?w=600&q=70&auto=format';
+const ADDS=[{n:'Fresh fruit',x:480,y:1050},{n:'Crackers',x:580,y:440},{n:'Fig jam & honey',x:610,y:720},{n:'Candied nuts',x:290,y:930},{n:'Herbs & garnish',x:340,y:560}];
+function crop(el,a,size,zoom){const k=size/zoom;el.style.backgroundImage=`url(${PHOTO})`;el.style.backgroundSize=`${1000*k}px auto`;el.style.backgroundPosition=`${-(a.x*k-size/2)}px ${-(a.y*k-size/2)}px`}
+const st={size:1,adds:['Fresh fruit','Crackers']};
+const frame=document.getElementById('frame'),imgs=[...frame.querySelectorAll('img')],sides=document.getElementById('sides');
+function render(){
+ const S=document.getElementById('sizes'),A=document.getElementById('adds');S.innerHTML=A.innerHTML='';
+ SIZES.forEach((z,i)=>{const b=document.createElement('button');b.type='button';b.className='size';b.setAttribute('aria-pressed',st.size===i);b.innerHTML=`<div><b>${z.n}</b><small>${z.s} · ${z.d}</small></div><span class="p">${z.p?'$'+z.p:'Quote'}</span>`;b.onclick=()=>{st.size=i;render()};S.appendChild(b)});
+ ADDS.forEach(a=>{const on=st.adds.includes(a.n);const b=document.createElement('button');b.type='button';b.className='add';b.setAttribute('aria-pressed',on);const t=document.createElement('i');crop(t,a,40,200);b.appendChild(t);b.appendChild(document.createTextNode(a.n));b.onclick=()=>{st.adds=on?st.adds.filter(x=>x!==a.n):[...st.adds,a.n];render()};A.appendChild(b)});
+ const z=SIZES[st.size];
+ frame.style.width=(z.w*100)+'%';frame.style.height=(z.h*100)+'%';frame.style.borderRadius=z.r;
+ imgs.forEach((im,i)=>im.classList.toggle('on',i===st.size));
+ document.getElementById('dimLine').style.width=(z.w*100)+'%';document.getElementById('dimLabel').textContent=z.dim;
+ document.getElementById('servesTxt').textContent=z.s;
+ const pl=document.getElementById('plates');pl.innerHTML='';for(let i=0;i<Math.min(z.serve,15);i++){const d=document.createElement('i');d.style.animationDelay=(i*35)+'ms';pl.appendChild(d)}if(z.serve>15){const m=document.createElement('em');m.textContent='+ more';pl.appendChild(m)}
+ /* ramekins beside the platter */
+ sides.innerHTML='';const picked=ADDS.filter(a=>st.adds.includes(a.n));
+ const spots=[[94,8],[100,34],[96,62],[4,86],[30,96]];
+ picked.forEach((a,i)=>{const r=document.createElement('div');r.className='ram';const inner=document.createElement('i');crop(inner,a,86,190);r.appendChild(inner);const lab=document.createElement('span');lab.textContent=a.n;r.appendChild(lab);r.style.left=spots[i][0]+'%';r.style.top=spots[i][1]+'%';r.style.animationDelay=(i*80)+'ms';sides.appendChild(r)});
+ document.getElementById('tagTitle').textContent=z.n;document.getElementById('tagSub').textContent=`${z.s} · ${z.d}`;
+ document.getElementById('tagExtras').textContent=st.adds.length?'+ '+st.adds.join(', '):'No extras yet';
+ document.getElementById('price').textContent=z.p?'$'+z.p:'Custom quote';
+ const body=`Hi Emily! I'd like to order a ${z.n.toLowerCase()} (${z.s}, ${z.d}).\nExtras: ${st.adds.join(', ')||'none'}\nOccasion: \nDate needed: \nPickup or delivery: `;
+ document.getElementById('sms').href='sms:+19792298500?&body='+encodeURIComponent(body);
+ document.getElementById('mail').href='mailto:Emilyscreations10@gmail.com?subject='+encodeURIComponent(z.n+' order')+'&body='+encodeURIComponent(body);}
+render();
 </script>
 </body>
 </html>
