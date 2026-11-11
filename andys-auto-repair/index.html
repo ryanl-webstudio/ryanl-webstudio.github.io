@@ -223,16 +223,16 @@ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const bg=document.getElementById('heroBg');addEventListener('scroll',()=>{if(!reduce)bg.style.transform=`scale(1.08) translateY(${scrollY*.25}px)`},{passive:true});
 /* symptom diagnosis */
 const S=[
- {k:'Squeals or grinds when I brake',t:'Brakes',d:'Squealing usually means worn pads. Grinding can mean the rotors are getting damaged, so don\'t wait long.',img:'1696494561430-de087dd0bd69',x:52,y:48,l:'Pads & rotors'},
- {k:'Blowing warm air',t:'A/C repair',d:'Often low refrigerant, a leak or a compressor problem. We\'ll find which.',img:'1713757554567-232a340261a0',x:46,y:42,l:'A/C system'},
- {k:'Clicks but won\'t start',t:'Starter or battery',d:'A click with no crank usually points to the starter, the battery or a connection.',img:'1654616111851-5394318e3279',x:40,y:58,l:'Starter'},
- {k:'Dim lights, battery keeps dying',t:'Alternator',d:'If the battery keeps dying, the alternator may not be charging it.',img:'1771340012378-3c86cb649193',x:36,y:52,l:'Alternator'},
- {k:'Due for an oil change',t:'Oil & filter',d:'Quick oil and filter change so the engine stays healthy.',img:'1771340742493-52fbd5476ccb',x:50,y:46,l:'Oil & filter'},
- {k:'Check engine light is on',t:'Diagnostics',d:'We read the code and tell you what it means.',img:'1615906655593-ad0386982a0f',x:55,y:50,l:'Engine'}];
+ {k:'Squeals or grinds when I brake',t:'Brakes',d:'Squealing usually means worn pads. Grinding can mean the rotors are getting damaged, so don\'t wait long.',img:'1696494561430-de087dd0bd69',x:25,y:37,l:'Caliper & pads'},
+ {k:'Blowing warm air',t:'A/C repair',d:'Often low refrigerant, a leak or a compressor problem. We\'ll find which.',img:'1713757554567-232a340261a0',x:64,y:57,l:'A/C line'},
+ {k:'Clicks but won\'t start',t:'Starter or battery',d:'A click with no crank usually points to the starter, the battery or a connection.',img:'1765211003026-f7666ea3a948',x:24,y:68,l:'Battery terminal'},
+ {k:'Dim lights, battery keeps dying',t:'Alternator',d:'If the battery keeps dying, the alternator may not be charging it.',img:'1757547570448-04946db22218',x:49,y:25,l:'Alternator'},
+ {k:'Due for an oil change',t:'Oil & filter',d:'Quick oil and filter change so the engine stays healthy.',img:'1771340742493-52fbd5476ccb',x:37,y:65,l:'Oil fill'},
+ {k:'Check engine light is on',t:'Diagnostics',d:'We read the code and tell you what it means.',img:'1615906655593-ad0386982a0f',x:56,y:69,l:'Sensor plug'}];
 const photo=document.getElementById('photo');S.forEach((s,i)=>{const im=document.createElement('img');im.src=`https://images.unsplash.com/photo-${s.img}?w=1100&h=825&fit=crop&q=70&auto=format`;im.alt=s.t;if(i===0)im.className='on';photo.insertBefore(im,photo.firstChild)});
 const imgs=[...photo.querySelectorAll('img')].reverse();let cur=0;
 function pick(i){cur=i;const s=S[i];const sym=document.getElementById('sym');sym.innerHTML='';S.forEach((o,j)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-pressed',j===i);b.innerHTML=`<span>${o.k}</span><small>${o.t}</small>`;b.onclick=()=>pick(j);sym.appendChild(b)});
- imgs.forEach((im,j)=>im.classList.toggle('on',j===i));const r=document.getElementById('ring'),c=document.getElementById('callout');r.style.left=s.x+'%';r.style.top=s.y+'%';c.style.left=`calc(${s.x}% + 64px)`;c.style.top=`calc(${s.y}% - 16px)`;document.getElementById('calloutTxt').textContent=s.l;
+ imgs.forEach((im,j)=>im.classList.toggle('on',j===i));const r=document.getElementById('ring'),c=document.getElementById('callout');r.style.left=s.x+'%';r.style.top=s.y+'%';if(s.x>55){c.style.left='auto';c.style.right=`calc(${100-s.x}% + 64px)`;c.style.flexDirection='row-reverse'}else{c.style.right='auto';c.style.left=`calc(${s.x}% + 64px)`;c.style.flexDirection='row'}c.style.top=`calc(${s.y}% - 16px)`;document.getElementById('calloutTxt').textContent=s.l;
  document.getElementById('vTitle').textContent=s.t;document.getElementById('vText').textContent=s.d;
  document.getElementById('vSend').href='sms:+19798221271?&body='+encodeURIComponent(`Hi Andy's! My car: ${s.k.toLowerCase()}.\nYear/make/model: \nName: `)}
 pick(0);

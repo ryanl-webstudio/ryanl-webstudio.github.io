@@ -38,10 +38,11 @@ p{max-width:520px;font-size:18px;color:#555;margin-top:24px}
   let color='#e2231a';const MAXW=38,LIFE=3200;let pts=[],dpr=Math.min(2,devicePixelRatio||1);
   function size(){c.width=innerWidth*dpr;c.height=innerHeight*dpr;x.setTransform(dpr,0,0,dpr,0,0)}size();addEventListener('resize',size);
   let last=null;
-  addEventListener('pointermove',e=>{const p={x:e.clientX,y:e.clientY,t:performance.now()};
+  function addPt(X,Y){const p={x:X,y:Y,t:performance.now()};
     if(last){const d=Math.hypot(p.x-last.x,p.y-last.y);const steps=Math.min(8,Math.floor(d/6));for(let i=1;i<=steps;i++){pts.push({x:last.x+(p.x-last.x)*i/(steps+1),y:last.y+(p.y-last.y)*i/(steps+1),t:p.t})}}
-    pts.push(p);last=p});
-  addEventListener('scroll',()=>{const dy=scrollY-(window._py||scrollY);window._py=scrollY;pts.forEach(p=>p.y-=dy)},{passive:true});window._py=scrollY;
+    pts.push(p);last=p}
+  let cx=null,cy=null;addEventListener('pointermove',e=>{cx=e.clientX;cy=e.clientY;addPt(cx,cy)});
+  addEventListener('scroll',()=>{const dy=scrollY-(window._py||scrollY);window._py=scrollY;pts.forEach(p=>p.y-=dy);if(cx!==null)addPt(cx,cy)},{passive:true});window._py=scrollY;
   document.querySelectorAll('.swatches button').forEach(b=>b.onclick=()=>{color=b.dataset.c});
   (function frame(){const now=performance.now();pts=pts.filter(p=>now-p.t<LIFE);x.clearRect(0,0,innerWidth,innerHeight);
     if(pts.length>2){x.lineCap='round';x.lineJoin='round';x.strokeStyle=color;

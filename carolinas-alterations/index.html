@@ -44,7 +44,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .hero .row{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
 .stars{display:flex;gap:22px;margin-top:34px;flex-wrap:wrap}
 .stars div{border-left:1px solid var(--champ);padding-left:14px}
-.stars b{display:block;font-family:"Bodoni Moda";font-size:30px;font-weight:400}
+.stars b{display:block;font-family:"Jost",sans-serif;font-size:30px;font-weight:300;letter-spacing:.01em}
 .stars span{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
 .arches{position:relative;height:min(78vh,700px)}
 @media(max-width:900px){.arches{height:110vw}}
@@ -86,7 +86,7 @@ h2{font-size:clamp(42px,5.6vw,80px)}
 .pgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:5vw;margin-top:50px;align-items:start}
 @media(max-width:900px){.pgrid{grid-template-columns:1fr}}
 .field label{display:block;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--champ2);margin-bottom:12px}
-.field input[type=date]{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(246,241,234,.4);color:var(--ivory);font:400 34px "Bodoni Moda",serif;padding:8px 0;color-scheme:dark}
+.field input[type=date]{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(246,241,234,.4);color:var(--ivory);font:300 32px "Jost",sans-serif;letter-spacing:.02em;padding:8px 0;color-scheme:dark}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
 .chip{background:transparent;border:1px solid rgba(246,241,234,.3);color:var(--ivory);padding:10px 16px;font:400 14px Jost,sans-serif;letter-spacing:.06em;cursor:pointer}
 .chip[aria-pressed=true]{background:var(--ivory);color:var(--ink)}
@@ -109,6 +109,7 @@ h2{font-size:clamp(42px,5.6vw,80px)}
 .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center}
 @media(max-width:860px){.visit .wrap{grid-template-columns:1fr}}
 .hours div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line)}
+.addr .n{font-family:"Jost",sans-serif;font-weight:300;letter-spacing:.01em}
 .addr{font-family:"Bodoni Moda";font-size:clamp(30px,3.6vw,44px);line-height:1.1;margin:10px 0 24px}
 footer{padding:36px 0 50px;color:var(--mute);font-size:13.5px;border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
@@ -206,7 +207,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   <div class="wrap">
     <div>
       <div class="eyebrow">Visit the shop</div>
-      <p class="addr">402 W William J Bryan Pkwy<br>Bryan, TX 77803</p>
+      <p class="addr"><span class="n">402</span> W William J Bryan Pkwy<br>Bryan, TX 77803</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="https://maps.google.com/?q=402+W+William+J+Bryan+Pkwy,+Bryan,+TX+77803" target="_blank" rel="noopener">Directions</a><a class="btn line" href="mailto:carolinas_alterations@hotmail.com">Email</a></div>
     </div>
     <div class="hours">
@@ -231,8 +232,9 @@ addEventListener('scroll',()=>requestAnimationFrame(()=>{if(reduce)return;par.fo
 (function(){const c=document.getElementById('thread'),x=c.getContext('2d');if(!matchMedia('(pointer:fine)').matches||reduce){c.remove();return}
 let pts=[],dpr=Math.min(2,devicePixelRatio||1),last=null,py=scrollY;const LIFE=3200;
 function size(){c.width=innerWidth*dpr;c.height=innerHeight*dpr;x.setTransform(dpr,0,0,dpr,0,0)}size();addEventListener('resize',size);
-addEventListener('pointermove',e=>{const p={x:e.clientX,y:e.clientY,t:performance.now()};if(last&&Math.hypot(p.x-last.x,p.y-last.y)<3)return;pts.push(p);last=p});
-addEventListener('scroll',()=>{const dy=scrollY-py;py=scrollY;pts.forEach(p=>p.y-=dy)},{passive:true});
+let cx=null,cy=null;
+addEventListener('pointermove',e=>{cx=e.clientX;cy=e.clientY;const p={x:e.clientX,y:e.clientY,t:performance.now()};if(last&&Math.hypot(p.x-last.x,p.y-last.y)<3)return;pts.push(p);last=p});
+addEventListener('scroll',()=>{const dy=scrollY-py;py=scrollY;pts.forEach(p=>p.y-=dy);if(cx!==null){const p={x:cx,y:cy,t:performance.now()};pts.push(p);last=p}},{passive:true});
 (function f(){const now=performance.now();pts=pts.filter(p=>now-p.t<LIFE);x.clearRect(0,0,innerWidth,innerHeight);
  if(pts.length>2){x.lineCap='round';
   for(let i=1;i<pts.length-1;i++){const a=pts[i-1],b=pts[i],n=pts[i+1];const age=(now-b.t)/LIFE;x.globalAlpha=Math.max(0,1-Math.pow(age,2));x.strokeStyle='#b8975a';x.lineWidth=1.6;x.setLineDash([7,5]);x.beginPath();x.moveTo((a.x+b.x)/2,(a.y+b.y)/2);x.quadraticCurveTo(b.x,b.y,(b.x+n.x)/2,(b.y+n.y)/2);x.stroke()}
