@@ -89,6 +89,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .lab span{background:rgba(14,12,10,.82);padding:6px 10px;border:1px solid var(--line)}
 .lab.r{transform:translate(var(--off),-50%);padding-left:30px}.lab.r:before{left:0;width:24px}
 .lab.l{transform:translate(calc(-100% - var(--off)),-50%);padding-right:30px}.lab.l:before{right:0;width:24px}
+.lab.b{transform:translate(-50%,calc(var(--off) - 4px))}.lab.b:before{display:none}
 .lab.show{opacity:1}
 .parts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .parts button{background:transparent;color:var(--ivory);border:1px solid var(--line);padding:11px 16px;font:500 13px "Hanken Grotesk";letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .25s}
@@ -311,7 +312,7 @@ if(fine){
  stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();const x=e.clientX-r.left,y=e.clientY-r.top;lens.classList.add('free','on');setLens(x,y);
   let best=-1,bd=1e9;P.forEach((p,i)=>{const d=Math.hypot(p.x/100*r.width-x,p.y/100*r.height-y);if(d<bd){bd=d;best=i}});if(bd<lens.offsetWidth*.32)show(best)});
 }else{stage.style.cursor='pointer';stage.addEventListener('click',e=>{const r=stage.getBoundingClientRect();const x=e.clientX-r.left,y=e.clientY-r.top;let best=0,bd=1e9;P.forEach((p,i)=>{const d=Math.hypot(p.x/100*r.width-x,p.y/100*r.height-y);if(d<bd){bd=d;best=i}});focusPart(best,true)})}
-function sides(){const W=stage.offsetWidth,off=W<700?82:132;P.forEach(p=>{const px=p.x/100*W,lw=p.l.offsetWidth||140;let d=p.d;if(d==='r'&&px+off+lw>W)d='l';if(d==='l'&&px-off-lw<0)d='r';p.l.className='lab '+d+(p.l.classList.contains('show')?' show':'')})}
+function sides(){const W=stage.offsetWidth,off=W<700?82:132;P.forEach(p=>{const px=p.x/100*W,lw=p.l.offsetWidth||140;const fitR=px+off+lw<=W,fitL=px-off-lw>=0;let d=p.d;if(d==='r'&&!fitR)d=fitL?'l':'b';if(d==='l'&&!fitL)d=fitR?'r':'b';p.l.className='lab '+d+(p.l.classList.contains('show')?' show':'')})}
 sides();addEventListener('resize',()=>{sides();if(active>=0)focusPart(active,false)});
 /* flip */
 const card=document.getElementById('card'),fs=document.querySelector('.flip-sec');
