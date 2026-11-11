@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wren Bird Bakery | Hand-Decorated Custom Cookies in College Station, TX</title>
+<meta name="description" content="Custom decorated sugar cookies for holidays, birthdays and showers, piped and finished by hand in College Station, TX. Holiday pre-orders open now.">
+<meta name="theme-color" content="#0f1a2b">
+<!-- CONCEPT PREVIEW: remove robots tag + .concept strip at launch -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Bakery","name":"Wren Bird Bakery","email":"wrenbirdbakery@gmail.com","address":{"@type":"PostalAddress","addressLocality":"College Station","addressRegion":"TX","addressCountry":"US"},"servesCuisine":"Custom decorated cookies","sameAs":["https://www.instagram.com/wrenbirdbakery/"]}</script>
+<style>
+:root{--night:#0f1a2b;--night2:#16243a;--ivory:#f6efe3;--ivory2:#cfc6b6;--gold:#d8b46a;--gold2:#f1d9a0;--rose:#e9b9b0;--sage:#a9bfa8;--line:rgba(246,239,227,.14);--serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost",system-ui,sans-serif;--e:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--night);color:var(--ivory);font-family:var(--sans);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+#snow{position:fixed;inset:0;pointer-events:none;z-index:0}
+main,nav,footer{position:relative;z-index:1}
+.concept{position:fixed;top:0;left:0;right:0;z-index:60;height:30px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;letter-spacing:.06em;background:#0a1220;border-bottom:1px solid var(--line);color:var(--ivory2);white-space:nowrap;overflow:hidden}
+.concept b{color:var(--gold);font-weight:500}
+nav{position:fixed;top:30px;left:0;right:0;z-index:50;transition:background .5s}
+nav.s{background:rgba(15,26,43,.8);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{height:78px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.nl{display:flex;gap:30px;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+.nl a{opacity:.75;transition:opacity .3s}.nl a:hover{opacity:1}
+.logo{font-family:var(--serif);font-style:italic;font-size:28px;letter-spacing:.01em;display:flex;align-items:center;gap:8px}
+.logo svg{width:26px;height:26px;color:var(--gold)}
+.nr{justify-self:end}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 28px;border-radius:999px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;transition:all .5s var(--e);position:relative;overflow:hidden}
+.btn.g{background:linear-gradient(120deg,var(--gold),var(--gold2),var(--gold));background-size:200% 100%;color:var(--night)}
+.btn.g:hover{background-position:100% 0;box-shadow:0 10px 40px -10px rgba(216,180,106,.7)}
+.btn.o{border:1px solid rgba(246,239,227,.35)}.btn.o:hover{border-color:var(--gold);color:var(--gold2)}
+/* hero */
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:130px 0 80px;position:relative}
+.season{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold2);border:1px solid rgba(216,180,106,.35);padding:9px 18px;border-radius:999px;opacity:0;transition:opacity 1.2s 1.6s}
+.season i{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(58px,10vw,156px);line-height:.92;letter-spacing:-.02em;margin:28px 0 26px}
+h1 em{font-style:italic;color:var(--gold2)}
+h1 .ch{display:inline-block;opacity:0;filter:blur(14px);transform:translateY(30px);transition:opacity 1.2s var(--e),filter 1.2s var(--e),transform 1.2s var(--e)}
+.ready h1 .ch{opacity:1;filter:none;transform:none}
+.ready .season,.ready .hl{opacity:1}
+.hl{font-size:clamp(17px,1.5vw,20px);color:var(--ivory2);max-width:560px;margin:0 auto;opacity:0;transition:opacity 1.4s 1.3s}
+.hc{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:40px;opacity:0;transition:opacity 1.4s 1.6s}.ready .hc{opacity:1}
+.bird{position:fixed;z-index:70;width:56px;height:56px;color:var(--gold2);pointer-events:none;filter:drop-shadow(0 4px 12px rgba(0,0,0,.4))}
+.bird .wing{transform-origin:24px 26px;animation:flap .32s ease-in-out infinite alternate}
+@keyframes flap{to{transform:scaleY(-.6)}}
+.bird.landed .wing{animation:none}
+.scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ivory2);display:flex;flex-direction:column;align-items:center;gap:10px}
+.scroll::after{content:"";width:1px;height:50px;background:linear-gradient(var(--gold),transparent);animation:dr 2s infinite}
+@keyframes dr{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* zoom-through */
+.zoom{height:300vh;position:relative}
+.zoom .pin{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;place-items:center}
+.zoom .ph{position:absolute;inset:0;clip-path:inset(var(--i,30%) var(--j,36%) var(--i,30%) var(--j,36%) round var(--r,240px));will-change:clip-path}
+.zoom .ph img{width:100%;height:100%;object-fit:cover;transform:scale(var(--s,1.3))}
+.zoom .ph::after{content:"";position:absolute;inset:0;background:rgba(10,18,32,var(--o,0))}
+.zoom .cap{position:relative;z-index:2;text-align:center;font-family:var(--serif);font-size:clamp(40px,6.4vw,100px);line-height:1;letter-spacing:-.01em;max-width:1000px;padding:0 24px;opacity:var(--co,0);transform:translateY(calc((1 - var(--co,0)) * 40px))}
+.zoom .cap em{color:var(--gold2)}
+.zoom .lbl{position:absolute;top:22%;left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--ivory2);opacity:calc(1 - var(--co,0) * 2)}
+/* sections */
+.sec{padding:150px 0}
+.ey{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px;justify-content:center}
+.ey::before,.ey::after{content:"";width:40px;height:1px;background:var(--gold);opacity:.6}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(44px,6.2vw,92px);line-height:.98;letter-spacing:-.02em;text-align:center;margin:18px 0 18px}
+h2 em{font-style:italic;color:var(--gold2)}
+.sub{text-align:center;color:var(--ivory2);max-width:560px;margin:0 auto;font-size:18px}
+.rv{opacity:0;transform:translateY(40px);filter:blur(6px);transition:opacity 1.3s var(--e),transform 1.3s var(--e),filter 1.3s var(--e)}
+.rv.in{opacity:1;transform:none;filter:none}
+/* flip cards */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:70px}
+.fc{perspective:1400px;height:440px}
+.fc:nth-child(even){margin-top:60px}
+.fc .in{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 1s var(--e)}
+.fc:hover .in,.fc.flip .in{transform:rotateY(180deg)}
+.fa,.fb{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:200px 200px 22px 22px;overflow:hidden;border:1px solid rgba(216,180,106,.35)}
+.fa img{width:100%;height:100%;object-fit:cover}
+.fa::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,18,32,.85))}
+.fa .t{position:absolute;bottom:22px;left:0;right:0;text-align:center;z-index:1;font-family:var(--serif);font-size:30px;font-style:italic}
+.fa .t small{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold2);margin-top:4px}
+.fb{transform:rotateY(180deg);background:radial-gradient(circle at 50% 0%,#22344f,var(--night2));display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 28px}
+.fb h3{font-family:var(--serif);font-weight:400;font-style:italic;font-size:34px;line-height:1;margin-bottom:14px;color:var(--gold2)}
+.fb p{color:var(--ivory2);font-size:15.5px}
+.fb a{margin-top:22px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:4px;color:var(--gold2)}
+.hint{text-align:center;color:var(--ivory2);font-size:13px;letter-spacing:.14em;margin-top:30px;opacity:.7}
+/* about */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.frame{position:relative;aspect-ratio:.8;border-radius:300px 300px 24px 24px;overflow:hidden;border:1px solid rgba(216,180,106,.4)}
+.frame img{width:100%;height:115%;object-fit:cover;will-change:transform}
+.ring{position:absolute;inset:-18px;border-radius:320px 320px 34px 34px;border:1px dashed rgba(216,180,106,.35);pointer-events:none}
+.about h2{text-align:left}.about .ey{justify-content:flex-start}.about .ey::after{display:none}
+.about p{color:var(--ivory2);font-size:18px;margin-bottom:16px}
+.sig{width:260px;height:90px;margin-top:10px}
+.sig text{font-family:var(--serif);font-style:italic;font-size:54px;fill:none;stroke:var(--gold2);stroke-width:1.1;stroke-dasharray:900;stroke-dashoffset:900;transition:stroke-dashoffset 3s var(--e),fill 1s 2.4s}
+.sig.in text{stroke-dashoffset:0;fill:var(--gold2)}
+/* order */
+.order{max-width:860px;margin:60px auto 0;background:rgba(246,239,227,.04);border:1px solid var(--line);border-radius:30px;padding:48px;backdrop-filter:blur(6px)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+label{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.f{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(246,239,227,.3);padding:12px 2px;color:var(--ivory);font:inherit;font-size:18px;outline:none;transition:border-color .4s}
+.f:focus{border-color:var(--gold)}
+select.f option{color:#111}
+textarea.f{min-height:80px;resize:vertical}
+.qty{display:flex;align-items:center;gap:18px;padding-top:6px}
+.qty button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(246,239,227,.35);font-size:20px;transition:all .3s}.qty button:hover{border-color:var(--gold);color:var(--gold2)}
+.qty b{font-family:var(--serif);font-size:38px;font-weight:500;min-width:40px;text-align:center}
+.qty span{color:var(--ivory2);font-size:14px}
+.note{text-align:center;color:var(--ivory2);font-size:14px;margin-top:20px}
+/* banner */
+.band{border-block:1px solid var(--line);padding:22px 0;overflow:hidden;background:rgba(216,180,106,.06)}
+.band .t{display:flex;width:max-content;gap:56px;font-family:var(--serif);font-style:italic;font-size:28px;color:var(--gold2);animation:mv 32s linear infinite}
+.band .t span::after{content:"❄";margin-left:56px;font-style:normal;font-size:16px;color:var(--ivory2)}
+@keyframes mv{to{transform:translateX(-50%)}}
+footer{padding:100px 0 130px;text-align:center;border-top:1px solid var(--line)}
+footer .big{font-family:var(--serif);font-style:italic;font-size:clamp(60px,11vw,180px);line-height:.9;color:var(--ivory)}
+footer .links{display:flex;justify-content:center;gap:30px;margin-top:30px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--ivory2)}
+footer .links a:hover{color:var(--gold2)}
+.pnote{font-size:12px;color:var(--ivory2);opacity:.7;margin-top:24px;letter-spacing:.06em}
+.mbar{display:none}
+@media (max-width:920px){
+ .nl,.nr{display:none}nav .wrap{grid-template-columns:1fr;justify-items:center}
+ .cards{grid-template-columns:1fr 1fr}.fc{height:340px}.fc:nth-child(even){margin-top:30px}
+ .about{grid-template-columns:1fr;gap:50px}.row{grid-template-columns:1fr}.order{padding:30px 22px}.sec{padding:110px 0}
+ .mbar{display:grid;grid-template-columns:1fr;position:fixed;left:14px;right:14px;bottom:max(14px,env(safe-area-inset-bottom));z-index:55;transform:translateY(170%);transition:transform .6s var(--e)}.mbar.show{transform:none}.mbar .btn{justify-content:center}
+ .cfull{display:none}.zoom{height:220vh}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,h1 .ch{opacity:1;filter:none;transform:none}.bird{display:none}.season,.hl,.hc{opacity:1}}
+</style>
+</head>
+<body>
+<canvas id="snow"></canvas>
+<svg class="bird" id="bird" viewBox="0 0 48 48" aria-hidden="true"><path fill="currentColor" d="M8 28c6 0 10-3 14-3 5 0 9 5 16 3 2-1 4-3 5-6-3 1-6 1-8 0 1-3 0-6-3-7-3-1-6 1-7 4-3-2-9-1-12 2-2 2-4 5-5 7z"/><path class="wing" fill="currentColor" opacity=".85" d="M20 26c-2-6 0-12 6-16-1 5 0 9 3 12z"/><circle cx="34" cy="17" r="1.2" fill="#0f1a2b"/></svg>
+<div class="concept"><b>Concept preview</b><span class="cfull">· designed for Wren Bird Bakery, not the official site yet</span></div>
+<nav id="nav"><div class="wrap">
+ <div class="nl"><a href="#collections">Collections</a><a href="#about">The baker</a></div>
+ <a href="#top" class="logo" id="logo"><svg viewBox="0 0 24 24" id="perch"><path fill="currentColor" d="M3 15c3 0 5-1.5 7-1.5 2.5 0 4.5 2.5 8 1.5 1-.5 2-1.5 2.5-3-1.5.5-3 .5-4 0 .5-1.5 0-3-1.5-3.5-1.5-.5-3 .5-3.5 2-1.5-1-4.5-.5-6 1-1 1-2 2.5-2.5 3.5z"/></svg>Wren Bird Bakery</a>
+ <div class="nr"><a href="#order" class="btn g">Order cookies</a></div>
+</div></nav>
+
+<main id="top">
+<header class="hero"><div class="wrap">
+ <span class="season"><i></i>Holiday pre-orders are open</span>
+ <h1 id="h1">Little cookies,<br><em>made by hand.</em></h1>
+ <p class="hl">Custom decorated sugar cookies for holidays, birthdays, showers and every little celebration in between. Piped, flooded and finished one at a time in College Station.</p>
+ <div class="hc"><a href="#order" class="btn g">Start an order</a><a href="#collections" class="btn o">See collections</a></div>
+</div><div class="scroll">Scroll</div></header>
+
+<section class="zoom" id="zoom"><div class="pin">
+ <div class="ph" id="zph"><img src="https://images.unsplash.com/photo-1577222959912-2c4ae76903ae?auto=format&fit=crop&w=2000&q=80" alt="Hand-decorated snowman cookie"></div>
+ <div class="lbl">Keep scrolling</div>
+ <p class="cap">Every one is piped, flooded and finished <em>by hand.</em></p>
+</div></section>
+
+<div class="band"><div class="t"><span>Christmas sets</span><span>Thanksgiving pre-orders</span><span>Birthday cookies</span><span>Baby showers</span><span>Easter &amp; spring</span><span>Christmas sets</span><span>Thanksgiving pre-orders</span><span>Birthday cookies</span><span>Baby showers</span><span>Easter &amp; spring</span></div></div>
+
+<section class="sec" id="collections"><div class="wrap">
+ <div class="ey rv">Collections</div>
+ <h2 class="rv">A cookie for <em>every season.</em></h2>
+ <p class="sub rv">Every set is designed around your colors, your theme and your people. Hover or tap a card to flip it.</p>
+ <div class="cards">
+  <div class="fc rv"><div class="in"><div class="fa"><img loading="lazy" src="https://images.unsplash.com/photo-1607291144860-8c0f759ac2b2?auto=format&fit=crop&w=700&q=75" alt=""><div class="t">Christmas<small>Holiday sets</small></div></div><div class="fb"><h3>Christmas</h3><p>Trees, snowmen, stockings and sweaters. Gift boxes and party platters that disappear fast.</p><a href="#order" data-occ="Christmas">Reserve a set</a></div></div></div>
+  <div class="fc rv"><div class="in"><div class="fa"><img loading="lazy" src="https://images.unsplash.com/photo-1734180206659-ad037b2024fe?auto=format&fit=crop&w=700&q=75" alt=""><div class="t">Thanksgiving<small>Pre-order</small></div></div><div class="fb"><h3>Thanksgiving</h3><p>Mixed dozens for the table, the hostess or the kids' table. Pre-orders open now.</p><a href="#order" data-occ="Thanksgiving">Pre-order</a></div></div></div>
+  <div class="fc rv"><div class="in"><div class="fa"><img loading="lazy" src="https://images.unsplash.com/photo-1638434451331-1a2e3d630514?auto=format&fit=crop&w=700&q=75" alt=""><div class="t">Birthdays<small>Milestones</small></div></div><div class="fb"><h3>Birthdays</h3><p>First birthdays to fortieths. Names, numbers and themes piped to match the party.</p><a href="#order" data-occ="Birthday">Plan a set</a></div></div></div>
+  <div class="fc rv"><div class="in"><div class="fa"><img loading="lazy" src="https://images.unsplash.com/photo-1601647691199-bb04a502585f?auto=format&fit=crop&w=700&q=75" alt=""><div class="t">Showers<small>&amp; little ones</small></div></div><div class="fb"><h3>Showers</h3><p>Baby and bridal showers, gender reveals and "a little one is on the way" favors.</p><a href="#order" data-occ="Shower">Plan a set</a></div></div></div>
+ </div>
+ <p class="hint">Preview photos · Wren Bird's real cookies go here</p>
+</div></section>
+
+<section class="sec" id="about" style="padding-top:40px"><div class="wrap about">
+ <div class="frame rv"><img id="aimg" loading="lazy" src="https://images.unsplash.com/photo-1577222960414-17797ba82e98?auto=format&fit=crop&w=900&q=75" alt=""><div class="ring"></div></div>
+ <div>
+  <div class="ey rv">The baker</div>
+  <h2 class="rv">Baked in a <em>College Station</em> kitchen.</h2>
+  <p class="rv">Wren Bird Bakery is a small cookie studio run by a College Station wife, mom of three and baker who pours her heart into every set.</p>
+  <p class="rv">That means real attention to detail, designs made just for you, and cookies that taste as good as they look.</p>
+  <svg class="sig" id="sig" viewBox="0 0 260 90"><text x="4" y="62">Wren Bird</text></svg>
+ </div>
+</div></section>
+
+<section class="sec" id="order" style="padding-top:40px"><div class="wrap">
+ <div class="ey rv">Order</div>
+ <h2 class="rv">Let's make <em>something sweet.</em></h2>
+ <p class="sub rv">Tell me about your celebration and I'll follow up with designs, pricing and pickup details.</p>
+ <form class="order rv" id="of">
+  <div class="row"><div><label>Your name</label><input class="f" id="n" required></div><div><label>Phone or email</label><input class="f" id="c" required></div></div>
+  <div class="row"><div><label>Occasion</label><select class="f" id="o"><option>Christmas</option><option>Thanksgiving</option><option>Birthday</option><option>Shower</option><option>Wedding</option><option>Easter</option><option>Something else</option></select></div><div><label>Date needed</label><input class="f" type="date" id="d"></div></div>
+  <div class="row"><div><label>How many dozen?</label><div class="qty"><button type="button" id="m">−</button><b id="q">1</b><button type="button" id="p">+</button><span id="qs">12 cookies</span></div></div><div><label>Colors &amp; theme</label><input class="f" id="t" placeholder="e.g. sage &amp; gold, woodland, Aggie maroon"></div></div>
+  <div><label>Anything else?</label><textarea class="f" id="x" placeholder="Names to pipe, inspiration, allergies…"></textarea></div>
+  <div style="text-align:center;margin-top:34px"><button class="btn g" type="submit">Send my order request</button></div>
+  <p class="note">Holiday sets fill up early. The sooner you ask, the better.</p>
+ </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div class="big rv">Wren Bird</div>
+ <div class="links"><a href="mailto:wrenbirdbakery@gmail.com">Email</a><a href="https://www.instagram.com/wrenbirdbakery/" target="_blank" rel="noopener">Instagram</a><a href="#order">Order</a></div>
+ <p class="pnote">© <span id="yr"></span> Wren Bird Bakery · College Station, TX</p>
+</div></footer>
+<div class="mbar" id="mbar"><a class="btn g" href="#order">Order cookies</a></div>
+
+<script>
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches,MOB=matchMedia('(max-width:920px)').matches,$=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+/* split headline into letters */
+(function(){const h=$('#h1');let i=0;function walk(n){[...n.childNodes].forEach(c=>{if(c.nodeType===3){const f=document.createDocumentFragment();[...c.textContent].forEach(ch=>{const s=document.createElement('span');s.className='ch';s.textContent=ch===' '?' ':ch;s.style.transitionDelay=(.3+i++*.035)+'s';f.appendChild(s)});c.replaceWith(f)}else if(c.nodeName!=='BR')walk(c)})}walk(h)})();
+requestAnimationFrame(()=>setTimeout(()=>document.body.classList.add('ready'),100));
+/* bird flight: across the hero, lands on the logo */
+(function(){const b=$('#bird');if(RM){b.remove();return}const per=$('#perch');const W=innerWidth,H=innerHeight;const t0=performance.now()+500,dur=3200;
+function bez(t,a,b,c,d){const u=1-t;return u*u*u*a+3*u*u*t*b+3*u*t*t*c+t*t*t*d}
+(function f(t){const r=per.getBoundingClientRect();const ex=r.left-14,ey=r.top-22;const k=Math.max(0,Math.min(1,(t-t0)/dur)),e=1-Math.pow(1-k,3);
+const x=bez(e,-80,W*.25,W*.85,ex),y=bez(e,H*.62,H*.15,H*.75,ey);b.style.transform=`translate(${x}px,${y}px) rotate(${(1-e)*-10}deg)`;
+if(k<1)requestAnimationFrame(f);else{b.classList.add('landed');per.style.opacity=0;b.style.transition='opacity .6s';
+addEventListener('scroll',function s(){b.style.opacity=0;per.style.opacity=1;removeEventListener('scroll',s)},{passive:true})}})(performance.now())})();
+/* snow */
+(function(){const c=$('#snow'),x=c.getContext('2d');let W,H,D=Math.min(2,devicePixelRatio||1);function rs(){W=c.width=innerWidth*D;H=c.height=innerHeight*D;c.style.width=innerWidth+'px';c.style.height=innerHeight+'px'}rs();addEventListener('resize',rs);
+const P=[...Array(MOB?40:90)].map(()=>({x:Math.random(),y:Math.random(),r:.6+Math.random()*2.2,v:.0005+Math.random()*.0012,w:Math.random()*6}));
+(function f(){x.clearRect(0,0,W,H);for(const p of P){p.y+=p.v;p.w+=.01;if(p.y>1.02){p.y=-.02;p.x=Math.random()}x.globalAlpha=.25+p.r/4;x.fillStyle='#f6efe3';x.beginPath();x.arc((p.x+Math.sin(p.w)*.01)*W,p.y*H,p.r*D,0,7);x.fill()}if(!RM)requestAnimationFrame(f)})()})();
+/* zoom-through */
+(function(){const s=$('#zoom'),p=$('#zph');function u(){const r=s.getBoundingClientRect(),k=Math.max(0,Math.min(1,-r.top/(s.offsetHeight-innerHeight)));const g=Math.min(1,k/.65),e=1-Math.pow(1-g,3);
+p.style.setProperty('--i',(30*(1-e))+'%');p.style.setProperty('--j',((MOB?18:36)*(1-e))+'%');p.style.setProperty('--r',(240*(1-e))+'px');p.style.setProperty('--s',1.3-.3*e);p.style.setProperty('--o',.55*e);
+s.style.setProperty('--co',Math.max(0,Math.min(1,(k-.5)/.3)))}addEventListener('scroll',u,{passive:true});u()})();
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});$$('.rv,.sig').forEach((el,i)=>{el.style.transitionDelay=(i%4)*.1+'s';io.observe(el)});
+/* tap to flip on touch */
+$$('.fc').forEach(c=>c.addEventListener('click',e=>{if(e.target.closest('a'))return;c.classList.toggle('flip')}));
+$$('.fb a[data-occ]').forEach(a=>a.addEventListener('click',()=>{$('#o').value=a.dataset.occ==='Shower'?'Shower':a.dataset.occ}));
+/* about parallax */
+(function(){const im=$('#aimg');if(RM)return;addEventListener('scroll',()=>{const r=im.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;im.style.transform=`translateY(${(r.top/innerHeight)*-10}%)`},{passive:true})})();
+/* qty */
+(function(){let q=1;const set=()=>{$('#q').textContent=q;$('#qs').textContent=(q*12)+' cookies'};$('#m').onclick=()=>{q=Math.max(1,q-1);set()};$('#p').onclick=()=>{q=Math.min(20,q+1);set()};
+$('#of').addEventListener('submit',e=>{e.preventDefault();const body=`Hi! I'd love to order cookies.\n\nOccasion: ${$('#o').value}\nDate needed: ${$('#d').value||'flexible'}\nQuantity: ${q} dozen (${q*12} cookies)\nColors/theme: ${$('#t').value}\n\n${$('#x').value}\n\nName: ${$('#n').value}\nContact: ${$('#c').value}`;
+location.href='mailto:wrenbirdbakery@gmail.com?subject='+encodeURIComponent('Cookie order: '+$('#o').value+' ('+q+' dozen)')+'&body='+encodeURIComponent(body)})})();
+addEventListener('scroll',()=>{$('#nav').classList.toggle('s',scrollY>40);$('#mbar').classList.toggle('show',scrollY>innerHeight)},{passive:true});$('#yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
