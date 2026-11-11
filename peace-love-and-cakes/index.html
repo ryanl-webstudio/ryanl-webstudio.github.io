@@ -14,6 +14,7 @@
 <style>
 :root{--cream:#fff6ef;--cream2:#ffeee3;--ink:#2b1a17;--ink2:#6e5550;--rasp:#e6396b;--pink:#ffc9d8;--mint:#a6e6cf;--butter:#ffd97a;--line:rgba(43,26,23,.12);--disp:"Fraunces",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif;--e:cubic-bezier(.16,1,.3,1);--bounce:cubic-bezier(.34,1.56,.64,1)}
 *{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:hidden}
 body{background:var(--cream);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.55}
 a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .wrap{max-width:1220px;margin:0 auto;padding:0 28px}
@@ -115,9 +116,9 @@ h2 em{font-weight:700;color:var(--rasp)}
 .chip2:hover{transform:translateY(-2px)}
 .chip2.on{background:var(--rasp);color:#fff;transform:rotate(-2deg)}
 input[type=range]{width:100%;accent-color:var(--rasp);height:28px}
-.in{width:100%;padding:14px 16px;border:2px solid var(--ink);border-radius:16px;font:inherit;background:var(--cream);outline:none;transition:box-shadow .3s}
-.in:focus{box-shadow:0 0 0 4px var(--pink)}
-textarea.in{min-height:96px;resize:vertical}
+.inp{width:100%;padding:14px 16px;border:2px solid var(--ink);border-radius:16px;font:inherit;background:var(--cream);outline:none;transition:box-shadow .3s}
+.inp:focus{box-shadow:0 0 0 4px var(--pink)}
+textarea.inp{min-height:96px;resize:vertical}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .preview{position:sticky;top:130px;background:var(--cream2);border:3px solid var(--ink);border-radius:32px;padding:30px;text-align:center;overflow:hidden}
 .cakebox{height:270px;display:flex;flex-direction:column-reverse;align-items:center;justify-content:flex-start;padding-bottom:14px;position:relative}
@@ -229,10 +230,10 @@ footer{padding:80px 0 130px;overflow:hidden;text-align:center}
    <div class="fl"><span>How many people?</span><span id="sv">24 guests</span></div>
    <input type="range" min="8" max="150" value="24" id="serv">
    <div class="fl">The details</div>
-   <div class="two"><input class="in" type="date" id="dt" aria-label="Date needed"><input class="in" id="fl" placeholder="Favorite flavors"></div>
+   <div class="two"><input class="inp" type="date" id="dt" aria-label="Date needed"><input class="inp" id="fl" placeholder="Favorite flavors"></div>
    <div class="fl">Design ideas</div>
-   <textarea class="in" id="nt" placeholder="Colors, theme, a photo you love, a name to pipe on top…"></textarea>
-   <div class="two" style="margin-top:12px"><input class="in" id="nm" placeholder="Your name" required><input class="in" id="ph" placeholder="Phone or email" required></div>
+   <textarea class="inp" id="nt" placeholder="Colors, theme, a photo you love, a name to pipe on top…"></textarea>
+   <div class="two" style="margin-top:12px"><input class="inp" id="nm" placeholder="Your name" required><input class="inp" id="ph" placeholder="Phone or email" required></div>
    <button class="pill p1" type="submit" style="margin-top:22px;width:100%;justify-content:center">Send my cake idea →</button>
   </form>
   <div class="preview rv">
