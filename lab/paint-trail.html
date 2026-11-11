@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab · Paint trail cursor</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800;900&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f4f1ec;color:#141414;font-family:Archivo,sans-serif;overflow-x:clip}
+section{min-height:100vh;display:grid;place-items:center;padding:8vh 6vw;position:relative}
+h1{font-size:clamp(56px,11vw,180px);font-weight:900;line-height:.86;letter-spacing:-.04em}
+h1 em{font-family:"Instrument Serif",serif;font-weight:400;color:#e2231a;letter-spacing:-.01em}
+p{max-width:520px;font-size:18px;color:#555;margin-top:24px}
+.big{font-size:clamp(120px,26vw,420px);font-weight:900;letter-spacing:-.06em;line-height:.8;color:#141414}
+.row{display:grid;grid-template-columns:1fr auto;align-items:end;gap:4vw;width:100%}
+.swatches{position:fixed;right:18px;bottom:18px;display:flex;gap:8px;z-index:20}
+.swatches button{width:30px;height:30px;border-radius:50%;border:3px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.2);cursor:pointer}
+.note{position:fixed;left:18px;bottom:18px;font-size:13px;color:#777;z-index:20}
+#paint{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:10;mix-blend-mode:multiply}
+</style>
+</head>
+<body>
+<canvas id="paint" aria-hidden="true"></canvas>
+<section><div><h1>Most sites get<br>looked at. Ours get <em>played with.</em></h1><p>Move your mouse. The cursor leaves a smooth, tapered paint stroke that dries and fades as you scroll down the page.</p></div></section>
+<section><div class="row"><div><h1>Design</h1><p>Use the business's brand color for the paint. Red for a BBQ joint, sage for a florist, chrome blue for a detailer.</p></div><div class="big">01</div></div></section>
+<section><div class="row"><div><h1>Launch</h1><p>Turned off automatically on phones and for anyone with reduced motion turned on.</p></div><div class="big">02</div></div></section>
+<div class="swatches"><button style="background:#e2231a" data-c="#e2231a" aria-label="Red"></button><button style="background:#1d3c96" data-c="#1d3c96" aria-label="Blue"></button><button style="background:#3f5a3a" data-c="#3f5a3a" aria-label="Green"></button><button style="background:#141414" data-c="#141414" aria-label="Ink"></button></div>
+<div class="note">Lab demo · Ryan L. Web Studio</div>
+<script>
+/* Paint trail: drop-in. Config: color, max width, life (ms). */
+(function(){
+  const c=document.getElementById('paint'),x=c.getContext('2d');
+  const fine=matchMedia('(pointer:fine)').matches,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!fine||reduce){c.remove();return}
+  let color='#e2231a';const MAXW=38,LIFE=900;let pts=[],dpr=Math.min(2,devicePixelRatio||1);
+  function size(){c.width=innerWidth*dpr;c.height=innerHeight*dpr;x.setTransform(dpr,0,0,dpr,0,0)}size();addEventListener('resize',size);
+  let last=null;
+  addEventListener('pointermove',e=>{const p={x:e.clientX,y:e.clientY,t:performance.now()};
+    if(last){const d=Math.hypot(p.x-last.x,p.y-last.y);const steps=Math.min(8,Math.floor(d/6));for(let i=1;i<=steps;i++){pts.push({x:last.x+(p.x-last.x)*i/(steps+1),y:last.y+(p.y-last.y)*i/(steps+1),t:p.t})}}
+    pts.push(p);last=p});
+  addEventListener('scroll',()=>{const dy=scrollY-(window._py||scrollY);window._py=scrollY;pts.forEach(p=>p.y-=dy)},{passive:true});window._py=scrollY;
+  document.querySelectorAll('.swatches button').forEach(b=>b.onclick=()=>{color=b.dataset.c});
+  (function frame(){const now=performance.now();pts=pts.filter(p=>now-p.t<LIFE);x.clearRect(0,0,innerWidth,innerHeight);
+    if(pts.length>2){x.lineCap='round';x.lineJoin='round';x.strokeStyle=color;
+      for(let i=1;i<pts.length-1;i++){const a=pts[i-1],b=pts[i],n=pts[i+1];const age=(now-b.t)/LIFE;const w=MAXW*Math.pow(1-age,1.4)*Math.min(1,i/6);
+        x.globalAlpha=Math.max(0,.95-age*.6);x.lineWidth=Math.max(.5,w);x.beginPath();x.moveTo((a.x+b.x)/2,(a.y+b.y)/2);x.quadraticCurveTo(b.x,b.y,(b.x+n.x)/2,(b.y+n.y)/2);x.stroke()}
+      x.globalAlpha=1}
+    requestAnimationFrame(frame)})();
+})();
+</script>
+</body>
+</html>
