@@ -46,12 +46,12 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 #veil .box{text-align:center;color:var(--foam)}
 #veil svg{width:min(190px,40vw);height:auto;overflow:visible}
 #veil .liq{transform:translateY(100%);animation:pour 1.5s .2s cubic-bezier(.4,0,.2,1) forwards}
-#veil .head{transform:translateY(240px) scaleY(.2);transform-origin:50% 100%;animation:foam .6s 1.45s cubic-bezier(.3,1.6,.5,1) forwards}
+#veil .head{transform-box:fill-box;transform:scale(.3,0);transform-origin:50% 100%;animation:foam .6s 1.45s cubic-bezier(.3,1.6,.5,1) forwards}
 #veil .wave{animation:wave 1.1s linear infinite}
 #veil .bub{animation:bub 1.2s linear infinite;opacity:0}
 #veil p{font-family:UnifrakturMaguntia;font-size:clamp(44px,7vw,72px);margin-top:18px;opacity:0;animation:fadeUp .6s 1.6s forwards}
 @keyframes pour{to{transform:translateY(0)}}
-@keyframes foam{to{transform:translateY(0) scaleY(1)}}
+@keyframes foam{to{transform:scale(1,1)}}
 @keyframes wave{to{transform:translateX(-60px)}}
 @keyframes bub{0%{opacity:0;transform:translateY(0)}20%{opacity:.8}100%{opacity:0;transform:translateY(-120px)}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
