@@ -310,8 +310,8 @@ yr.addEventListener('input',upd);upd();
 
 /* ---------- 100-year medallion flips on scroll ---------- */
 const coin=document.getElementById('coin'),ms=document.getElementById('medal'),medal=ms.querySelector('.medal');let manual=null;
-function flip(){if(manual!==null)return;const r=ms.getBoundingClientRect();const c=(r.top+r.height/2)/innerHeight;/* 1 = section center at bottom of screen, 0 = at top */
-  const t=Math.min(1,Math.max(0,(.62-c)/.16));const e=t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;coin.style.transform=`rotateY(${e*180}deg)`}
+function flip(){if(manual!==null)return;const r=medal.getBoundingClientRect();const c=(r.top+r.height/2)/innerHeight;/* coin center: 1 = bottom of screen, 0 = top. Front holds until 0.6, flips by 0.44, back holds after */
+  const t=Math.min(1,Math.max(0,(.6-c)/.16));const e=t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;coin.style.transform=`rotateY(${e*180}deg)`}
 medal.addEventListener('click',()=>{manual=manual===null?(coin.style.transform.includes('180')?0:180):(manual?0:180);coin.style.transform=`rotateY(${manual}deg)`});
 medal.setAttribute('aria-hidden','false');medal.setAttribute('role','button');medal.setAttribute('tabindex','0');medal.setAttribute('aria-label','Flip the 100-year coin');
 medal.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();medal.click()}});
