@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Casa Monarca Mexican Cantina | Downtown Bryan, TX</title>
+<meta name="description" content="Casa Monarca Mexican Cantina in Historic Downtown Bryan: birria, enchiladas verdes, the Monarca Molcajete, homemade tortillas and award-winning margaritas. 206 W 26th St. (979) 810-0179.">
+<meta name="theme-color" content="#160c07">
+<!-- CONCEPT PREVIEW: remove robots tag + .concept strip at launch -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400;1,9..144,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Casa Monarca Mexican Cantina","servesCuisine":"Mexican","priceRange":"$$","telephone":"+1-979-810-0179","email":"casamonarcabtx@gmail.com","address":{"@type":"PostalAddress","streetAddress":"206 W 26th St","addressLocality":"Bryan","addressRegion":"TX","postalCode":"77803","addressCountry":"US"},"openingHours":["Mo-Th 11:00-21:00","Fr-Sa 11:00-22:00"],"acceptsReservations":"True","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"342"},"sameAs":["https://www.instagram.com/casamonarca.btx/"]}</script>
+<style>
+:root{--night:#160c07;--night2:#22140c;--cream:#fbf2e4;--cream2:#f3e4cc;--orange:#ec6a1c;--gold:#f5a524;--rosa:#d6336c;--teal:#13877c;--ink:#2a1a10;--mute:#8a7262;--line:rgba(42,26,16,.14)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip;scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:Outfit,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+.serif{font-family:Fraunces,Georgia,serif}
+.wrap{width:min(1220px,90vw);margin:0 auto}
+.eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--orange)}
+.num{font-family:Outfit,sans-serif;font-variant-numeric:tabular-nums}
+.concept{background:var(--night);color:var(--gold);font-size:12.5px;text-align:center;padding:7px 10px;letter-spacing:.04em}
+@media(max-width:560px){.concept .cfull{display:none}}
+nav{position:sticky;top:0;z-index:40;background:rgba(251,242,228,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:14px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:34px;height:34px}
+.logo b{font-family:Fraunces;font-weight:600;font-size:23px;line-height:1;letter-spacing:-.01em}
+.logo small{display:block;font-size:9.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--mute);margin-top:3px;font-weight:500}
+.links{display:flex;gap:28px;font-size:14px;font-weight:500}
+.links a{text-decoration:none;color:#5a4334}
+.links a:hover{color:var(--orange)}
+@media(max-width:900px){.links{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;background:var(--night);color:var(--cream);text-decoration:none;border:0;font:600 14px Outfit;letter-spacing:.02em;cursor:pointer;transition:transform .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.or{background:var(--orange);color:#fff}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+
+/* page-load: wings open */
+#veil{position:fixed;inset:0;z-index:100;perspective:1600px;pointer-events:none;background:var(--night);transition:background .4s .2s}
+#veil.open{background:transparent}
+#veil .w{position:absolute;top:0;bottom:0;width:50%;display:grid;align-items:center;transition:transform 1.25s cubic-bezier(.7,0,.25,1),opacity 1.25s;backface-visibility:hidden;background:var(--night)}
+#veil .w svg{width:100%;height:80vh;max-height:760px}
+#veil .wl{left:0;transform-origin:100% 50%;justify-items:end}
+#veil .wr{right:0;transform-origin:0 50%;justify-items:start}
+#veil .wr svg{transform:scaleX(-1)}
+#veil.open .wl{transform:rotateY(88deg);opacity:.2}
+#veil.open .wr{transform:rotateY(-88deg);opacity:.2}
+#veil .body{position:absolute;left:50%;top:50%;width:14px;height:34vh;max-height:330px;border-radius:10px;background:#0b0604;transform:translate(-50%,-50%);transition:opacity .5s}
+#veil.open .body{opacity:0}
+#veil .vt{position:absolute;left:0;right:0;bottom:8vh;text-align:center;color:var(--cream);font-family:Fraunces;font-style:italic;font-size:clamp(22px,3vw,34px);opacity:0;animation:fadeUp .8s .25s forwards;transition:opacity .4s}
+#veil.open .vt{opacity:0!important}
+#veil .w svg path{animation:flut 1.2s ease-in-out infinite alternate}
+@keyframes flut{to{transform:scaleX(.985)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* papel picado */
+.picado{position:absolute;left:0;right:0;top:0;height:120px;pointer-events:none;z-index:3}
+.picado .string{position:absolute;left:-2%;right:-2%;top:10px;height:2px;background:rgba(42,26,16,.35)}
+.picado .flags{position:absolute;left:0;right:0;top:10px;display:flex;justify-content:space-around}
+.picado .flag{width:clamp(52px,6.2vw,92px);transform-origin:50% 0;will-change:transform}
+.picado .flag svg{width:100%;display:block;filter:drop-shadow(0 6px 8px rgba(42,26,16,.12))}
+
+/* hero */
+.hero{position:relative;padding:150px 0 90px;overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.hero h1{font-family:Fraunces;font-weight:800;font-size:clamp(58px,8.6vw,138px);line-height:.86;letter-spacing:-.035em}
+.hero h1 i{display:block;font-weight:400;font-style:italic;color:var(--orange);letter-spacing:-.02em}
+.hero .sub{font-size:19px;max-width:500px;margin:26px 0 30px;color:#5a4334}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#fff;box-shadow:0 1px 0 var(--line);font-size:13.5px;font-weight:500}
+.chip b{font-weight:700}
+.chip .star{color:var(--gold)}
+.open-dot{width:8px;height:8px;border-radius:50%;background:#9a8a7d}
+.open-dot.on{background:#25a244;box-shadow:0 0 0 4px rgba(37,162,68,.18)}
+.stack{position:relative;height:clamp(440px,48vw,640px)}
+.stack figure{position:absolute;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(42,26,16,.45);will-change:transform;background:#e9d8be}
+.stack figure img{width:100%;height:100%;object-fit:cover}
+.stack .a{width:58%;height:78%;right:2%;top:0;transform:rotate(4deg)}
+.stack .b{width:46%;height:56%;left:0;top:30%;transform:rotate(-6deg)}
+.stack .c{width:36%;height:38%;right:18%;bottom:-2%;transform:rotate(-2deg);border:6px solid var(--cream)}
+.stack figcaption{position:absolute;left:12px;bottom:12px;background:rgba(22,12,7,.72);color:var(--cream);font-size:12px;padding:5px 10px;border-radius:999px;backdrop-filter:blur(6px)}
+@media(max-width:900px){.hero{padding:120px 0 60px}.hero .grid{grid-template-columns:1fr;gap:40px}.stack{height:118vw;max-height:620px}}
+
+/* ribbon */
+.ribbon{background:var(--orange);color:#fff;overflow:hidden;white-space:nowrap;padding:16px 0;font-family:Fraunces;font-style:italic;font-size:clamp(20px,2.4vw,30px)}
+.ribbon .track{display:inline-flex;gap:40px;animation:marq 38s linear infinite;padding-left:40px}
+.ribbon span:nth-child(even){font-style:normal;opacity:.6}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* loteria */
+.lot{padding:120px 0 110px;background:var(--cream2);position:relative}
+.lot .head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:50px}
+.lot h2{font-family:Fraunces;font-weight:800;font-size:clamp(46px,6.4vw,96px);line-height:.9;letter-spacing:-.03em}
+.lot h2 i{font-weight:400;color:var(--rosa)}
+.lot .head p{max-width:420px;color:#5a4334}
+.deck{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+@media(max-width:1000px){.deck{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){.deck{grid-template-columns:repeat(2,1fr);gap:14px}}
+.card{perspective:1200px;aspect-ratio:5/7.4;cursor:pointer;border:0;background:none;font:inherit;color:inherit;text-align:left;padding:0}
+.card .in{position:relative;width:100%;height:100%;transition:transform .8s cubic-bezier(.3,1.3,.4,1);transform-style:preserve-3d}
+.card.flip .in{transform:rotateY(180deg)}
+.card .f,.card .bk{position:absolute;inset:0;border-radius:14px;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden}
+.card .f{background:#fffaf1;padding:10px;display:flex;flex-direction:column;box-shadow:0 2px 0 rgba(42,26,16,.08),0 18px 40px -22px rgba(42,26,16,.5);border:2px solid var(--ink)}
+.card .f .ph{flex:1;border:2px solid var(--ink);border-radius:6px;overflow:hidden;position:relative}
+.card .f .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .f .ph img{transform:scale(1.06)}
+.card .f .n{position:absolute;top:8px;left:8px;background:#fffaf1;border:2px solid var(--ink);border-radius:4px;font:700 15px Outfit;padding:0 7px;line-height:1.5}
+.card .f .t{font-family:Fraunces;font-weight:800;text-transform:uppercase;text-align:center;font-size:clamp(14px,1.5vw,20px);letter-spacing:.04em;padding:9px 0 3px}
+.card .bk{transform:rotateY(180deg);background:var(--night);color:var(--cream);padding:22px 20px;display:flex;flex-direction:column;justify-content:space-between;border:2px solid var(--ink)}
+.card .bk h3{font-family:Fraunces;font-style:italic;font-weight:600;font-size:clamp(20px,2vw,28px);line-height:1.05}
+.card .bk p{font-size:14.5px;color:#e5d4bf;line-height:1.5}
+.card .bk .k{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+@media(max-width:720px){.card .bk{padding:14px}.card .bk p{font-size:13px}}
+.card.dealt .f{animation:deal .9s}
+@keyframes deal{30%{transform:translateY(-14px) rotate(-3deg)}60%{transform:translateY(0) rotate(2deg)}}
+.lot .tools{display:flex;gap:12px;align-items:center;margin-top:34px;flex-wrap:wrap}
+.lot .also{margin-top:46px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.lot .also b{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);margin-right:6px}
+.lot .also span{padding:7px 14px;border-radius:999px;border:1.5px solid var(--line);font-size:14px;background:#fffaf1}
+
+/* press */
+.press{padding:120px 0;background:var(--night);color:var(--cream);position:relative;overflow:hidden}
+.press .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.press blockquote{font-family:Fraunces;font-weight:400;font-style:italic;font-size:clamp(32px,3.8vw,56px);line-height:1.08;letter-spacing:-.01em}
+.press cite{display:block;font-style:normal;font-family:Outfit;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-top:22px}
+.awards{display:grid;gap:14px}
+.award{display:flex;gap:18px;align-items:center;padding:20px 22px;border:1px solid rgba(251,242,228,.16);border-radius:16px}
+.award .ic{width:52px;height:52px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--orange);color:#fff;font:700 20px Outfit}
+.award b{display:block;font-size:18px;font-weight:600}
+.award span{font-size:14px;color:#c9b6a2}
+@media(max-width:900px){.press .grid{grid-template-columns:1fr;gap:40px}}
+
+/* happy hour */
+.hh{padding:0;background:var(--rosa);color:#fff;position:relative;overflow:hidden}
+.hh .grid{display:grid;grid-template-columns:1fr 1fr;min-height:620px}
+.hh .ph{position:relative;overflow:hidden}
+.hh .ph img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;will-change:transform}
+.hh .txt{padding:90px clamp(26px,5vw,80px);display:flex;flex-direction:column;justify-content:center}
+.hh .clock{font:700 clamp(70px,9vw,136px)/.9 Outfit;letter-spacing:-.04em}
+.hh .clock small{font-size:.3em;font-weight:500;letter-spacing:.02em;margin-left:6px}
+.hh h2{font-family:Fraunces;font-style:italic;font-weight:400;font-size:clamp(34px,3.6vw,52px);line-height:1;margin:6px 0 20px}
+.hh p{max-width:440px;color:#ffe3ee}
+.hh .live{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:rgba(0,0,0,.18);padding:10px 16px;border-radius:999px;font-weight:600;font-size:14px;width:max-content;max-width:100%}
+@media(max-width:860px){.hh .grid{grid-template-columns:1fr}.hh .ph{height:80vw;max-height:520px}.hh .txt{padding:60px 6vw}}
+
+/* culture */
+.cult{padding:120px 0}
+.cult .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.cult h2{font-family:Fraunces;font-weight:800;font-size:clamp(42px,5vw,78px);line-height:.92;letter-spacing:-.03em}
+.cult h2 i{font-weight:400;color:var(--teal)}
+.cult p{color:#5a4334;margin-top:20px;max-width:480px}
+.cult .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cult .duo figure{border-radius:20px;overflow:hidden;aspect-ratio:3/4}
+.cult .duo figure:nth-child(2){margin-top:60px}
+.cult .duo img{width:100%;height:100%;object-fit:cover}
+.cult .pd{margin-top:30px;padding:22px 24px;border-radius:18px;background:#fff;box-shadow:0 1px 0 var(--line)}
+.cult .pd b{display:block;font-family:Fraunces;font-size:22px;font-weight:600}
+@media(max-width:900px){.cult .grid{grid-template-columns:1fr;gap:40px}}
+
+/* reviews */
+.revs{padding:110px 0;background:var(--cream2)}
+.revs .top{display:flex;align-items:end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:40px}
+.big{font:700 clamp(80px,10vw,150px)/.85 Outfit;letter-spacing:-.05em}
+.big small{font-size:.28em;font-weight:500;letter-spacing:0;color:var(--mute)}
+.stars{color:var(--gold);font-size:22px;letter-spacing:4px}
+.qs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.q{background:#fffaf1;border-radius:20px;padding:30px;box-shadow:0 1px 0 var(--line)}
+.q p{font-family:Fraunces;font-size:22px;line-height:1.25}
+.q cite{display:block;margin-top:18px;font-style:normal;font-size:13px;color:var(--mute)}
+@media(max-width:900px){.qs{grid-template-columns:1fr}}
+
+/* visit */
+.visit{padding:120px 0;background:var(--night);color:var(--cream)}
+.visit .grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.visit .addr{font-family:Fraunces;font-size:clamp(36px,4vw,58px);line-height:1.02;letter-spacing:-.02em;margin-top:14px}
+.hours{margin-top:30px;display:grid;grid-template-columns:auto 1fr;gap:10px 30px;max-width:380px}
+.hours dt{color:#bfa995}
+.hours .today{color:var(--gold);font-weight:600}
+.clist a{display:flex;justify-content:space-between;gap:16px;padding:20px 0;border-bottom:1px solid rgba(251,242,228,.14);text-decoration:none}
+.clist a span{color:var(--gold);text-align:right;word-break:break-all}
+.clist a:hover span{color:#fff}
+.visit .note{margin-top:26px;color:#bfa995;font-size:15px}
+@media(max-width:860px){.visit .grid{grid-template-columns:1fr;gap:40px}}
+footer{background:var(--night);color:#a8917d;font-size:13px;padding:28px 0 44px;border-top:1px solid rgba(251,242,228,.1)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.credit{width:100%;font-size:11.5px;opacity:.75}
+
+/* migrating monarch */
+#mon{position:fixed;left:0;top:0;width:46px;height:40px;z-index:30;pointer-events:none;will-change:transform;opacity:0;transition:opacity .6s}
+#mon.on{opacity:1}
+#mon .wing{transform-box:fill-box;animation:flap .32s ease-in-out infinite alternate}
+#mon .wl{transform-origin:100% 50%}#mon .wr{transform-origin:0 50%}
+#mon.rest .wing{animation-duration:1.6s}
+@keyframes flap{to{transform:scaleX(.25)}}
+.callbar{display:none}
+@media(max-width:720px){.callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:45;gap:8px}.callbar a{flex:1}footer{padding-bottom:100px}nav .btn{display:none}#mon{width:34px;height:30px}}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+:focus-visible{outline:2.5px solid var(--orange);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}#veil,#mon{display:none}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="veil" aria-hidden="true">
+  <div class="w wl"><svg viewBox="0 0 320 420" preserveAspectRatio="xMaxYMid meet"><use href="#wingart"/></svg></div>
+  <div class="w wr"><svg viewBox="0 0 320 420" preserveAspectRatio="xMaxYMid meet"><use href="#wingart"/></svg></div>
+  <div class="body"></div>
+  <div class="vt">Bienvenidos a Casa Monarca</div>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="wg" x1="1" y1=".5" x2="0" y2=".3"><stop offset="0" stop-color="#b8420c"/><stop offset=".55" stop-color="#ec6a1c"/><stop offset="1" stop-color="#f7a33a"/></linearGradient>
+    <g id="wingart">
+      <path d="M318 196C272 112 168 18 44 30 6 86 22 172 92 204c66 22 160 6 226-8Z" fill="url(#wg)" stroke="#0b0604" stroke-width="16" stroke-linejoin="round"/>
+      <path d="M318 214c-62 6-170 22-208 92-18 56 40 104 110 82 52-24 86-96 98-174Z" fill="url(#wg)" stroke="#0b0604" stroke-width="16" stroke-linejoin="round"/>
+      <g stroke="#0b0604" stroke-width="5" fill="none" stroke-linecap="round"><path d="M316 198C250 150 150 90 60 44"/><path d="M316 198C240 170 150 160 96 196"/><path d="M290 150C230 110 170 70 120 44"/><path d="M316 214C260 250 210 300 170 370"/><path d="M316 216C280 260 250 330 228 382"/><path d="M316 214c-60 20-130 50-176 96"/></g>
+      <g fill="#fbf2e4"><circle cx="40" cy="48" r="5"/><circle cx="62" cy="38" r="4"/><circle cx="26" cy="80" r="4"/><circle cx="30" cy="112" r="5"/><circle cx="44" cy="146" r="4"/><circle cx="68" cy="178" r="4"/><circle cx="90" cy="34" r="4"/><circle cx="118" cy="300" r="4"/><circle cx="124" cy="334" r="5"/><circle cx="148" cy="364" r="4"/><circle cx="182" cy="382" r="4"/><circle cx="216" cy="384" r="4"/></g>
+    </g>
+  </defs>
+</svg>
+<div class="concept">Concept preview <span class="cfull">· designed for Casa Monarca, not the official site yet</span></div>
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Casa Monarca home"><svg viewBox="0 0 640 420" aria-hidden="true"><use href="#wingart"/><use href="#wingart" transform="translate(640 0) scale(-1 1)"/></svg><span><b>Casa Monarca</b><small>Mexican Cantina</small></span></a>
+    <div class="links"><a href="#menu">Menu</a><a href="#happy">Happy hour</a><a href="#culture">Música</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a></div>
+    <a class="btn or" href="tel:+19798100179">Reserve · (979) 810-0179</a>
+  </div>
+</nav>
+<main id="top">
+<section class="hero">
+  <div class="picado" id="picado" aria-hidden="true"><div class="string"></div><div class="flags"></div></div>
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">Historic Downtown Bryan · 206 W 26th St</div>
+      <h1 style="margin-top:18px">Casa Monarca <i>Mexican Cantina</i></h1>
+      <p class="sub">Birria, enchiladas verdes, homemade tortillas and margaritas worth the walk downtown. Mexican cooking, made by Bryan locals.</p>
+      <div class="cta"><a class="btn" href="#menu">See the menu</a><a class="btn ghost" href="tel:+19798100179">Call for a table</a></div>
+      <div class="chips">
+        <span class="chip"><span class="star" aria-hidden="true">★</span><b class="num">4.8</b> · <span class="num">342</span> Google reviews</span>
+        <span class="chip"><span class="open-dot" id="dot"></span><span id="openTxt">Hours</span></span>
+        <span class="chip">Texas Monthly Dining Guide</span>
+      </div>
+    </div>
+    <div class="stack" id="stack">
+      <figure class="a" data-s="-.06"><img src="img/margaritas.webp" alt="A row of margaritas with chile-salt rims and lime wedges" fetchpriority="high"><figcaption>Margaritas, chile-salt rim</figcaption></figure>
+      <figure class="b" data-s=".05"><img src="img/molcajete.webp" alt="The Monarca Molcajete: grilled meats, peppers and onions on a wooden board with salsas"><figcaption>Monarca Molcajete</figcaption></figure>
+      <figure class="c" data-s="-.12"><img src="img/tres-leches.webp" alt="Tres leches cake topped with strawberries, blueberries and mint" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon" aria-hidden="true"><div class="track"><span>Birria</span><span>✦</span><span>Enchiladas verdes</span><span>✦</span><span>Queso flameado</span><span>✦</span><span>Homemade tortillas</span><span>✦</span><span>Margarita flights</span><span>✦</span><span>Molcajete</span><span>✦</span><span>Tres leches</span><span>✦</span><span>Birria</span><span>✦</span><span>Enchiladas verdes</span><span>✦</span><span>Queso flameado</span><span>✦</span><span>Homemade tortillas</span><span>✦</span><span>Margarita flights</span><span>✦</span><span>Molcajete</span><span>✦</span><span>Tres leches</span><span>✦</span></div></div>
+
+<section class="lot" id="menu">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">La carta</div><h2 style="margin-top:14px">Play the menu, <i>lotería style.</i></h2></div>
+      <p>Each card is a real plate from the Casa Monarca kitchen. Tap one to flip it, or let us deal you a card.</p>
+    </div>
+    <div class="deck" id="deck"></div>
+    <div class="tools"><button class="btn or" id="deal" type="button">¡Lotería! Deal me a card</button><button class="btn ghost" id="reset" type="button">Flip all back</button></div>
+    <div class="also"><b>Also on the menu</b><span>Chicken tinga</span><span>Gorditas</span><span>Empanadas</span><span>Albóndigas</span><span>Queso flameado</span><span>Birria quesadillas</span><span>Lunch specials</span></div>
+  </div>
+</section>
+
+<section class="press">
+  <div class="wrap grid">
+    <div class="reveal"><div class="eyebrow" style="color:var(--gold)">In the press</div>
+      <blockquote style="margin-top:18px">“A buzzy new restaurant that offers more than run-of-the-mill Tex-Mex.”<cite>Texas Monthly · Dining Guide</cite></blockquote></div>
+    <div class="awards reveal">
+      <div class="award"><div class="ic">1st</div><div><b>Best Margaritas, 2026</b><span>First place for their margaritas</span></div></div>
+      <div class="award"><div class="ic">TM</div><div><b>Texas Monthly Dining Guide</b><span>Called out for the Monarca Molcajete</span></div></div>
+      <div class="award"><div class="ic num">4.8</div><div><b>342 Google reviews</b><span>Plus 3.4K neighbors following along on Facebook</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="hh" id="happy">
+  <div class="grid">
+    <div class="ph"><img id="hhImg" src="img/flight.webp" alt="A margarita flight of four drinks garnished with flowers, citrus and cinnamon" loading="lazy"></div>
+    <div class="txt">
+      <div class="eyebrow" style="color:#ffd6e5">Happy hour</div>
+      <div class="clock num">2–5<small>PM</small></div>
+      <h2>The award-winning margaritas, for less.</h2>
+      <p>Try a margarita flight and pick your favorite, or get a round for the table. The bar fills up fast after work, so come early.</p>
+      <div class="live" id="hhLive"><span class="open-dot" id="hhDot"></span><span id="hhTxt">Happy hour, 2–5 PM</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cult" id="culture">
+  <div class="wrap grid">
+    <div class="reveal">
+      <div class="eyebrow" style="color:var(--teal)">Música y cultura</div>
+      <h2 style="margin-top:14px">Mariachi nights. <i>Folklórico on the floor.</i></h2>
+      <p>Casa Monarca brings in live mariachi and folklórico dancers, and the owners are known downtown for backing local nonprofits. Follow along on Instagram for the next night of music.</p>
+      <div class="pd"><b>Private dining room</b><span>Birthdays, rehearsal dinners and team nights. Call ahead and the team will set it up: <a href="tel:+19798100179">(979) 810-0179</a>.</span></div>
+    </div>
+    <div class="duo reveal">
+      <figure><img src="img/mariachi.webp" alt="A mariachi band in red trajes playing violins along the bar" loading="lazy"></figure>
+      <figure><img src="img/folklorico.webp" alt="Folklórico dancers in bright full skirts in front of the Casa Monarca sign" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="revs" id="reviews">
+  <div class="wrap">
+    <div class="top reveal"><div><div class="eyebrow">What people say</div><div class="big num" style="margin-top:10px">4.8<small> / 5</small></div><div class="stars" aria-label="4.8 out of 5 stars">★★★★★</div></div><p style="max-width:380px;color:#5a4334">From 342 Google reviews. People keep naming the birria, the enchiladas and the homemade tortillas.</p></div>
+    <div class="qs">
+      <div class="q reveal"><p>“Great service, great drinks, great food, so fresh but so filling!”</p><cite>Google review</cite></div>
+      <div class="q reveal"><p>“Best Mexican around, actually spicy salsa, great chips, friendly staff!”</p><cite>Google review</cite></div>
+      <a class="q reveal" href="tel:+19798100179" style="background:var(--orange);color:#fff;text-decoration:none"><p>Weekend nights fill up fast. Call ahead and they’ll hold you a table.</p><cite style="color:#ffe1cc">(979) 810-0179 →</cite></a>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow" style="color:var(--gold)">Visit</div>
+      <p class="addr">206 W 26th St<br>Bryan, TX 77803</p>
+      <dl class="hours" id="hours"><dt data-d="1-4">Mon – Thu</dt><dd data-d="1-4">11 AM – 9 PM</dd><dt data-d="5-6">Fri – Sat</dt><dd data-d="5-6">11 AM – 10 PM</dd><dt data-d="0">Sunday</dt><dd data-d="0">Closed</dd></dl>
+      <p class="note">In Historic Downtown Bryan, a short walk from Main Street. Reservations taken by phone.</p>
+    </div>
+    <div class="clist">
+      <a href="tel:+19798100179">Call <span>(979) 810-0179</span></a>
+      <a href="mailto:casamonarcabtx@gmail.com">Email <span>casamonarcabtx@gmail.com</span></a>
+      <a href="https://maps.google.com/?q=Casa+Monarca,+206+W+26th+St,+Bryan,+TX+77803" target="_blank" rel="noopener">Directions <span>Google Maps</span></a>
+      <a href="https://www.instagram.com/casamonarca.btx/" target="_blank" rel="noopener">Instagram <span>@casamonarca.btx</span></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>© <span id="yr"></span> Casa Monarca Mexican Cantina · Bryan, Texas</span><span>Photos from Casa Monarca's own Facebook page</span><span class="credit">Site by Ryan L. Web Studio</span></div></footer>
+<div class="callbar"><a class="btn" href="tel:+19798100179">Call</a><a class="btn or" href="#menu">Menu</a></div>
+
+<svg id="mon" viewBox="0 0 640 420" aria-hidden="true"><g class="wing wl"><use href="#wingart"/></g><g class="wing wr"><use href="#wingart" transform="translate(640 0) scale(-1 1)"/></g><rect x="312" y="120" width="16" height="200" rx="8" fill="#0b0604"/></svg>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine=matchMedia('(pointer:fine)').matches;
+/* veil: wings open */
+(function(){const v=document.getElementById('veil');let seen=false;try{seen=sessionStorage.getItem('cmVeil')}catch(e){}
+ if(reduce||seen){v.remove();return}try{sessionStorage.setItem('cmVeil','1')}catch(e){}
+ setTimeout(()=>v.classList.add('open'),1300);setTimeout(()=>v.remove(),2700)})();
+
+/* hours, Bryan time */
+const H={0:null,1:[11,21],2:[11,21],3:[11,21],4:[11,21],5:[11,22],6:[11,22]};
+function ct(){const s=new Date().toLocaleString('en-US',{timeZone:'America/Chicago'});return new Date(s)}
+function hrs(h){return (h>12?h-12:h)+(h>=12?' PM':' AM')}
+function status(){const n=ct(),d=n.getDay(),h=n.getHours()+n.getMinutes()/60,t=H[d];
+ const dot=document.getElementById('dot'),tx=document.getElementById('openTxt');
+ if(t&&h>=t[0]&&h<t[1]){dot.classList.add('on');tx.textContent='Open now · until '+hrs(t[1])}
+ else{dot.classList.remove('on');let k=d,add=0;if(t&&h<t[0]){tx.textContent='Opens today at '+hrs(t[0])}else{do{k=(k+1)%7;add++}while(!H[k]);tx.textContent='Closed · opens '+(add==1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][k])+' '+hrs(H[k][0])}}
+ const hd=document.getElementById('hhDot'),ht=document.getElementById('hhTxt');
+ if(t&&h>=14&&h<17){hd.classList.add('on');ht.textContent='Happy hour is on right now'}else{ht.textContent=(t&&h<14)?'Happy hour today, 2–5 PM':'Happy hour, 2–5 PM'}
+ document.querySelectorAll('#hours [data-d]').forEach(e=>{const r=e.dataset.d.split('-').map(Number);const on=r.length>1?(d>=r[0]&&d<=r[1]):d===r[0];e.classList.toggle('today',on)})}
+status();setInterval(status,60000);
+
+/* papel picado */
+(function(){const cols=['#d6336c','#ec6a1c','#13877c','#f5a524','#7b3fa0','#2f6fd0','#8cc63f'];const box=document.querySelector('#picado .flags');
+ const n=innerWidth<700?6:11;const flags=[];
+ for(let i=0;i<n;i++){const c=cols[i%cols.length];let holes='';
+  for(let y=0;y<3;y++)for(let x=0;x<3;x++){const cx=18+x*22,cy=26+y*22;holes+=(x+y)%2?`M${cx-6} ${cy}L${cx} ${cy-7}L${cx+6} ${cy}L${cx} ${cy+7}Z`:`M${cx-5} ${cy}a5 5 0 1 0 10 0a5 5 0 1 0 -10 0Z`}
+  let zig='';for(let z=0;z<=8;z++)zig+=`L${80-z*10} ${z%2?96:90}`;
+  const el=document.createElement('div');el.className='flag';el.innerHTML=`<svg viewBox="0 0 80 100"><path fill-rule="evenodd" fill="${c}" d="M0 0H80V90${zig.replace(/^L80 90/,'')}L0 90Z ${holes}"/></svg>`;
+  box.appendChild(el);flags.push({el,ph:Math.random()*6,a:0,v:0})}
+ if(reduce)return;let gust=0,lx=0;addEventListener('pointermove',e=>{gust+=Math.min(14,Math.abs(e.clientX-lx))*.04;lx=e.clientX},{passive:true});
+ let last=scrollY;addEventListener('scroll',()=>{gust+=Math.min(30,Math.abs(scrollY-last))*.05;last=scrollY},{passive:true});
+ (function tick(t){gust*=.94;flags.forEach((f,i)=>{const target=Math.sin(t/900+f.ph)*4+Math.sin(t/260+i)*gust;f.v+=(target-f.a)*.08;f.v*=.86;f.a+=f.v;f.el.style.transform=`rotate(${f.a}deg)`});requestAnimationFrame(tick)})(0)})();
+
+/* hero stack parallax */
+const figs=[...document.querySelectorAll('#stack figure')];const base=figs.map(f=>getComputedStyle(f).transform==='none'?'':getComputedStyle(f).transform);
+function par(){if(reduce)return;const y=scrollY;figs.forEach((f,i)=>{f.style.transform=`translateY(${y*f.dataset.s}px) ${base[i]}`})}
+addEventListener('scroll',()=>requestAnimationFrame(par),{passive:true});
+const hhImg=document.getElementById('hhImg');
+addEventListener('scroll',()=>{if(reduce)return;const r=hhImg.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;hhImg.style.transform=`translateY(${(r.top+r.height/2-innerHeight/2)*-.08}px)`},{passive:true});
+
+/* loteria deck */
+const C=[
+ ['El Molcajete','molcajete','The Monarca Molcajete','Grilled beef, chicken, sausage and shrimp piled with cactus, jalapeños and queso fresco, served with guacamole and corn tortillas. Texas Monthly called it a work of art.','For the table'],
+ ['La Birria','birria-bowl','Birria','The dish reviewers bring up most. Get it in a bowl with onion, cilantro and lime, or folded into birria quesadillas.','House favorite'],
+ ['Las Enchiladas','enchiladas','Enchiladas','Smothered, cheesy and finished with avocado. The enchiladas verdes are a Destination Bryan pick.','Comida'],
+ ['La Margarita','margaritas','Margaritas','Chile-salt rims, fresh lime, a few flavors to choose from. These took first place for Best Margaritas in 2026.','Bar'],
+ ['El Vuelo','flight','Margarita flight','Four margaritas on one board, each with its own garnish. The easiest way to find your favorite.','Bar'],
+ ['El Banquete','platter','The big platter','Grilled meats, peppers and nopales with salsas, guacamole, rice and beans. Made for sharing.','For the table'],
+ ['El Tres Leches','tres-leches','Tres leches','Soaked sponge cake under cream, strawberries and blueberries. Save room.','Postre'],
+ ['Los Mariachis','mariachi','Live mariachi','On music nights the mariachis play right along the bar. Watch Instagram for the next one.','Música']];
+const deck=document.getElementById('deck');
+C.forEach((c,i)=>{const b=document.createElement('button');b.type='button';b.className='card reveal';b.setAttribute('aria-pressed','false');b.setAttribute('aria-label',c[0]+': '+c[3]);
+ b.innerHTML=`<div class="in"><div class="f"><div class="ph"><img src="img/${c[1]}.webp" alt="" loading="lazy"><span class="n num">${i+1}</span></div><div class="t">${c[0]}</div></div><div class="bk"><div class="k">${c[4]}</div><div><h3>${c[2]}</h3><p style="margin-top:12px">${c[3]}</p></div><div class="k" style="opacity:.6">Nº ${i+1} · Casa Monarca</div></div></div>`;
+ b.addEventListener('click',()=>{b.classList.toggle('flip');b.setAttribute('aria-pressed',b.classList.contains('flip'))});
+ b.addEventListener('pointerenter',()=>landOn=b);b.addEventListener('pointerleave',()=>{if(landOn===b)landOn=null});
+ deck.appendChild(b)});
+const cards=[...deck.children];
+document.getElementById('deal').addEventListener('click',()=>{const pool=cards.filter(c=>!c.classList.contains('flip'));const c=(pool.length?pool:cards)[Math.floor(Math.random()*(pool.length||cards.length))];
+ c.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});c.classList.remove('dealt');void c.offsetWidth;c.classList.add('dealt');setTimeout(()=>{c.classList.add('flip');c.setAttribute('aria-pressed','true');landOn=c;setTimeout(()=>{if(landOn===c)landOn=null},2600)},reduce?0:500)});
+document.getElementById('reset').addEventListener('click',()=>cards.forEach(c=>{c.classList.remove('flip');c.setAttribute('aria-pressed','false')}));
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach((e,i)=>{e.style.transitionDelay=(e.classList.contains('card')?(i%4)*.08:0)+'s';io.observe(e)});
+
+/* migrating monarch: drifts down the page with you, lands on the card you hover */
+let landOn=null;
+(function(){if(reduce)return;const m=document.getElementById('mon');let x=innerWidth*.8,y=innerHeight*.3,vx=0,vy=0,ang=0;
+ setTimeout(()=>m.classList.add('on'),2600);
+ function tick(t){const doc=document.documentElement.scrollHeight-innerHeight;const p=doc>0?scrollY/doc:0;
+  let tx,ty,rest=false;
+  if(landOn){const r=landOn.getBoundingClientRect();tx=r.right-34;ty=r.top+8;rest=Math.hypot(tx-x,ty-y)<14}
+  else{const w=innerWidth,h=innerHeight;tx=w*(.5+.4*Math.sin(p*Math.PI*5+t/4000));ty=h*(.32+.22*Math.sin(p*Math.PI*7+1)+.03*Math.sin(t/700))}
+  vx+=(tx-x)*.012;vy+=(ty-y)*.012;vx*=.9;vy*=.9;x+=vx;y+=vy;
+  const a=rest?0:Math.max(-35,Math.min(35,vx*2.2));ang+=(a-ang)*.1;
+  m.style.transform=`translate(${x-23}px,${y-20}px) rotate(${ang}deg)`;m.classList.toggle('rest',rest);requestAnimationFrame(tick)}
+ requestAnimationFrame(tick)})();
+</script>
+</body>
+</html>
