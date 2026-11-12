@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Koala Bakery &amp; Café | Boba, Milk Tea &amp; Asian Bakery in Bryan, TX</title>
+<meta name="description" content="Koala Bakery & Café on S Texas Ave in Bryan, near Texas A&M. Brown sugar milk tea, fresh fruit tea, slushes, Taiwanese chicken popcorn, purple rice wraps and fresh bakery. Build your boba and order online.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f2e9dd">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Koala Bakery & Café","servesCuisine":["Bubble Tea","Taiwanese","Bakery","Desserts"],"priceRange":"$","telephone":"+1-979-485-1539","email":"koala1688llc@yahoo.com","address":{"@type":"PostalAddress","streetAddress":"3700 S Texas Ave Suite 550","addressLocality":"Bryan","addressRegion":"TX","postalCode":"77802","addressCountry":"US"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"356"},"sameAs":["https://www.facebook.com/profile.php?id=61550611358401"]}</script>
+<style>
+:root{--milk:#f2e9dd;--milk2:#e8dccb;--tea:#b07a4a;--sugar:#5b3418;--pearl:#1f120b;--ink:#1b1410;--matcha:#8fb26a;--straw:#ef5d74;--mango:#ffb22e;--wood:#9b6b45;--mute:#7d6b5c;--white:#fffdf9}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip;scroll-behavior:smooth}
+body{background:var(--milk);color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,sans-serif;line-height:1.55;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+.concept{background:var(--ink);color:var(--milk);font:700 12px/1 "Plus Jakarta Sans";letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:8px 10px;position:relative;z-index:60}
+.concept .cfull{font-weight:500;text-transform:none;letter-spacing:0;opacity:.8}
+nav{position:sticky;top:0;z-index:50;background:rgba(242,233,221,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06)}
+nav .wrap{height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 20px Fraunces;letter-spacing:.02em}
+.logo img{width:42px;height:42px;border-radius:50%;background:#fff;object-fit:cover;border:1px solid #e5d8c4}
+.logo small{display:block;font:600 10px "Plus Jakarta Sans";letter-spacing:.2em;color:var(--mute)}
+.links{display:flex;gap:28px;font-weight:600;font-size:14px}
+.links a{text-decoration:none}.links a:hover{color:var(--tea)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--ink);color:var(--white);text-decoration:none;font:700 15px "Plus Jakarta Sans";padding:13px 22px;border-radius:999px;border:0;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:var(--sugar)}
+.btn.tea{background:var(--tea)}.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+:focus-visible{outline:3px solid var(--tea);outline-offset:3px}
+
+/* HERO bento with organic masks */
+.hero{padding:6vh 0 9vh;position:relative}
+.hgrid{display:grid;grid-template-columns:.95fr 1.05fr;gap:4vw;align-items:center}
+.kick{display:inline-flex;gap:8px;align-items:center;background:var(--white);border-radius:999px;padding:7px 14px;font-weight:700;font-size:13px;box-shadow:0 6px 18px rgba(91,52,24,.08)}
+.kick i{width:8px;height:8px;border-radius:50%;background:var(--pearl)}
+.hero h1{font:600 clamp(54px,7.6vw,112px)/.92 Fraunces;letter-spacing:-.035em;margin-top:22px}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--tea)}
+.lede{font-size:clamp(17px,1.5vw,19px);max-width:470px;margin-top:22px;color:#4f4136}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.mini{display:flex;gap:26px;margin-top:30px;font-size:14px;color:var(--mute)}
+.mini b{display:block;font:800 26px "Plus Jakarta Sans";color:var(--ink)}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(6,minmax(0,1fr));gap:14px;height:clamp(440px,52vw,640px)}
+.bento figure{overflow:hidden;position:relative;opacity:0;transform:translateY(30px) scale(.96);transition:opacity .9s,transform 1s cubic-bezier(.2,.8,.2,1)}
+.bento.in figure{opacity:1;transform:none}
+.bento figure:nth-child(2){transition-delay:.12s}.bento figure:nth-child(3){transition-delay:.24s}.bento figure:nth-child(4){transition-delay:.36s}.bento figure:nth-child(5){transition-delay:.48s}
+.bento img{width:100%;height:100%;object-fit:cover}
+.bA{grid-column:1/4;grid-row:1/7;border-radius:999px 999px 26px 26px}
+.bB{grid-column:4/7;grid-row:1/4;border-radius:50%}
+.bC{grid-column:4/6;grid-row:4/7;border-radius:26px 26px 999px 999px}
+.bD{grid-column:6/7;grid-row:4/6;border-radius:999px}
+.bE{grid-column:6/7;grid-row:6/7;border-radius:50%;background:var(--white);display:grid;place-items:center}
+.bE img{width:80%;height:80%;object-fit:contain}
+.tagp{position:absolute;left:12px;bottom:12px;background:rgba(255,253,249,.92);border-radius:999px;padding:6px 12px;font:700 12px "Plus Jakarta Sans"}
+
+section.pad{padding:clamp(80px,11vw,140px) 0}
+.eyebrow{font:800 12px "Plus Jakarta Sans";letter-spacing:.24em;text-transform:uppercase;color:var(--tea)}
+h2{font:600 clamp(40px,5.4vw,74px)/.96 Fraunces;letter-spacing:-.03em;margin-top:12px;text-wrap:balance}
+h2 em{font-style:italic;font-weight:400;color:var(--tea)}
+.sub{font-size:18px;color:#5d4d40;max-width:580px;margin-top:16px}
+
+/* DRINK BUILDER */
+.builder{background:var(--ink);color:var(--milk);border-radius:40px;margin:0 2vw;position:relative;overflow:hidden}
+.builder .eyebrow{color:#d9b48b}
+.builder .sub{color:#c9b9a8}
+.bgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:4vw;margin-top:44px;align-items:start}
+.cupwrap{position:sticky;top:100px;display:grid;justify-items:center}
+.cup{width:min(300px,64vw);height:auto;overflow:visible}
+.cupwrap .price{font:800 44px "Plus Jakarta Sans";margin-top:6px;letter-spacing:-.02em}
+.cupwrap .desc{font-size:14px;color:#c9b9a8;text-align:center;max-width:300px;min-height:42px}
+.liquid{transition:y .7s cubic-bezier(.3,1.2,.4,1),height .7s cubic-bezier(.3,1.2,.4,1),fill .6s}
+.ice rect{transition:opacity .4s,transform .6s}
+.pearl{transition:transform 1s cubic-bezier(.3,1.3,.5,1),opacity .4s}
+.steps{display:grid;gap:26px}
+.step h3{font:700 13px "Plus Jakarta Sans";letter-spacing:.2em;text-transform:uppercase;color:#d9b48b;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:600 14px "Plus Jakarta Sans";background:rgba(255,255,255,.06);color:var(--milk);border:1px solid rgba(255,255,255,.14);padding:10px 14px;border-radius:999px;cursor:pointer;transition:background .2s,border-color .2s,transform .15s}
+.chips button:hover{border-color:#d9b48b}
+.chips button[aria-pressed=true]{background:var(--milk);color:var(--ink);border-color:var(--milk)}
+.chips button:disabled{opacity:.35;cursor:not-allowed}
+.chips button small{opacity:.65;font-weight:500;margin-left:4px}
+.drinks{max-height:300px;overflow:auto;padding-right:6px;scrollbar-width:thin}
+.drinks button{display:flex;justify-content:space-between;width:100%;text-align:left;font:600 15px "Plus Jakarta Sans";background:transparent;color:var(--milk);border:0;border-bottom:1px solid rgba(255,255,255,.08);padding:12px 6px;cursor:pointer;gap:12px}
+.drinks button:hover{background:rgba(255,255,255,.04)}
+.drinks button[aria-pressed=true]{color:#ffd59b}
+.drinks button span:last-child{font-variant-numeric:tabular-nums;opacity:.8}
+.ordbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.summary{background:rgba(255,255,255,.06);border-radius:18px;padding:16px 18px;font-size:15px;color:#e9dccc}
+.note{font-size:12px;color:#9e8e7f}
+
+/* BITES */
+.bites .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px}
+.bite{background:var(--white);border-radius:28px;padding:12px 12px 18px;box-shadow:0 10px 30px rgba(91,52,24,.06);transition:transform .3s}
+.bite:hover{transform:translateY(-6px) rotate(-.6deg)}
+.bite .ph{aspect-ratio:1;border-radius:999px 999px 22px 22px;overflow:hidden}
+.bite:nth-child(even) .ph{border-radius:22px 22px 999px 999px}
+.bite img{width:100%;height:100%;object-fit:cover}
+.bite h3{font:600 20px Fraunces;margin:14px 6px 2px}
+.bite p{font-size:14px;color:var(--mute);margin:0 6px}
+.bite b{display:inline-block;margin:10px 6px 0;font:800 15px "Plus Jakarta Sans";background:var(--milk);padding:4px 10px;border-radius:999px}
+
+/* sweet */
+.sweet{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center}
+.sweet .pic{border-radius:40px;overflow:hidden;aspect-ratio:4/3}
+.sweet .pic img{width:100%;height:100%;object-fit:cover}
+.perks{display:grid;gap:14px;margin-top:24px}
+.perk{display:flex;gap:14px;align-items:flex-start;background:var(--white);border-radius:20px;padding:16px 18px}
+.perk i{flex:none;width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#5b3a25,#1f120b 70%);box-shadow:inset -3px -3px 6px rgba(0,0,0,.4)}
+.perk b{display:block}
+
+/* reviews, visit */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.q{background:var(--white);border-radius:26px;padding:26px}
+.q p{font:400 21px/1.35 Fraunces}
+.q cite{display:block;font-style:normal;color:var(--mute);font-size:14px;margin-top:14px}
+.visit{background:var(--tea);color:var(--white);border-radius:40px;margin:0 2vw}
+.vgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:5vw;align-items:center}
+.vcard{background:var(--white);color:var(--ink);border-radius:28px;padding:30px}
+.vcard .btn{width:100%;margin-top:12px}
+footer{padding:34px 0 100px;font-size:13px;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.callbar{display:none}
+#pearls{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:40}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:900px){
+  .links{display:none}
+  nav .btn{padding:10px 14px;font-size:13px}
+  .hgrid,.bgrid,.sweet,.vgrid{grid-template-columns:1fr}
+  .bento{height:auto;aspect-ratio:1/1.05}
+  .cupwrap{position:relative;top:0}
+  .bites .grid{grid-template-columns:1fr 1fr}
+  .quotes{grid-template-columns:1fr}
+  .builder,.visit{border-radius:26px;margin:0 3vw}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(242,233,221,.96);backdrop-filter:blur(8px);border-top:1px solid rgba(0,0,0,.07)}
+  .callbar .btn{flex:1}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal,.bento figure{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="concept">Concept preview <span class="cfull">· designed for Koala Bakery &amp; Café, not the official site yet</span></div>
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="img/logo.webp" alt="">Koala<small>BAKERY &amp; CAFÉ</small></a>
+    <div class="links"><a href="#build">Build a drink</a><a href="#bites">Bites</a><a href="#sweet">Bakery</a><a href="#visit">Visit</a></div>
+    <a class="btn" href="https://order.online/store/-25370424" target="_blank" rel="noopener">Order online</a>
+  </div>
+</nav>
+<main id="top">
+<section class="hero">
+  <div class="wrap hgrid">
+    <div>
+      <span class="kick"><i></i>Bryan · near Texas A&amp;M</span>
+      <h1>Boba, bread <em>&amp;</em> bites.</h1>
+      <p class="lede">Brown sugar milk tea, fresh fruit tea, slushes and Taiwanese chicken popcorn, plus a bakery case full of fresh bread. Plenty of seats for studying or catching up with friends.</p>
+      <div class="cta"><a class="btn tea" href="#build">Build your drink</a><a class="btn ghost" href="https://order.online/store/-25370424" target="_blank" rel="noopener">Order online</a></div>
+      <div class="mini"><div><b>4.7★</b>356 Google reviews</div><div><b>60+</b>drinks to choose from</div></div>
+    </div>
+    <div class="bento" id="bento">
+      <figure class="bA"><img src="img/tea-bread.webp" alt="A strawberry milk drink in a Koala cup next to a fresh bread bun on a wooden tray" fetchpriority="high"><span class="tagp">Strawberry + fresh bread</span></figure>
+      <figure class="bB"><img src="img/popcorn-chicken.webp" alt="Koala's chicken popcorn with a basil leaf and dipping sauce"></figure>
+      <figure class="bC"><img src="img/fruit-tea.webp" alt="A mango fruit tea with a sunflower in a vase"></figure>
+      <figure class="bD"><img src="img/coffee-tea.webp" alt="A creamy iced drink in a Koala cup"></figure>
+      <figure class="bE"><img src="img/logo.webp" alt="Koala Bakery and Café logo"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="pad builder" id="build">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">Your cup, your way</div><h2>Build your <em>drink.</em></h2>
+    <p class="sub">Pick a drink, size, ice, sweetness and toppings. The cup fills as you go and the price updates using Koala's real menu.</p></div>
+    <div class="bgrid">
+      <div class="cupwrap reveal">
+        <svg class="cup" viewBox="0 0 220 360" id="cup" role="img" aria-label="Your drink preview">
+          <defs>
+            <clipPath id="cupClip"><path d="M30 70 L190 70 L172 336 Q171 346 160 346 L60 346 Q49 346 48 336 Z"/></clipPath>
+            <linearGradient id="glass" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".18" stop-color="#fff" stop-opacity=".05"/><stop offset=".8" stop-color="#fff" stop-opacity=".02"/><stop offset="1" stop-color="#fff" stop-opacity=".16"/></linearGradient>
+            <radialGradient id="pg" cx=".35" cy=".3" r=".7"><stop offset="0" stop-color="#6b4630"/><stop offset=".6" stop-color="#24140c"/><stop offset="1" stop-color="#120a06"/></radialGradient>
+          </defs>
+          <rect x="102" y="0" width="16" height="250" rx="6" fill="#ef5d74" transform="rotate(10 110 200)" opacity=".95"/>
+          <g clip-path="url(#cupClip)">
+            <rect x="0" y="0" width="220" height="360" fill="rgba(255,255,255,.04)"/>
+            <rect class="liquid" id="liq" x="0" y="120" width="220" height="240" fill="#b07a4a"/>
+            <g id="stripes" opacity="0"></g>
+            <rect class="liquid" id="foam" x="0" y="110" width="220" height="0" fill="#fff6e8"/>
+            <g class="ice" id="ice"></g>
+            <g id="tops"></g>
+          </g>
+          <path d="M30 70 L190 70 L172 336 Q171 346 160 346 L60 346 Q49 346 48 336 Z" fill="url(#glass)" stroke="rgba(255,255,255,.55)" stroke-width="2.5"/>
+          <rect x="22" y="58" width="176" height="16" rx="7" fill="#f6efe5"/>
+          <text x="110" y="230" fill="rgba(255,255,255,.9)" font-family="Plus Jakarta Sans" font-weight="800" font-size="22" letter-spacing="4" text-anchor="middle" transform="rotate(-90 110 230)">KOALA</text>
+        </svg>
+        <div class="price" id="price">$4.95</div>
+        <div class="desc" id="desc"></div>
+      </div>
+      <div class="steps reveal">
+        <div class="step"><h3>1 · Type</h3><div class="chips" id="cats"></div></div>
+        <div class="step"><h3>2 · Drink</h3><div class="drinks" id="drinks"></div></div>
+        <div class="step"><h3>3 · Size</h3><div class="chips" id="sizes"></div></div>
+        <div class="step"><h3>4 · Ice</h3><div class="chips" id="ices"></div></div>
+        <div class="step"><h3>5 · Sweetness</h3><div class="chips" id="sugars"></div></div>
+        <div class="step"><h3>6 · Toppings</h3><div class="chips" id="toppings"></div></div>
+        <div class="summary" id="summary" aria-live="polite"></div>
+        <div class="ordbar"><a class="btn tea" href="https://order.online/store/-25370424" target="_blank" rel="noopener">Order this online</a><a class="btn ghost" style="color:var(--milk);border-color:rgba(255,255,255,.4)" href="tel:+19794851539">Call it in</a><button class="btn ghost" style="color:var(--milk);border-color:rgba(255,255,255,.4)" type="button" id="copy">Copy my order</button></div>
+        <p class="note">Prices from Koala's posted menu, before tax. Fruit teas start at 50% sugar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad bites" id="bites">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">From the kitchen</div><h2>Hungry? <em>Get the popcorn chicken.</em></h2>
+    <p class="sub">Appetizers, rice bowls, purple rice wraps and house-made sandwiches. A few of the Top 9:</p></div>
+    <div class="grid">
+      <article class="bite reveal"><div class="ph"><img src="img/popcorn-chicken.webp" alt="Koala's chicken popcorn" loading="lazy"></div><h3>Koala's Chicken Popcorn</h3><p>Golden fried bites in Koala's seasoning</p><b>$7.95</b></article>
+      <article class="bite reveal"><div class="ph"><img src="img/calamari.webp" alt="Calamari fritti with dipping sauce" loading="lazy"></div><h3>Calamari Fritti</h3><p>Tossed in Koala's spicy seasoning</p><b>$8.75</b></article>
+      <article class="bite reveal"><div class="ph"><img src="img/shrimp-tempura.webp" alt="Golden shrimp tempura" loading="lazy"></div><h3>Golden Shrimp Tempura</h3><p>6 pieces with greens and spicy mayo</p><b>$8.75</b></article>
+      <article class="bite reveal"><div class="ph"><img src="img/milk-curd.webp" alt="Crispy fried milk curd with brown sugar sauce" loading="lazy"></div><h3>Crispy Milk Curd</h3><p>6 pieces, sweet brown sugar sauce</p><b>$7.75</b></article>
+      <article class="bite reveal"><div class="ph"><img src="img/purple-rice.webp" alt="Purple rice burrito wrap cut in half" loading="lazy"></div><h3>Purple Rice Burrito Wrap</h3><p>Seaweed, cucumber, avocado, lettuce + protein</p><b>from $6.75</b></article>
+      <article class="bite reveal"><div class="ph"><img src="img/noodles.webp" alt="Stir-fry noodles with vegetables" loading="lazy"></div><h3>Stir-fry Noodle</h3><p>Chicken, beef, shrimp or crawfish</p><b>$14.25</b></article>
+      <article class="bite reveal"><div class="ph"><img src="img/calamari-2.webp" alt="Szechuan crinkle fries" loading="lazy"></div><h3>Szechuan Fries</h3><p>Chili oil &amp; Szechuan peppercorn</p><b>$6.59</b></article>
+      <article class="bite reveal"><div class="ph"><img src="img/pepper-beef.webp" alt="A rice bowl topped with glazed meat and peppers" loading="lazy"></div><h3>Rice Bowls</h3><p>Black pepper or teriyaki</p><b>from $12.95</b></article>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="sweet">
+  <div class="wrap sweet">
+    <div class="pic reveal"><img src="img/parfaits.webp" alt="Four parfait cups layered with mango, strawberry, taro and cookies and cream" loading="lazy"></div>
+    <div class="reveal">
+      <div class="eyebrow">The bakery case</div>
+      <h2>Fresh bread &amp; <em>pretty desserts.</em></h2>
+      <p class="sub">Asian breads and pastries, layered parfait cups and cakes from the case. Pair any of them with a milk tea.</p>
+      <div class="perks">
+        <div class="perk"><i></i><div><b>Sugar &amp; ice your way</b>Full, less, half or low ice. 0% to 100% sweet.</div></div>
+        <div class="perk"><i></i><div><b>Study-friendly</b>Lots of seats, a calm room and quick, friendly staff.</div></div>
+        <div class="perk"><i></i><div><b>Order ahead</b>Order online for pickup and skip the line between classes.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">Reviews</div><h2>Bryan's <em>boba stop.</em></h2></div>
+    <div class="quotes">
+      <blockquote class="q reveal"><p>“A great place to study, catch up with friends, and enjoy great boba! The staff is very nice and quick with orders.”</p><cite>Wanderlog review</cite></blockquote>
+      <blockquote class="q reveal"><p>“Ordered the Brûlée Boba Tea… Once I saw them hand torch the brûlée at the top, I knew it was good.”</p><cite>Nini P., Yelp review</cite></blockquote>
+      <blockquote class="q reveal"><p>“A great assortment of desserts, baked goods, and snacks.”</p><cite>Texas A&amp;M Graduate &amp; Professional School blog</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="pad visit" id="visit">
+  <div class="wrap vgrid">
+    <div class="reveal">
+      <div class="eyebrow" style="color:#ffe3bf">Come say hi</div>
+      <h2>3700 S Texas Ave, Suite 550</h2>
+      <p style="font-size:19px;margin-top:10px">Bryan, TX 77802 · in the shopping center on Texas Avenue</p>
+      <p style="margin-top:18px;opacity:.9">Open daily. Call or check Google for today's hours.</p>
+    </div>
+    <div class="vcard reveal">
+      <h3 style="font:600 30px Fraunces">Craving boba?</h3>
+      <p style="color:var(--mute);margin-top:6px">Order ahead for pickup, or come in and stay a while.</p>
+      <a class="btn tea" href="https://order.online/store/-25370424" target="_blank" rel="noopener">Order online</a>
+      <a class="btn" href="tel:+19794851539">Call (979) 485-1539</a>
+      <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=3700+S+Texas+Ave+Suite+550+Bryan+TX+77802" target="_blank" rel="noopener">Get directions</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>© <span id="yr"></span> Koala Bakery &amp; Café · 3700 S Texas Ave Ste 550, Bryan, TX</span><span>Photos and menu from Koala's own Facebook page</span><span>Site by Ryan L. Web Studio</span></div></footer>
+<div class="callbar"><a class="btn tea" href="https://order.online/store/-25370424" target="_blank" rel="noopener">Order online</a><a class="btn" href="tel:+19794851539">Call</a></div>
+<canvas id="pearls" aria-hidden="true"></canvas>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+setTimeout(()=>document.getElementById('bento').classList.add('in'),reduce?0:120);
+
+/* ---------- real menu data ---------- */
+const MENU={
+ 'Milk Tea':{note:'Non-dairy',items:[['Koala Brown Sugar Milk Tea',4.95,5.95,'#a8703f'],['Earl Grey Milk Tea',4.95,6.25,'#c39b78'],['Creamy Jasmine',4.95,6.25,'#e2cfa8'],['Assam Milk Tea',4.95,5.95,'#b88758'],['Premium Taro Milk Tea',4.95,5.95,'#b9a2d4'],['Pink Rose',4.95,5.95,'#e8b4bf'],['Osmanthus Oolong Milk Tea',4.95,6.35,'#d7b077'],['White-Peach Oolong',4.95,6.25,'#efcfb3'],['Iron Goddess',4.95,6.25,'#c3956a'],['Honeydew Milk Tea',4.95,5.95,'#cfe1aa'],['Strawberry Milk Tea',4.95,5.95,'#f2a4b5'],['Coconut Heaven',4.95,5.95,'#efe6d6'],['Thai Tea',4.95,5.95,'#e8944a'],['Black Rock Oolong',null,6.35,'#a3754d'],['Crystal Boba & Moon Lake',null,6.75,'#d8c09d'],['Golden Soy Brown Sugar',null,6.75,'#c69756']]},
+ 'Fruit Tea':{note:'Fresh fruit tea · min 50% sugar',min50:true,items:[['Koala Signature Fruit Tea',4.95,6.25,'#f4a33c'],['Hawaiian Fruit Tea',4.95,6.25,'#f7b84b'],['Popping Boba Mango Tea',4.95,5.95,'#ffb21f'],['Pineapple SunRise',4.95,5.95,'#ffcd3a'],['Grapefruit Sunset',4.95,5.95,'#f2684d'],['Sweet Peach Green Tea',4.95,5.95,'#f5c197'],['Passion Fruit Green Tea',4.95,5.95,'#f0bd47'],['Honey-Lemon Green Tea',4.95,5.95,'#efd775'],['Lychee Black Tea',4.95,5.95,'#e3b4a1'],['Tropical Summer Fruit Tea',null,6.55,'#ffa646'],['Lady Pink Dragon Fruit',null,6.65,'#de3c78']]},
+ 'Fresh Milk':{note:'Decaf · brown sugar boba included',boba:true,items:[['Brown Sugar w/ Fresh Milk',4.25,5.50,'#f1e6d6'],['Brown Sugar w/ Matcha Fresh Milk',5.25,6.10,'#c7da9f'],['Brown Sugar w/ Chocolate Fresh Milk',4.25,5.50,'#9e7353'],['Brown Sugar w/ Taro Fresh Milk',4.25,5.50,'#cdb7df'],['Brown Sugar w/ Coconut Fresh Milk',4.25,5.50,'#f4eee4'],['Strawberry Tornado (no boba)',null,5.50,'#f08aa0',true]]},
+ 'Slush':{note:'Large only · milk foam included',foam:true,items:[['Mango Mango Slush',null,6.95,'#ffbd2c'],['Strawberry Slush',null,6.95,'#f2647a'],['Peachy Peach Slush',null,6.95,'#f8b28a'],['Pineapple Slush',null,6.95,'#ffd648'],['Sweet Grape Slush',null,6.95,'#8b5bb5'],['Fresh Watermelon Slush',null,6.95,'#f26a6a'],['Premium Taro Slush',null,6.95,'#b9a2d4']]},
+ 'Matcha':{note:'Matcha lattes',items:[['Classic Matcha Latte',4.59,5.95,'#a9c47b'],['Cheesy Latte & Red Beans',null,6.95,'#b5cc8a'],['Strawberry Matcha Latte',null,6.95,'#d99aa4']]}
+};
+const ICE=[['Full',1],['Less',.7],['Half',.5],['Low',.3]];
+const SUGAR=[['Regular',100],['Less',70],['Half',50],['Light',30],['None',0]];
+const TOP=[['Regular Bubble',.60,'pearl'],['Brown Sugar Bubble',.85,'bs'],['Mango Popping Boba',.75,'mango'],['Strawberry Popping Boba',.75,'straw'],['Coconut Jelly',.60,'coco'],['Herb Jelly',.60,'herb'],['Red Beans',.60,'bean'],['Milk Foam',.85,'foam'],['Crystal Boba',.85,'crystal'],['Coffee Jelly',.85,'coffee']];
+let st={cat:'Milk Tea',i:0,size:'S',ice:0,sugar:0,tops:new Set(['Regular Bubble'])};
+const $=id=>document.getElementById(id);
+function chip(label,pressed,onClick,small,dis){const b=document.createElement('button');b.type='button';b.innerHTML=label+(small?'<small>'+small+'</small>':'');b.setAttribute('aria-pressed',!!pressed);b.disabled=!!dis;b.onclick=onClick;return b}
+function drink(){return MENU[st.cat].items[st.i]}
+function render(){
+  const cat=MENU[st.cat],d=drink();
+  $('cats').replaceChildren(...Object.keys(MENU).map(c=>chip(c,c===st.cat,()=>{st.cat=c;st.i=0;if(MENU[c].min50&&SUGAR[st.sugar][1]<50)st.sugar=2;render()})));
+  $('drinks').replaceChildren(...cat.items.map((it,k)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-pressed',k===st.i);b.innerHTML=`<span>${it[0]}</span><span>${it[1]?'$'+it[1].toFixed(2)+' / ':''}$${it[2].toFixed(2)}</span>`;b.onclick=()=>{st.i=k;render()};return b}));
+  if(!d[1])st.size='L';
+  $('sizes').replaceChildren(chip('Small',st.size==='S',()=>{st.size='S';render()},d[1]?' $'+d[1].toFixed(2):'',!d[1]),chip('Large',st.size==='L',()=>{st.size='L';render()},' $'+d[2].toFixed(2)));
+  $('ices').replaceChildren(...ICE.map((v,k)=>chip(v[0],k===st.ice,()=>{st.ice=k;render()},' '+Math.round(v[1]*100)+'%')));
+  $('sugars').replaceChildren(...SUGAR.map((v,k)=>chip(v[0],k===st.sugar,()=>{st.sugar=k;render()},' '+v[1]+'%',cat.min50&&v[1]<50)));
+  $('toppings').replaceChildren(...TOP.map(t=>chip(t[0],st.tops.has(t[0]),()=>{st.tops.has(t[0])?st.tops.delete(t[0]):st.tops.add(t[0]);render()},' +$'+t[1].toFixed(2))));
+  const base=st.size==='S'?d[1]:d[2];let total=base;st.tops.forEach(n=>{total+=TOP.find(t=>t[0]===n)[1]});
+  $('price').textContent='$'+total.toFixed(2);
+  $('desc').textContent=cat.note;
+  const tl=[...st.tops];const line=`${st.size==='S'?'Small':'Large'} ${d[0]} · ${ICE[st.ice][0].toLowerCase()} ice · ${SUGAR[st.sugar][1]}% sugar${tl.length?' · '+tl.join(', '):''}${cat.boba&&!d[4]?' (brown sugar boba included)':''}`;
+  $('summary').textContent=line;window.__order=line+' — $'+total.toFixed(2);
+  drawCup(d,cat);
+}
+/* ---------- the cup ---------- */
+const NS='http://www.w3.org/2000/svg';function E(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e}
+const iceG=$('ice'),topG=$('tops'),stripes=$('stripes');
+for(let k=0;k<6;k++){E('path',{d:`M${30+k*28} 360 C ${50+k*28} 300, ${20+k*30} 230, ${48+k*28} 160`,stroke:'#6b3a17','stroke-width':10,fill:'none','stroke-linecap':'round',opacity:.55},stripes)}
+function drawCup(d,cat){
+  const iceAmt=ICE[st.ice][1],size=st.size==='L'?1:.86;const top=Math.round(118+(1-size)*60);
+  const liq=$('liq');liq.setAttribute('y',top);liq.setAttribute('height',360-top);liq.setAttribute('fill',d[3]);
+  stripes.setAttribute('opacity',cat.boba&&!d[4]?1:0);
+  const foam=cat.foam||st.tops.has('Milk Foam');const f=$('foam');f.setAttribute('y',top-2);f.setAttribute('height',foam?26:0);
+  iceG.replaceChildren();const n=Math.round(iceAmt*8);for(let k=0;k<n;k++){const x=50+((k*53)%110),y=top+8+((k*37)%110);E('rect',{x,y,width:30,height:28,rx:6,fill:'rgba(255,255,255,.35)',stroke:'rgba(255,255,255,.6)','stroke-width':1.5,transform:`rotate(${(k*29)%40-20} ${x+15} ${y+14})`},iceG)}
+  topG.replaceChildren();let row=0;
+  const kinds=[...st.tops].map(n=>TOP.find(t=>t[0]===n)[2]).filter(k=>k!=='foam');if(cat.boba&&!d[4])kinds.unshift('bs');
+  const col={pearl:'url(#pg)',bs:'url(#pg)',mango:'#ffb21f',straw:'#ef3e5e',coco:'rgba(255,255,255,.75)',herb:'#2b2a22',bean:'#7a2f2a',crystal:'rgba(240,240,255,.6)',coffee:'#4a2b18'};
+  kinds.forEach(k=>{for(let j=0;j<11;j++){const x=58+j*10+(row%2)*5,y=332-row*12-(j%3)*2;const isCube=['coco','herb','coffee'].includes(k);const el=isCube?E('rect',{x:x-6,y:y-6,width:12,height:12,rx:2,fill:col[k],class:'pearl'},topG):E('circle',{cx:x,cy:y,r:6.2,fill:col[k],class:'pearl',stroke:k==='crystal'?'rgba(255,255,255,.8)':'none'},topG);
+    if(!reduce){el.style.transform=`translateY(${-(y-top+40)}px)`;el.style.opacity=0;requestAnimationFrame(()=>requestAnimationFrame(()=>{el.style.transitionDelay=(j*25+row*60)+'ms';el.style.transform='none';el.style.opacity=1}))}}row++});
+}
+render();
+$('copy').onclick=async e=>{try{await navigator.clipboard.writeText(window.__order);e.target.textContent='Copied ✓'}catch(_){e.target.textContent='Copy failed'}setTimeout(()=>e.target.textContent='Copy my order',1800)};
+
+/* ---------- tapioca pearl cursor (keeps dropping while you scroll) ---------- */
+(function(){
+  const c=$('pearls'),x=c.getContext('2d');const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;if(!fine||reduce){c.remove();return}
+  const LIFE=3200;let ps=[],dpr=Math.min(2,devicePixelRatio||1),last=null,cx=null,cy=null,py=scrollY;
+  function size(){c.width=innerWidth*dpr;c.height=innerHeight*dpr;x.setTransform(dpr,0,0,dpr,0,0)}size();addEventListener('resize',size);
+  function add(X,Y){const now=performance.now();if(last&&Math.hypot(X-last.x,Y-last.y)<11)return;ps.push({x:X+(Math.random()-.5)*6,y:Y+(Math.random()-.5)*6,t:now,r:6+Math.random()*4,s:Math.random()<.18});last={x:X,y:Y}}
+  addEventListener('pointermove',e=>{cx=e.clientX;cy=e.clientY;add(cx,cy)});
+  addEventListener('scroll',()=>{const dy=scrollY-py;py=scrollY;ps.forEach(p=>p.y-=dy);if(last)last.y-=dy;if(cx!==null)add(cx,cy)},{passive:true});
+  (function f(){const now=performance.now();ps=ps.filter(p=>now-p.t<LIFE);x.clearRect(0,0,innerWidth,innerHeight);
+    ps.forEach(p=>{const age=(now-p.t)/LIFE,pop=Math.min(1,(now-p.t)/180);const r=p.r*(pop<1?(.4+pop*.75):1.15-age*.35);x.globalAlpha=Math.max(0,1-Math.pow(age,2.4));
+      const g=x.createRadialGradient(p.x-r*.35,p.y-r*.4,r*.1,p.x,p.y,r);if(p.s){g.addColorStop(0,'#ffd27a');g.addColorStop(.6,'#f2a12b');g.addColorStop(1,'#b86a0c')}else{g.addColorStop(0,'#7a5238');g.addColorStop(.55,'#2a170d');g.addColorStop(1,'#120a06')}
+      x.fillStyle=g;x.beginPath();x.arc(p.x,p.y+age*10,r,0,Math.PI*2);x.fill();x.fillStyle='rgba(255,255,255,.55)';x.beginPath();x.arc(p.x-r*.35,p.y-r*.38+age*10,r*.22,0,Math.PI*2);x.fill()});
+    x.globalAlpha=1;requestAnimationFrame(f)})();
+})();
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
