@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Control &amp; Definition Hair Salon &amp; Spa · Salón de Belleza · South Austin</title>
-<meta name="description" content="Control & Definition Hair Salon & Spa: cortes, color, balayage, tratamientos, peinados, pestañas y limpieza facial. 2004 E William Cannon Dr Suite 103, Austin, TX 78744.">
+<title>Control &amp; Definition Hair Salon &amp; Spa · South Austin</title>
+<meta name="description" content="Control & Definition Hair Salon & Spa: cuts, color, balayage, treatments, styling, lash extensions and facials. 2004 E William Cannon Dr Suite 103, Austin, TX 78744.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700;800&family=Pinyon+Script&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Control & Definition Hair Salon & Spa","alternateName":"Control & Definición Salón de Belleza","telephone":"+1-512-300-0773","email":"controlanddefinitionsalon@gmail.com","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"2004 E William Cannon Dr Suite 103","addressLocality":"Austin","addressRegion":"TX","postalCode":"78744","addressCountry":"US"},"sameAs":["https://www.facebook.com/profile.php?id=100063803192433","https://www.instagram.com/controlydefinicion"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Control & Definition Hair Salon & Spa","telephone":"+1-512-300-0773","email":"controlanddefinitionsalon@gmail.com","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"2004 E William Cannon Dr Suite 103","addressLocality":"Austin","addressRegion":"TX","postalCode":"78744","addressCountry":"US"},"sameAs":["https://www.facebook.com/profile.php?id=100063803192433","https://www.instagram.com/controlydefinicion"]}</script>
 <style>
 :root{--noir:#121010;--noir2:#1c1817;--gold:#c9a35c;--gold-l:#e6c98d;--cream:#f5ede1;--blush:#ecdcd0;--ink:#1d1715;--mute:#7c6e64}
 *{box-sizing:border-box;margin:0;padding:0}
 html{overflow-x:clip;scroll-behavior:smooth}
 body{background:var(--cream);color:var(--ink);font-family:"Manrope",system-ui,sans-serif;line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 .wrap{width:min(1200px,92vw);margin-inline:auto}
 .serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500}
@@ -150,7 +150,7 @@ body.swap [data-en]{opacity:0}
   <div class="navr">
     <a class="l" href="#servicios" data-es="Servicios" data-en="Services">Servicios</a>
     <a class="l" href="#trabajo" data-es="Trabajos" data-en="Our work">Trabajos</a>
-    <div class="lang" role="group" aria-label="Language / Idioma"><button type="button" data-l="es" aria-pressed="true">ES</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
+    
     <a class="btn" href="#cita" data-es="Agenda tu cita" data-en="Book a visit">Agenda tu cita</a>
   </div>
 </div></nav>
@@ -253,8 +253,8 @@ body.swap [data-en]{opacity:0}
 <script>
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.getElementById('yr').textContent=new Date().getFullYear();
-let lang='es';
-try{const s=localStorage.getItem('cd-lang');if(s)lang=s}catch(e){}
+let lang='en';
+
 
 /* appointment builder */
 const SV={es:['Corte de dama','Corte de caballero','Corte de niño','Color / mechas','Balayage','Tratamiento','Peinado','Pestañas','Limpieza facial','Maquillaje'],en:['Women\'s cut','Men\'s cut','Kids\' cut','Color / highlights','Balayage','Treatment','Styling / updo','Lash extensions','Facial','Makeup']};
@@ -286,14 +286,13 @@ document.getElementById('nm').addEventListener('input',msg);
 
 /* language */
 function setLang(l,animate){
-  lang=l;try{localStorage.setItem('cd-lang',l)}catch(e){}
+  lang=l;
   document.documentElement.lang=l;
   const apply=()=>{document.querySelectorAll('[data-en]').forEach(el=>{const v=el.getAttribute('data-'+l);if(v==null)return;if(el.hasAttribute('data-html'))el.innerHTML=v;else el.textContent=v});
     document.getElementById('nm').placeholder=l==='es'?'Nombre':'Name';document.getElementById('pv').dataset.label=l==='es'?'Mensaje':'Your message';
     document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));render()};
   if(animate&&!reduce){document.body.classList.add('swap');setTimeout(()=>{apply();document.body.classList.remove('swap')},250)}else apply();
 }
-document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l,true));
 setLang(lang,false);
 
 /* hero arch crossfade */
