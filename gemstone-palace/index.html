@@ -45,19 +45,17 @@ nav.top .links{display:flex;gap:26px;align-items:center;font-size:14px;letter-sp
 nav.top .links a{text-decoration:none}
 nav.top .links .btn{padding:11px 16px;font-size:12px}
 /* hero */
-.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
-.hero .bg{position:absolute;inset:0}
-.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
-.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(12,10,11,.55) 0%,rgba(12,10,11,0) 30%,rgba(12,10,11,.35) 55%,rgba(12,10,11,.97) 100%)}
-.hero .copy{position:relative;z-index:2;padding-bottom:clamp(56px,9vh,110px)}
-.hero .copy .kick{display:inline-block;background:rgba(12,10,11,.72);padding:9px 12px;border:1px solid var(--line)}
-.hero h1{font-size:clamp(46px,8vw,120px);margin:18px 0 18px;text-shadow:0 4px 40px rgba(0,0,0,.5)}
+.hero{position:relative;padding:150px 0 clamp(60px,8vw,100px);overflow:hidden;background:radial-gradient(60% 50% at 50% 100%,rgba(179,18,46,.28),transparent 70%)}
+.hero .copy{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:end}
+.hero h1{font-size:clamp(46px,7.4vw,112px);margin:18px 0 0}
 .hero h1 span{display:block;background:linear-gradient(100deg,#b88a35,#f6e2a7 40%,#c9a24e 60%,#f6e2a7 80%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 6s linear infinite}
 @keyframes sheen{to{background-position:-200% 0}}
-.hero p{max-width:540px;font-size:clamp(17px,1.6vw,20px);color:#e9e1d2}
-.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.since{position:absolute;right:max(4vw,calc((100vw - 1180px)/2));bottom:clamp(56px,9vh,110px);z-index:2;text-align:right;font:700 13px/1.4 "Manrope";letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
-.since b{display:block;font:700 64px/1 "Manrope";color:var(--pearl);letter-spacing:0}
+.hero p{font-size:clamp(17px,1.5vw,19px);color:#e9e1d2}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.marquee{position:relative;margin:clamp(36px,5vw,60px) auto 0;width:min(1270px,94vw);aspect-ratio:1270/562;border:1px solid var(--line);box-shadow:0 0 0 8px rgba(12,10,11,1),0 0 0 9px var(--line),0 40px 120px rgba(179,18,46,.35)}
+.marquee img{width:100%;height:100%;object-fit:cover}
+.marquee .since{position:absolute;right:18px;bottom:16px;text-align:right;font:700 12px/1.4 "Manrope";letter-spacing:.24em;text-transform:uppercase;color:var(--gold-l);background:rgba(12,10,11,.75);padding:10px 14px}
+.marquee .since b{display:block;font:700 34px/1 "Manrope";color:var(--pearl);letter-spacing:0}
 /* tour */
 section{padding:clamp(80px,10vw,130px) 0}
 .h2{font-size:clamp(36px,5vw,68px);margin:14px 0 16px}
@@ -118,7 +116,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
 @media (max-width:900px){
  .tgrid{grid-template-columns:1fr}.chips{flex-direction:row;flex-wrap:wrap}
  nav.top .links a:not(.btn){display:none}
- .since{display:none}
+ .hero .copy{grid-template-columns:1fr}
+ .marquee .since{display:none}
+ .hero{padding-top:120px}
  .evs{grid-template-columns:1fr 1fr}.ev{min-height:260px}
  .pg,.visit .vg{grid-template-columns:1fr}
  .hs{width:28px;height:28px}.hs:before{inset:7px}
@@ -150,14 +150,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
 </div></nav>
 
 <header class="hero" id="top">
-<div class="bg"><img src="img/exterior.webp" alt="Gemstone Palace at night: the red neon diamond and lit sign over the brick arches on Bunton Creek Rd" width="1270" height="562" fetchpriority="high"></div>
 <div class="wrap copy">
-<span class="kick">Ballroom &amp; event center · 1101 Bunton Creek Rd · Kyle, TX</span>
-<h1 class="cz">Celebrate<span>like royalty.</span></h1>
-<p>Look for the red diamond on Bunton Creek Rd. Inside: a ballroom under a ceiling of hanging florals, with a grand staircase, a stage and a star in the middle of the dance floor. Weddings, quinceañeras, galas and everything in between.</p>
-<div class="cta"><a class="btn" href="#plan">Check a date</a><a class="btn ghost" href="#tour">Tour the ballroom</a></div>
+<div><span class="kick">Ballroom &amp; event center · 1101 Bunton Creek Rd · Kyle, TX</span>
+<h1 class="cz">Celebrate<span>like royalty.</span></h1></div>
+<div><p>Look for the red diamond on Bunton Creek Rd. Inside: a ballroom under a ceiling of hanging florals, with a grand staircase, a stage and a star in the middle of the dance floor.</p>
+<div class="cta"><a class="btn" href="#plan">Check a date</a><a class="btn ghost" href="#tour">Tour the ballroom</a></div></div>
 </div>
-<div class="since"><b>2019</b>Celebrating in Kyle since</div>
+<div class="marquee"><img src="img/exterior.webp" alt="Gemstone Palace at night: the red neon diamond and lit sign over the brick arches on Bunton Creek Rd" width="1270" height="562" fetchpriority="high"><div class="since"><b>2019</b>Celebrating in Kyle since</div></div>
 </header>
 
 <section id="tour">
