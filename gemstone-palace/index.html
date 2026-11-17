@@ -61,7 +61,7 @@ section{padding:clamp(80px,10vw,130px) 0}
 .h2{font-size:clamp(36px,5vw,68px);margin:14px 0 16px}
 .h2 em{font-style:normal;color:var(--gold-l)}
 .sub{color:var(--mute);max-width:620px;font-size:18px}
-.tgrid{display:grid;grid-template-columns:minmax(0,600px) 1fr;gap:clamp(24px,4vw,56px);align-items:center;margin-top:44px}
+.tgrid{display:grid;grid-template-columns:minmax(0,780px) 1fr;gap:clamp(24px,4vw,56px);align-items:center;margin-top:44px}
 .tour{position:relative;border:1px solid var(--line);padding:10px;background:linear-gradient(135deg,rgba(201,162,78,.12),transparent)}
 .tour .pic{position:relative;overflow:hidden}
 .tour .pic img{width:100%;height:auto}
@@ -166,7 +166,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
 <p class="sub">Tap the glowing points to explore the room.</p>
 <div class="tgrid"><div class="tour">
 <div class="pic" id="pic">
-<img src="img/ballroom.webp" alt="Wide view of the Gemstone Palace ballroom: hanging florals, chandeliers, a star medallion on the marble floor, a stage and a curved balcony railing" width="526" height="308" loading="lazy">
+<img src="img/ballroom.webp" alt="Wide view of the Gemstone Palace ballroom: hanging florals, chandeliers, a star medallion on the marble floor, a stage and a curved balcony railing" width="1242" height="670" loading="lazy">
 <div class="tip" id="tip"></div>
 </div>
 </div>
@@ -182,7 +182,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
 <div class="ev"><img src="img/floral-ceiling.webp" alt="" loading="lazy" style="object-position:50% 15%"><div><h3>Weddings</h3><p>Ceremony, dinner and the first dance under the florals.</p></div></div>
 <div class="ev"><img src="img/staircase.webp" alt="" loading="lazy" style="object-position:50% 40%"><div><h3>Quinceañeras</h3><p>A grand entrance down the staircase and a floor built for the waltz.</p></div></div>
 <div class="ev"><img src="img/balloon-wall.webp" alt="" loading="lazy"><div><h3>Birthdays &amp; showers</h3><p>Balloon walls, arches and colors to match your theme.</p></div></div>
-<div class="ev"><img src="img/ballroom.webp" alt="" loading="lazy"><div><h3>Galas &amp; community</h3><p>Concerts, expos, workshops and town meetings. Kyle’s room for big nights.</p></div></div>
+<div class="ev"><img src="img/balcony-bar.webp" alt="" loading="lazy"><div><h3>Galas &amp; community</h3><p>Concerts, expos, workshops and town meetings. Kyle’s room for big nights.</p></div></div>
 </div>
 </div>
 </section>
@@ -214,7 +214,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
 
 <section class="visit">
 <div class="wrap vg">
-<div class="duo"><img src="img/staircase.webp" alt="Lit staircase with a blue balloon garland" width="792" height="990" loading="lazy"><img src="img/balloon-arch.webp" alt="A balloon arch on the marble ballroom floor" width="832" height="1039" loading="lazy"></div>
+<div class="duo"><img src="img/balcony-bar.webp" alt="The Gemstone Palace balcony, spiral staircase and bar under a ring of hanging florals" width="530" height="484" loading="lazy"><img src="img/balloon-arch.webp" alt="A balloon arch on the marble ballroom floor" width="832" height="1039" loading="lazy"></div>
 <div>
 <span class="kick">Come see it</span>
 <h2 class="cz h2">Book a walkthrough.</h2>
@@ -229,7 +229,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
 </div>
 </section>
 
-<footer><div class="wrap"><span>© <span id="yr"></span> Gemstone Palace LLC · 1101 Bunton Creek Rd, Kyle, TX</span><span>Photos from Gemstone Palace’s own Facebook page</span><span>Site by Ryan L. Web Studio</span></div></footer>
+<footer><div class="wrap"><span>© <span id="yr"></span> Gemstone Palace LLC · 1101 Bunton Creek Rd, Kyle, TX</span><span>Photos from Gemstone Palace’s own Facebook and Instagram</span><span>Site by Ryan L. Web Studio</span></div></footer>
 <div class="callbar"><a class="btn" href="tel:+18339292872">Call</a><a class="btn ghost" href="#plan">Plan an event</a></div>
 
 <script>
@@ -239,12 +239,12 @@ yr.textContent=new Date().getFullYear();
  if(RM||seen){el.remove();return}setTimeout(()=>{el.classList.add('done');try{sessionStorage.setItem('gp-intro','1')}catch(e){}},2100);setTimeout(()=>el.remove(),3000)})();
 // hotspot tour (positions read off a 10% grid on the photo)
 const HS=[
- {x:23,y:9,t:'Hanging floral ceiling',d:'Cascades of white wisteria and roses over the whole floor.'},
- {x:38,y:17,t:'Crystal chandeliers',d:'Chandeliers tucked inside the florals for that warm glow.'},
- {x:42,y:36,t:'Head table',d:'A spot up front for the couple, the quinceañera or the guest of honor.'},
- {x:42,y:75,t:'Star dance floor',d:'A Texas star set into the marble, right where the first dance happens.'},
- {x:80,y:53,t:'Stage',d:'Room for a band, a DJ or a mariachi.'},
- {x:73,y:91,t:'Balcony & staircase',d:'A curved railing up top and a staircase made for grand entrances.'}];
+ {x:30,y:10,t:'Hanging floral ceiling',d:'Cascades of white wisteria and roses over the dance floor.'},
+ {x:51,y:12,t:'Crystal chandeliers',d:'Chandeliers tucked inside the florals for that warm glow.'},
+ {x:48,y:58,t:'Head table',d:'A throne up front for the couple, the quinceañera or the guest of honor.'},
+ {x:52,y:79,t:'Star dance floor',d:'A Texas star set into the marble, right where the first dance happens.'},
+ {x:73,y:64,t:'Stage',d:'Room for a band, a DJ or a mariachi.'},
+ {x:88,y:70,t:'Grand staircase',d:'Up to the balcony and back down for a grand entrance.'}];
 const pic=document.getElementById('pic'),tip=document.getElementById('tip'),chips=document.getElementById('chips');let cur=-1;
 HS.forEach((h,i)=>{const b=document.createElement('button');b.className='hs';b.style.left=h.x+'%';b.style.top=h.y+'%';b.setAttribute('aria-label',h.t);b.onclick=()=>show(i);b.onmouseenter=()=>matchMedia('(pointer:fine)').matches&&show(i);pic.appendChild(b);
  const c=document.createElement('button');c.textContent=h.t;c.onclick=()=>show(i);chips.appendChild(c)});
