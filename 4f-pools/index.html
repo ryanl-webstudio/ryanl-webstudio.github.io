@@ -271,7 +271,7 @@ yr.textContent=new Date().getFullYear();
    for(let c=0;c<3;c++){const v=A[i+c]+(B[i+c]-A[i+c])*a1;d[i+c]=v+(C[i+c]-v)*a2}d[i+3]=255}
   cx.putImageData(out,0,0)}
  function set(v){v=+v;want=v;needle.style.transform=`rotate(${-135+270*v/100}deg)`;dpct.textContent=v;clarity.value=v;
-  let s=S[0];for(const q of S)if(v>=q[0])s=q;dstate.textContent=s[1];dnote.textContent=s[2];if(!raf)raf=requestAnimationFrame(draw)}
+  let s=S[0];for(const q of S)if(v>=q[0])s=q;dstate.textContent=s[1];dnote.textContent=s[2];if(!raf){raf=requestAnimationFrame(draw);setTimeout(()=>{if(raf){cancelAnimationFrame(raf);draw()}},120)}}
  clarity.addEventListener('input',e=>set(e.target.value));
  let drag=false;function ang(e){const b=ring.getBoundingClientRect();let a=Math.atan2(e.clientX-(b.left+b.width/2),-(e.clientY-(b.top+b.height/2)))*180/Math.PI;a=Math.max(-135,Math.min(135,a));set(Math.round((a+135)/270*100))}
  ring.addEventListener('pointerdown',e=>{drag=true;ring.setPointerCapture(e.pointerId);ang(e)});ring.addEventListener('pointermove',e=>drag&&ang(e));ring.addEventListener('pointerup',()=>drag=false);
