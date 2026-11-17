@@ -37,7 +37,7 @@ nav.top .links .btn{padding:11px 16px;font-size:14px}
 /* hero */
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--navy)}
 .hero .bg{position:absolute;inset:0}
-.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
 .hero .bg img.wob{filter:url(#water)}
 #rip{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;mix-blend-mode:screen}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,37,56,.6) 0%,rgba(6,37,56,0) 30%,rgba(6,37,56,.15) 55%,rgba(6,37,56,.88) 100%);z-index:1}
@@ -59,9 +59,7 @@ section{padding:clamp(80px,10vw,130px) 0}
 .dial .sub{color:rgba(239,251,252,.75)}
 .dgrid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(24px,4vw,56px);align-items:center;margin-top:44px}
 .pv{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/3;background:#123}
-.pv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:filter .15s}
-.pv .murk{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 60%,rgba(70,110,30,.75),rgba(40,70,20,.9));mix-blend-mode:multiply;pointer-events:none}
-.pv .leaves{position:absolute;inset:0;pointer-events:none}
+.pv img,.pv canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pv .state{position:absolute;left:18px;top:18px;background:rgba(6,37,56,.8);backdrop-filter:blur(6px);padding:10px 14px;border-radius:12px;font:800 15px/1 "Archivo";text-transform:uppercase;letter-spacing:.04em}
 .knob{display:grid;place-items:center;gap:20px}
 .knob .ring{position:relative;width:min(260px,64vw);aspect-ratio:1;border-radius:50%;background:conic-gradient(from 225deg,#5d7a2b 0deg,#8fa83a 70deg,#36b3a8 160deg,var(--aqua) 270deg,transparent 270deg);padding:18px;touch-action:none;cursor:grab}
@@ -142,7 +140,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
 </div></nav>
 
 <header class="hero" id="top">
-<div class="bg"><img id="heroImg" src="img/pool-rect.webp" alt="A clear, freshly cleaned backyard pool with white coping under live oaks" width="1300" height="975" fetchpriority="high"></div>
+<div class="bg"><img id="heroImg" src="img/pool-travertine.webp" alt="A clear backyard pool with travertine coping and a raised spa beside a pond" width="1300" height="975" fetchpriority="high"></div>
 <canvas id="rip" aria-hidden="true"></canvas>
 <div class="free" aria-hidden="true"><span><b>1st</b>clean<br>free</span></div>
 <div class="wrap copy">
@@ -159,7 +157,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
 <h2 class="dx h2">From swamp <span>to swim.</span></h2>
 <p class="sub">Spin the dial (or drag the slider) to see what a 4F visit does to a pool that’s been left alone too long.</p>
 <div class="dgrid">
-<div class="pv"><img id="dimg" src="img/pool-travertine.webp" alt="A backyard pool with a raised spa and travertine coping" width="1300" height="975" loading="lazy"><div class="murk" id="murk"></div><canvas class="leaves" id="leaves" aria-hidden="true"></canvas><div class="state" id="dstate">Swamp</div></div>
+<div class="pv"><img id="dimg" src="img/dial-swamp.webp" alt="A backyard pool turned green with algae and floating leaves, which clears as the dial turns" width="1000" height="750" loading="lazy"><canvas id="pc" width="1000" height="750" aria-hidden="true"></canvas><div class="state" id="dstate">Swamp</div></div>
 <div class="knob">
 <div class="ring" id="ring" role="presentation"><div class="needle" id="needle"></div><div class="pct"><span><span id="dpct">0</span>%<small>clarity</small></span></div></div>
 <input type="range" id="clarity" min="0" max="100" value="0" aria-label="Pool clarity">
@@ -258,19 +256,27 @@ yr.textContent=new Date().getFullYear();
  hero.addEventListener('pointerdown',e=>{const b=c.getBoundingClientRect();for(let i=0;i<3;i++)R.push({x:e.clientX-b.left,y:e.clientY-b.top,r:4+i*16,a:.7})});
  setInterval(()=>{if(document.hidden)return;R.push({x:Math.random()*W,y:H*(.45+Math.random()*.45),r:2,a:.35})},900);
  (function f(){requestAnimationFrame(f);x.clearRect(0,0,W,H);R=R.filter(p=>p.a>.01);for(const p of R){p.r+=1.6;p.a*=.965;x.strokeStyle=`rgba(200,250,255,${p.a})`;x.lineWidth=2;x.beginPath();x.ellipse(p.x,p.y,p.r,p.r*.42,0,0,7);x.stroke()}})()})();
-// clarity dial
-(()=>{const S=[[0,'Swamp','Green water, leaves on the bottom, filter clogged. Sound familiar?'],[30,'Cloudy','Shocked and filtering. Getting there.'],[60,'Almost','Brushed, vacuumed, chemicals balanced.'],[90,'Crystal clear','Swim-ready. Now we keep it that way every week.']];
- const lc=leaves,lx=lc.getContext('2d');const L=Array.from({length:22},()=>({x:Math.random(),y:Math.random(),r:Math.random()*6.28,s:.6+Math.random()*.8}));
- function drawLeaves(v){lc.width=lc.offsetWidth;lc.height=lc.offsetHeight;const a=Math.max(0,1-v/55);if(!a)return;for(const l of L){lx.save();lx.globalAlpha=a*.9;lx.translate(l.x*lc.width,l.y*lc.height);lx.rotate(l.r);lx.scale(l.s,l.s);lx.fillStyle='#4b3a17';lx.beginPath();lx.ellipse(0,0,14,6,0,0,7);lx.fill();lx.strokeStyle='#2c2210';lx.beginPath();lx.moveTo(-14,0);lx.lineTo(14,0);lx.stroke();lx.restore()}}
- function set(v){v=+v;const k=v/100;dimg.style.filter=`hue-rotate(${(-75*(1-k)).toFixed(0)}deg) saturate(${(.55+.6*k).toFixed(2)}) brightness(${(.72+.33*k).toFixed(2)}) blur(${(2.2*(1-k)).toFixed(1)}px) contrast(${(.85+.2*k).toFixed(2)})`;
-  murk.style.opacity=(1-k)**1.4;needle.style.transform=`rotate(${-135+270*k}deg)`;dpct.textContent=v;clarity.value=v;
-  let s=S[0];for(const q of S)if(v>=q[0])s=q;dstate.textContent=s[1];dnote.textContent=s[2];drawLeaves(v)}
+// clarity dial: three real-photo stages (algae, shocked/cloudy, clear) blended per pixel,
+// clearing in patches by a precomputed order map; only the water changes
+(()=>{const S=[[0,'Swamp','Green water, leaves on the bottom, filter clogged. Sound familiar?'],[30,'Shocked','Algae killed off and the leaves skimmed. Cloudy while the filter works.'],[65,'Almost','Brushed, vacuumed, chemicals balanced. Clearing fast.'],[92,'Crystal clear','Swim-ready. Now we keep it that way every week.']];
+ const cv=pc,cx=cv.getContext('2d',{willReadFrequently:true});let A,B,C,O,idx,out,ready=false,want=0,raf=0;
+ const load=u=>new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=u});
+ function px(im){const c=document.createElement('canvas');c.width=1000;c.height=750;const x=c.getContext('2d');x.drawImage(im,0,0,1000,750);return x.getImageData(0,0,1000,750).data}
+ Promise.all(['img/dial-swamp.webp','img/dial-cloudy.webp','img/dial-clear.webp','img/dial-order.png'].map(load)).then(([a,b,c,o])=>{
+  A=px(a);B=px(b);C=px(c);O=px(o);out=cx.createImageData(1000,750);out.data.set(C);
+  const L=[];for(let i=0;i<A.length;i+=4){if(A[i]!==C[i]||A[i+1]!==C[i+1]||A[i+2]!==C[i+2])L.push(i)}idx=Int32Array.from(L);ready=true;draw()}).catch(()=>{});
+ function draw(){raf=0;if(!ready)return;const p=want/100,W=0.22,t1=Math.min(1,p/0.5),t2=Math.max(0,(p-0.5)/0.5),d=out.data;
+  for(let k=0;k<idx.length;k++){const i=idx[k],o=O[i]/255;
+   let a1=(t1*(1+W)-o)/W;a1=a1<0?0:a1>1?1:a1;let a2=(t2*(1+W)-o)/W;a2=a2<0?0:a2>1?1:a2;
+   for(let c=0;c<3;c++){const v=A[i+c]+(B[i+c]-A[i+c])*a1;d[i+c]=v+(C[i+c]-v)*a2}d[i+3]=255}
+  cx.putImageData(out,0,0)}
+ function set(v){v=+v;want=v;needle.style.transform=`rotate(${-135+270*v/100}deg)`;dpct.textContent=v;clarity.value=v;
+  let s=S[0];for(const q of S)if(v>=q[0])s=q;dstate.textContent=s[1];dnote.textContent=s[2];if(!raf)raf=requestAnimationFrame(draw)}
  clarity.addEventListener('input',e=>set(e.target.value));
  let drag=false;function ang(e){const b=ring.getBoundingClientRect();let a=Math.atan2(e.clientX-(b.left+b.width/2),-(e.clientY-(b.top+b.height/2)))*180/Math.PI;a=Math.max(-135,Math.min(135,a));set(Math.round((a+135)/270*100))}
  ring.addEventListener('pointerdown',e=>{drag=true;ring.setPointerCapture(e.pointerId);ang(e)});ring.addEventListener('pointermove',e=>drag&&ang(e));ring.addEventListener('pointerup',()=>drag=false);
- set(0);addEventListener('resize',()=>drawLeaves(+clarity.value));
- // gentle auto-demo once when scrolled into view
- if(!RM){let done=false;new IntersectionObserver(e=>{if(e[0].isIntersecting&&!done&&+clarity.value===0){done=true;let v=0;const iv=setInterval(()=>{v+=2;set(v);if(v>=100)clearInterval(iv)},28)}},{threshold:.6}).observe(dimg)}})();
+ set(0);
+ if(!RM){let done=false;new IntersectionObserver(e=>{if(e[0].isIntersecting&&!done&&+clarity.value===0){done=true;let v=0;const go=()=>{if(!ready){setTimeout(go,200);return}const iv=setInterval(()=>{v+=1;set(v);if(v>=100)clearInterval(iv)},45)};setTimeout(go,600)}},{threshold:.6}).observe(dimg)}})();
 // before/after
 (()=>{const s=ba;function at(cx){const b=s.getBoundingClientRect();const p=Math.max(0,Math.min(100,(cx-b.left)/b.width*100));s.style.setProperty('--x',p+'%');s.setAttribute('aria-valuenow',Math.round(p))}
  let d=false;s.addEventListener('pointerdown',e=>{d=true;s.setPointerCapture(e.pointerId);at(e.clientX)});s.addEventListener('pointermove',e=>d&&at(e.clientX));s.addEventListener('pointerup',()=>d=false);
